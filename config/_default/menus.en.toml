@@ -69,7 +69,7 @@
 
 [[main]]
     name = "About"
-    pageRef = "page"
+    pageRef = "about"
     weight = "40"
 
 

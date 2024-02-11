@@ -4,7 +4,7 @@ summary = 'Tutorial for basic squash & stretch ball rig'
 languageCode = 'en-us'
 date = 2024-02-11T15:20:18+01:00
 draft = false
-tags = ['ball', 'rigging', 'beginner', 'maya', 'blender']
+tags = ['rigging', 'beginner', 'maya', 'blender']
 showRecent = true
 +++
 
