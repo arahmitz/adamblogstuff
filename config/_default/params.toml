@@ -76,6 +76,10 @@ disableTextInHeader = false
   sharingLinks = [ "linkedin", "twitter"]
   showZenMode = true
 
+
+[about]
+  layout = "page"
+  
 [list]
   showHero = true
   heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
