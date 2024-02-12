@@ -17,7 +17,7 @@ sharingLinks = false
 Forever Skies is the first project I am working on as an animator/rigger. I've been working mostly on third and first person animations, rigging and skinning of humanoids, non-humanoids
 and devices for Unreal Engine 4 and I've been helping in implementation of the animation system within the project.
 
-
+---
 
 ## My own projects
 ###  Rigs for Animation Students in blender & Maya
