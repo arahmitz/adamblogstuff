@@ -1,91 +1,31 @@
 +++
-title = 'The ball says it all'
-summary = 'Tutorial for basic squash & stretch ball rig'
+title = 'Squash & Stretch Ball in blender'
+summary = 'Tutorial for basic squash & stretch ball rig in blender'
 languageCode = 'en-us'
 date = 2024-02-12T15:20:18+01:00
 draft = false
-tags = ['rigging', 'beginner', 'maya', 'blender']
+tags = ['rigging', 'beginner', 'blender']
 showRecent = true
+series = ["Rigging for beginner animation"]
+series_order = 2
 +++
+## Rigging the squash & stretch ball in blender
 
+## 0. Foreword
 
-# How to build a proper ball rig?
+In this article you'll learn:
 
-## 1. Why is ball important?
+- How to rig a ball in blender
+- How to create armatures and move them to snap bones in place
+- How to use [Bone Widget](https://blenderdefender.gumroad.com/l/boneWidget) to create controls
+- How to make clean layers in rig
+- Basics of preparing rig for usage by other people
 
-Whether you're just starting your journey, study animation or you're a seasoned veteran - the basics of everything you know about animation starts with a ball. If we take a look at Richard William's *The Animator's Survival Kit*, the first chapter title where he talks about animation is called *IT'S ALL IN THE TIMING AND THE SPACING* - and it's all about how do we use these two terms in understanding the basics of any motion. 
+## 1. Preparation 
 
->
-> I'll never forget the image of this big Norwegian American sitting in the golden twilight, extending his long arms and spatula hands saying... «The bouncing ball says it all» 
-> 
-> ~R. Williams "The Animators Survival Kit"
->
+As far as rigging in blender goes, we're start by downloading the [project files](https://github.com/arahmitz/am_blender_ball_tutorial) and [Bone Widget](https://blenderdefender.gumroad.com/l/boneWidget).
 
-That's why I want my first post dedicated to **building a proper ball rig**, on which we can build basics of **spacing**, **timing** and **squash & stretch** principles and to look under the hood of rigging a mesh that can **preserve it's volume** while being scaled.
-
-Of course, in 3D animation there are two main groups of users: **Autodesk Maya** and **blender** ones. I'm going to try to explain the ideas as software agnostic as possible, but there are going to be chapter for both Maya and blender rigging - so noone feels left out. I am going to use some scripts along the way, but every script/addon is going to look like this:
-
-[Example](https://www.example.com) - so you can install it yourself and follow along.
-
-Besides that, I am going to include rigs done in this series (as I want to rig with you all rigs that you'd commonly find in animation exercises) both as fully working rigs and basics to follow the tutorial **totally free of charge** and **licensed under [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html#license-text)**. 
-
-If you're interested to hop into the world of animation technicality then let's start!
-
-## 2. How does a ball rig works?
-
-### Mesh
-
-For this example I’m going to use a simple ball mesh with a texture that you can download:
-- For blender [here](https://www.example.com)
-- For Maya [here](https://www.example.com)
-
-
-### Skeleton
-
-A ball skeleton in the easiest form is just one bone which <span style="color:#3AA8FF"> joints </span> (that color will mean it's a Maya term) or head and tail <span style="color:#FC5902"> joints </span> (that color will mean it's a blender term) are touching the start and end of the height line, like this:
-
-
-The whole mesh is skinned to this one bone only.
-
-### Controls
-
-If we think about a ball rig, there are a few basic things we'll need.
-
-{{< alert >}}
-For blender I'm going to use [Bone Widget](https://blenderdefender.gumroad.com/l/boneWidget) to create control shapes.  
-For Maya, I'm are going to use [IDR ControllerTools](https://indyrigger.gumroad.com/l/kybSJ?layout=profile) to do the same.
-{{< /alert >}}
-
-The list of controls:
-- **Root** - if you ever downloaded a rig, you probably know it as some kind of a circle or a variation of circle with arrows - it's going to tell every software we work in what's the **default space** of our object. The easiest way to think about it is to think that if we are going to move the root controller, everything will move along with it. In gameplay animation most of the time it'll stay at default [0, 0, 0] position to mimic the player's capsule.
-- **Center of Gravity** - commonly known as cog or c.o.g is usually the control around hips or general center of gravity of your rig. It's one of the main thing animators are going to use to give a sense of weight. For a ball usage, we'll create a **cog** to move the ball in 3D space.
-- **Rotor** - while it's not something that you might find in every rig, I am going to add a second controller under the COG that is going to let us rotate the ball - why? To detach the **translation** of our ball from it's **rotation**. It will help us with separating squash and stretch from the rotation.
-- **Squash and Stretch Controllers** - as we are going to make our ball not only move and rotate but also to squash and stretch - we'll need some controls to *control* the amount of squash and stretch. We'll make **two** controls: at the **top** and **bottom** of the ball to give animators more flexibility when it comes to to proper animation. Because of the rotor control, we'll be also able to rotate the ball independently of these controllers - in case the ball is going to hit a wall for example!
-
-### How does squash & stretch work under the hood?
-
-#### The mathematical explanation
-
-We'll start by eating the frog. As far as mathematics go, we are going to take a sphere that has dimensions of *x*, *y* and *z* and volume *V1*,  we are going to multiply it by *n* in one direction and multiply it by 1/sqrt(*n*) in the rest to get a *V2* that is the same as *V1*
-
->
->{{< katex >}}
->\\(\text{Volume} = x \cdot y \cdot z = n \cdot y \cdot \left(\frac{x}{\sqrt{n}}\right) \cdot \left(\frac{z}{\sqrt{n}}\right)\\)
->
->Where: 
->*x*, *y*, *z* - our sphere transform values\
->*n* - the amount of change along we add, in this case along Y axis
-
-#### Techanim Technobabble explanation
-
-In rigging there are multiple ways to achieve a volume preservation effect depending on the usage and outcome. 
-
-In this post I’m going to talk about the most basic one - **joint scaling**. To achieve the stretching in one axis, we are going to take the dimension between <span style="color:#3AA8FF"> **two joints** </span> or the <span style="color:#FC5902"> **lenght of bone** </span> and make it larger for example by increasing it in the height axis. By doing this, we are going to feed rest of the axis (width, depth) with a multiplification of {{< katex >}} \\(\frac{1}{\sqrt{n}}\\), where **n** is the amount of transform we are adding - basically making the width and depth smaller the longer the bone is. Of course it’ll work the opposite when we are going to squash the controllers by making the object wider in other directions. Just like we would stretch or squash a water balloon.
-
-## 3. Rigging the ball in blender
-
-As far as rigging in blender goes, start by downloading the [project files](github.com).
-Attention: due to lack of rigging notes (as of day of writing this post), we'll need to do little hacking in the controllers hierarchy,
+Attention: due to lack of rigging nodes (as of day of writing this post), we'll need to do little hacking in the controllers hierarchy,
 that I'll try to avoid later in the series, I'll let you know where and why it happens.
 
 {{< alert >}}
@@ -93,7 +33,7 @@ The files are prepared for version 4.0, I am going to utilise new bone collectio
 if you're on the old version of blender. 
 {{< /alert >}}                                  
 
-### Defining Armature and Skinning
+## 2. Armature and Skinning
 After you start up your project file, it should look like this:
 ![A checkerboard ball in an open scene](/images/ballrig_blender_1.png "View after opening the file")                                    
 
@@ -171,7 +111,7 @@ With that, we've done our first phase of making the **ball rig in blender**. Now
    Hit CTRL+P -> Parent With Offset
 </details>
 
-### Creating Squash & Stretch mechanism
+## 3. Making Squash & Stretch mechanism
 
 As I've talked about what's the math behind the good squash and stretch ratio, blender comes with a pre-built constraint that is going to do the work for us. There are some advantages
 of this, although personally I'd prefer rigging nodes like in Maya. 
@@ -251,7 +191,7 @@ root
 ```
 ![Making the parenting work](/gifs/ballrig_blender_10.gif "While it might be hard to remember how Parent actually works, think that it's always CHILDREN first being grabbed by PARENT at last")
 
-### Creating Controls
+## 4. Controls
 
 We don't really want animators to touch our rig insides, so for the ease of all we are going to create controls for our rig - remember, we're rigging for somebody else - so we need to make rigs in a way clear enough that other people understand it as well. Because of that, in this sub-section I am going to talk about some conventions. 
 
@@ -272,6 +212,9 @@ it's always a good idea to create a control for your root bone, that will let yo
 does).
 
 There are different shapes for root bones:
+
+{{< carousel images="{https://cdn.pixabay.com/photo/2016/12/11/12/02/mountains-1899264_960_720.jpg, https://cdn.pixabay.com/photo/2016/12/11/12/02/mountains-1899264_960_720.jpg}" >}}
+
 
 ![Vayne Valorant Style Rig](/images/ballrig_blender_11.jpg "Vayne Rig by Matheus Lima @ artstation")
 ![Azri Style Rig](/images/ballrig_blender_12.jpg "AZRI Rig by popular autor Jonathan Cooper, author of GameAnim: Video Games Explained")
@@ -335,13 +278,13 @@ As you know how to add controls, let's wrap this up, by adding colors to the res
 
 ![Finished controlls rig](/images/ballrig_blender_16.png "We've almost done!")
 
-### Cleaning up & final touches
+## 5. Clean up & final touches
 
-So, we've finally created everything, we could technically start animating right away!
+So, we've finally created everything, we could start animating right away!
 
-WRONG! 
+<span style="color:red" size ="16"> WRONG! </span>
 
-I've told you at the start that mess is going to be a pain in the ass, so lets do final cleaning.
+I've told you at the start that mess is going to be a pain in the ass, so let's do final cleaning up.
 
 We'll start with Armature Tab - we can finally check off *Names*, *In Front* and *Axes* tab - animators don't really need them and if they need to have controls in front, they'll set them up.
 
@@ -369,8 +312,10 @@ should be scalable or not and you'll have to create the controls appropriately.
 With that we've finally finished our rig! You can start learning animation right away with your own, self-rigged ball! 
 Good luck in your animation journey and if you decide to share your ball animation, I'll be happy to be tagged (@arahfx) to see what you created!
 
-## 4. Rigging the ball in Maya
+## 6. Closing Thoughts
 
-## 5. Final thoughts
+Congratulations on rigging your first, fully working **ball rig**! Now, you can start your animation journey by tackling bouncing ball exercises.
+Besides that we've now have idea on how to **plan our controls** and **name them properly**, which will be super handy later.
 
-## 6. Useful links
+As you are probably as happy as me, I am not going to hold you any longer - after you master *the ball*, the animation world will be your oyster!
+
