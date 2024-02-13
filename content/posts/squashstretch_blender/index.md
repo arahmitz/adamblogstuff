@@ -1,6 +1,6 @@
 +++
 title = 'Squash & Stretch Ball in blender'
-summary = 'Tutorial for basic squash & stretch ball rig in blender'
+summary = 'A step by step guide to build your first ball rig in blender'
 languageCode = 'en-us'
 date = 2024-02-12T15:20:18+01:00
 draft = false
