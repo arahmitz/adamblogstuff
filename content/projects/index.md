@@ -1,6 +1,5 @@
 +++
 title = 'Projects'
-summary = 'T'
 languageCode = 'en-us'
 date = 2024-02-11T15:20:18+01:00
 draft = false
