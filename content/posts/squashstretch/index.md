@@ -1,6 +1,6 @@
 +++
-title = 'Building a ball rig to start animating'
-summary = 'A theory behind building a squash & stretch ball'
+title = 'Theory behind building a squash & stretch rig'
+summary = 'Overlook of squash & stretch mechanism building with with different rigging approaches'
 languageCode = 'en-us'
 date = 2024-02-12T15:20:18+01:00
 draft = false
