@@ -316,4 +316,3 @@ Congratulations on rigging your first, fully working **ball rig**! Now, you can 
 Besides that we've now have idea on how to **plan our controls** and **name them properly**, which will be super handy later.
 
 As you are probably as happy as me, I am not going to hold you any longer - after you master *the ball*, the animation world will be your oyster!
-
