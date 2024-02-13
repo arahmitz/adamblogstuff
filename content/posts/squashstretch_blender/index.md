@@ -35,7 +35,7 @@ if you're on the old version of blender.
 
 ## 2. Armature and Skinning
 After you start up your project file, it should look like this:
-![A checkerboard ball in an open scene](./images/ballrig_blender_1.png "View after opening the file")                                    
+![A checkerboard ball in an open scene](/images/ballrig_blender_1.png "View after opening the file")                                    
 
 First of all, we are going to create an armature in the proper axis. That's why we'are going to click **NUM3** to make our camera allign,
 making our left side the front, and our right side the back. We can add the *Armature* by clicking **SHIFT + A** and selecting *Armature* that'll be created in 
