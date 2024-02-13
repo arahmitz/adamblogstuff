@@ -93,11 +93,14 @@ For that, we can use base math.
 
 Let's do an example. 
 
-We have a bone of transform (x, y, z), where y will be the height. As we know the y, we stretch the bone by vector \\(\vec{v}\\) = [0, 1, 0] resulting in new transform of (x, y+1, z). As we know the new transform, 
+We have a bone of transform (x, y, z), where y will be the height. 
+
+As we know the y, we stretch the bone by vector \\(\vec{v}\\) = [0, 1, 0] resulting in new transform of (x, y+1, z). As we know the new transform, 
 we know that the new bone is higher from the default one by 1, but to sell the effect of *stretching*, we need to also make the bone smaller in other axes - therefore we can multiply x and z using the Volume formula
-I've given you before, looking like this: {{< katex >}} \\(\frac{1}{\sqrt{n}}\\), where **n** is the amount of transform we are adding by translation, in our case **n = 1**. In <span style="color:#00ECFF">Maya</span>,
-we can use a *Rigging Node Editor*, to directly connect the channels of x, y and z with *multiplyDivide node*, to multiply the channels accordingly - achieving a good squash & stretch that is going to work on all type
-of bone chains - it's extremly useful for humanoid skeleton rigs with cartoon features!
+I've given you before, looking like this: {{< katex >}} \\(\frac{1}{\sqrt{n}}\\), where **n** is the amount of transform we are adding by translation, in our case **n = 1**. 
+
+In <span style="color:#00ECFF">Maya</span>, we can use a *Rigging Node Editor*, to directly connect the channels of x, y and z with *multiplyDivide node*, to multiply the channels accordingly - 
+achieving a good squash & stretch that is going to work on all type of bone chains - it's extremly useful for humanoid skeleton rigs with cartoon features!
 
 #### Squash & Stretch in video games
 
