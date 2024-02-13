@@ -9,7 +9,6 @@ showDate = false
 showReadingTime = false
 showZenmode = false
 sharingLinks = false
-baseURL = "https://arahmitz.github.io/adamblogstuff/"
 +++
 
 # Hey! I'm Adam. 
