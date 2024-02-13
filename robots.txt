@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: //arahmitz.github.io/adamblogstuff/sitemap.xml
