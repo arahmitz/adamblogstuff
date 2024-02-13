@@ -13,6 +13,7 @@ sharingLinks = false
 
 # Hey! I'm Adam. 
 I am an Animator / Rigger, based in Wrocław, Poland. 
+
 Currently, I am working at [Far From Home](https://www.farfromhomegames.com/) where I am animating and rigging [Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/)!
 
 Welcome to my blog, where I explore the art of **rigging**, **gameplay animation** and **technical animation*. This blog serves as a blend of insights into rigging techniques, animation principles, scripting, and their application in the dynamic world of video games.
