@@ -79,11 +79,11 @@ If you came to animation from modelling, the first idea that might pop to you mi
 
 ![Image of Lattice Deformer](/images/ballrig_theory_1.png "Lattice around the cube object in Object Mode - from blender official docs")
 
-Lattice is a deformer that is found both in <span style="color:#FF3600">blender</span> and <span style="color:#3AA8FF">Maya</span> and it's often used for applying deformation. For our purposes, 
+Lattice is a deformer that is found both in <span style="color:#FF3600">blender</span>( that color will mean it's a blende term) and <span style="color:#00ECFF">Maya</span> (that color will mean it's a Maya term) and it's often used for applying deformation. For our purposes, 
 **deformation cage** can be constrained and controlled, but while working on ball rigs (and I've saw a lot of Youtube videos using this idea), it's not the most transferable way to create deformations, that's
 why I am not going to talk about them in upcoming tutorials.
 
-Second one, more in line with rigging tools themselves would be <span style="color:#FF3600">**Stretch To Constraint**</span>/<span style="color:#3AA8FF"> **Squash Deformer** </span>. 
+Second one, more in line with rigging tools themselves would be <span style="color:#FF3600">**Stretch To Constraint**</span>/<span style="color:#00ECFF"> **Squash Deformer** </span>. 
 Both of them are off-the-shelf features that are going to streamline building the mechanisms on simpler rigs, but might be limited in some more advanced setups. Because <span style="color:#FF3600">blender</span> as of 4.0 didn't add 
 rigging nodes yet, we'll be using <span style="color:#FF3600">Stretch To Constraint</span> in <span style="color:#FF3600">blender</span>-specific tutorial. How does it work under the hood? 
 
@@ -95,7 +95,7 @@ Let's do an example.
 
 We have a bone of transform (x, y, z), where y will be the height. As we know the y, we stretch the bone by vector \\(\vec{v}\\) = [0, 1, 0] resulting in new transform of (x, y+1, z). As we know the new transform, 
 we know that the new bone is higher from the default one by 1, but to sell the effect of *stretching*, we need to also make the bone smaller in other axes - therefore we can multiply x and z using the Volume formula
-I've given you before, looking like this: {{< katex >}} \\(\frac{1}{\sqrt{n}}\\), where **n** is the amount of transform we are adding by translation, in our case **n = 1**. In <span style="color:#3AA8FF">Maya</span>,
+I've given you before, looking like this: {{< katex >}} \\(\frac{1}{\sqrt{n}}\\), where **n** is the amount of transform we are adding by translation, in our case **n = 1**. In <span style="color:#00ECFF">Maya</span>,
 we can use a *Rigging Node Editor*, to directly connect the channels of x, y and z with *multiplyDivide node*, to multiply the channels accordingly - achieving a good squash & stretch that is going to work on all type
 of bone chains - it's extremly useful for humanoid skeleton rigs with cartoon features!
 
@@ -124,7 +124,7 @@ For this example I’m going to use a simple ball mesh with a checker texture th
 
 ### Skeleton
 
-A ball skeleton in the easiest form is just one bone which <span style="color:#3AA8FF"> joints </span> (that color will mean it's a Maya term) or head and tail <span style="color:#FF3600"> joints </span> (that color will mean it's a blender term)
+A ball skeleton in the easiest form is just one bone which <span style="color:#00ECFF"> joints </span>or head and tail <span style="color:#FF3600"> joints </span> (that color will mean it's a blender term)
 are the only pieces over which we will skin. Because there's no deformation of these, we can use automatic weight painting.
 
 ### Controls
