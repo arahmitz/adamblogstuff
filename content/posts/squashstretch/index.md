@@ -8,6 +8,7 @@ tags = ['rigging', 'beginner', 'theory']
 showRecent = true
 series = ["Rigging for beginner animation"]
 series_order = 1
+baseURL = "https://arahmitz.github.io/adamblogstuff/"
 +++
 
 

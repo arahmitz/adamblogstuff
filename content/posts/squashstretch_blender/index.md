@@ -8,6 +8,7 @@ tags = ['rigging', 'beginner', 'blender']
 showRecent = true
 series = ["Rigging for beginner animation"]
 series_order = 2
+baseURL = "https://arahmitz.github.io/adamblogstuff/"
 +++
 ## Rigging the squash & stretch ball in blender
 

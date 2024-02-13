@@ -9,6 +9,7 @@ showDate = false
 showReadingTime = false
 showZenmode = false
 sharingLinks = false
+baseURL = "https://arahmitz.github.io/adamblogstuff/"
 +++
 
 ## Games I've been a part of
