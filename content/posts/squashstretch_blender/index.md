@@ -214,9 +214,6 @@ does).
 
 There are different shapes for root bones:
 
-{{< carousel images="{https://cdn.pixabay.com/photo/2016/12/11/12/02/mountains-1899264_960_720.jpg, https://cdn.pixabay.com/photo/2016/12/11/12/02/mountains-1899264_960_720.jpg}" >}}
-
-
 ![Vayne Valorant Style Rig](/images/ballrig_blender_11.jpg "Vayne Rig by Matheus Lima @ artstation")
 ![Azri Style Rig](/images/ballrig_blender_12.jpg "AZRI Rig by popular autor Jonathan Cooper, author of GameAnim: Video Games Explained")
 ![Uncle Death Rig](/images/ballrig_blender_13.jpg "Uncle Death Rig for blender by Crabnuts (@Kani_Natto_), blender rig controls are generally lighter and less saturated")
