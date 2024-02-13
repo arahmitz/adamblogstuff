@@ -12,6 +12,8 @@ enableRobotsTXT = true
 paginate = 10
 summaryLength = 0
 
+canonifyURLs = true
+
 buildDrafts = false
 buildFuture = false
 
