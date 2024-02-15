@@ -37,8 +37,8 @@ if you're on the old version of blender.
 After you start up your project file, it should look like this:
 ![A checkerboard ball in an open scene](images/ballrig_blender_1.png "View after opening the file")                                    
 
-First of all, we are going to create an armature in the proper axis. That's why we'are going to click <kbd>NUM3</kbd> to make our camera allign,
-making our left side the front, and our right side the back. We can add the *Armature* by clicking <kbd>SHIFT</kbd>+<kbd>A</kbd> and selecting *Armature* that'll be created in 
+First of all, we are going to create an armature in the proper axis. That's why we'are going to click **NUM3** to make our camera allign,
+making our left side the front, and our right side the back. We can add the *Armature* by clicking **SHIFT + A** and selecting *Armature* that'll be created in 
 the middle of the bar. Of course we can't see it, so we can navigate to the right side, and by selecting *Armature Data*>*Viewport Display*
 we are going to enable  
 - [x] Names - This option shows bone names, it'll help us in defining bones on screen, without having to look all the time at the outliner.
@@ -48,32 +48,32 @@ we are going to enable
 - [x] Axes - It's important for understanding our rotations.
 ![Outliner view of Armature data](images/ballrig_blender_2.png "Armature Data in outliner") 
 
-With selected armature, we can change the mode to *Edit* by using <kbd>Tab</kbd> (It's not a basic setting, go to *Preferences* > *Keymap* and select Tab for Pie Menu,
+With selected armature, we can change the mode to *Edit* by using **Tab** (It's not a basic setting, go to *Preferences* > *Keymap* and select Tab for Pie Menu,
 it'll make things faster later)
 ![Tab for Pie Menu](images/ballrig_blender_3.png    "Mode Select Pie Menu")
 
-While in Edit Mode with the bone selected, I am going to use <kbd>F2</kbd>> to fast-change name of the bone to root - as I've explained it before, root always sits at the origin of the world, and thats where our root will sit too.
+While in Edit Mode with the bone selected, I am going to use **F2** to fast-change name of the bone to root - as I've explained it before, root always sits at the origin of the world, and thats where our root will sit too.
 ![Bone rename](images/ballrig_blender_4.png "Rename tool")
 
-Now, in Edit Mode, we are going to select the *Head* of the bone, and by clicking <kbd>>SHIFT</kbd>+<kbd>S</kbd>> we're going to choose *Selection to Cursor*. After that, by moving the head with <kbd>>G</kbd>>, I am going to click <kbd>Y</kbd>> to lock axis and hit <kbd>>1</kbd> to move it by 1m.
+Now, in Edit Mode, we are going to select the *Head* of the bone, and by clicking **SHIFT+S** we're going to choose *Selection to Cursor*. After that, by moving the head with **G**, I am going to clikc *Y* to lock axis and hit **1** to move it by 1m.
 ![Changing the root's placement](gifs/ballrig_blender_1.gif "Changing the root to world transform by using 3D Cursor")
 
-Now that we know how to use 3D cursor, we are going to change the mesh origin point by first moving the *3D Cursor to Active*, but in order to select the mesh, we need to use use <kbd>Tab</kbd> to get back to Object Mode.
+Now that we know how to use 3D cursor, we are going to change the mesh origin point by first moving the *3D Cursor to Active*, but in order to select the mesh, we need to use use **TAB** to get back to Object Mode.
 ![Moving 3D Cursor to Active Element Origin](gifs/ballrig_blender_2.gif "Changing the 3D Cursor to Ball Origin")
 
 After we've done that, the next step is to create our only *def* bone, that we'll call *def_body*. To do that, we are going to select the armature back, change to Edit Mode,
-then select it's *Tail* and Extrude a bone after clicking <kbd>Z</kbd>> to lock the axis as height. We are going to extrude it up to around the middle and rename the bone.
+then select it's *Tail* and Extrude a bone after clicking **Z** to lock the axis as height. We are going to extrude it up to around the middle and rename the bone.
 ![Extruding a bone from root](gifs/ballrig_blender_3.gif "Extruding a bone from root")
 
 >
 > Clean outliner is your friend - rename things as early as possible to de-clutter things!
 >
 
-After that, we are going to move the *def_body* bone to start in the middle of the ball by selecting the bone (make sure it's not parented, if yours is, use <kbd>ALT</kbd>+<kbd>P</kbd>>*Clear Parent*)
-then by using <kbd>SHIFT</kbd>+<kbd>S</kbd>* use *Selection to Cursor*. Your rig should look like this:
+After that, we are going to move the *def_body* bone to start in the middle of the ball by selecting the bone (make sure it's not parented, if yours is, use **ALT+P**>*Clear Parent*)
+then by using **SHIFT+S** use *Selection to Cursor*. Your rig should look like this:
 ![def_body in proper place](images/ballrig_blender_5.png "Rig with proper deformation bone placed")
 
-One super important thing for later is changing the rotation mode - with your bones selected in Pose mode use <kbd>CTRL</kbd>+<kbd>R</kbd> and select *XYZ* - we'll touch it later!
+One super important thing for later is changing the rotation mode - with your bones selected in Pose mode use **CTRL+R** and select *XYZ* - we'll touch it later!
 ![Selecting a rotation mode](images/ballrig_blender_18.png)
 
 After that, we are going to bind the mesh to the bone in a process called **skinning**.
@@ -87,7 +87,7 @@ while def_body should be checked.
 ![Properties of def_bone with Deform checked](images/ballrig_blender_6.png "Properties of def_bone with Deform checked")
 
 If all of these are checked (and believe me - it's a good idea to get a habit of checking that before skinning the model), we can start skinning process.
-To do that, go back to your Object Mode, select your Mesh, then with <kbd>SHIFT</kbd> select your Armature and by using <kbd>CTRL</kbd>+<kbd>P</kbd> *Armature Deform - Automatic Weights*.
+To do that, go back to your Object Mode, select your Mesh, then with **SHIFT** select your Armature and by using **CTRL+P**> *Armature Deform - Automatic Weights*.
 ![Skinnig process with Armature Deform](gifs/ballrig_blender_4.gif "Skinning process with Automatic Weights")
 
 {{<alert icon="info">}}
@@ -97,7 +97,7 @@ that's beyond scope of this tutorial.
 {{</alert>}}
 
 After that, we're going to check if our skinning worked properly by going to select Armature, then in Pose Mode moving first *root* and then *def_body* and see if ball works properly.
-Note: I am resetting transforms fast by hitting <kbd>ALT</kbd>+<kbd>R<k/bd> and <kbd>ALT</kbd>+<kbd>G</kbd> for rotation and transformation.
+Note: I am resetting transforms fast by hitting **ALT+R** and **ALT+G** for rotation and transformation.
 ![Checking if skinning is working right](gifs/ballrig_blender_5.gif "Checking if skinning is working right, we'll do it every time after skinning")
 
 With that, we've done our first phase of making the **ball rig in blender**. Now, to keep you on your toes, please parent the *def_body* to *root* with offset., here's the fast guide in spoiler if you're not sure how to do it.
@@ -169,7 +169,7 @@ Now, to explain how this ball's mechanism will work, we are going to do two thin
 
 And then we'll talk about **why** does it work like this.
 
-Let's start by adding the constraint. To add them, we need to be in *Pose Mode*. You can add them by using <kbd>SHIFT</kbd>+<kbd>CTRL</kbd>+<kbd>C</kbd> or by going to *Properties*>*Bone Constraints*. We're going to pick *Armature* as our target and *tgt_stretch-top* as our bone target. After that, we can check if it works properly.
+Let's start by adding the constraint. To add them, we need to be in *Pose Mode*. You can add them by using **SHIFT+CTRL+C** or by going to *Properties*>*Bone Constraints*. We're going to pick *Armature* as our target and *tgt_stretch-top* as our bone target. After that, we can check if it works properly.
 ![Adding stretchTo constraint](gifs/ballrig_blender_9.gif "We could also shift-click our target bone > bone we add constraint to to automatically select it")
 
 After that we're going to parent our mechanism the proper way. Think of it that way:
@@ -224,7 +224,7 @@ you can leave it unattended under Armature.
 
 ![Creating ctrl_root](gifs/ballrig_blender_12.gif "We can easily leave it in hierarchy as we'll mimic target one")
 
-Next, we are going to do switch to *Pose Mode* and hit <kbd>N</kbd>, to open the sidebar. By picking *Rig Tools*, we open up **Bone Widget** and select *Root 1* as the shape. Then we can click *Create*, to create the shape.
+Next, we are going to do switch to *Pose Mode* and hit **N**, to open the sidebar. By picking *Rig Tools*, we open up **Bone Widget** and select *Root 1* as the shape. Then we can click *Create*, to create the shape.
 ![Creating the shape](gifs/ballrig_blender_13.gif)
 
 After done that, I am going to give you a simple exercies - your task is to copy all target bones and rename them `ctrl_*` where * is the relative name. Remember, we don't need to copy MCH one. After that, we can parent it to mimic tgt bone hierarchy.
@@ -291,7 +291,7 @@ The last thing we should think about is locking up some transforms - I am genera
 in their work. 
 
 We'll start with stretch controllers - while animator can use Transform (location), adding rotation or scale is only going to rotate the control, without any real consequences - 
-we can lock it, so he can work with just pressing <kbd>G</kbd> to control the stretch.
+we can lock it, so he can work with just pressing **G** to control the stretch.
 ![Locking stretches](gifs/ballrig_blender_18.gif "You can hold LMB and drag to lock more than one thing at a time")
 
 After that lets think about our rotation control - we don't really need the scale, so it should be locked. Rotation is the main thing so it should be open, but what about location?
