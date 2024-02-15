@@ -1,4 +1,5 @@
 baseURL = 'https://arahmitz.github.io/adamblogstuff/'
 languageCode = 'en-us'
 title = 'Techanimatically'
-timeout = 60000
+timeout = 6000000
+
