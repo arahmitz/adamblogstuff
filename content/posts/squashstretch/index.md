@@ -77,7 +77,7 @@ In rigging there are multiple ways to achieve a volume preservation effect depen
 
 If you came to animation from modelling, the first idea that might pop to you mind is **Lattice Deformer*.
 
-![Image of Lattice Deformer](images/ballrig_theory_1.png "Lattice around the cube object in Object Mode - from blender official docs")
+![Image of Lattice Deformer](/images/ballrig_theory_1.png "Lattice around the cube object in Object Mode - from blender official docs")
 
 Lattice is a deformer that is found both in <span style="color:#FF3600">blender</span>( that color will mean it's a blende term) and <span style="color:#00ECFF">Maya</span> (that color will mean it's a Maya term) and it's often used for applying deformation. For our purposes, 
 **deformation cage** can be constrained and controlled, but while working on ball rigs (and I've saw a lot of Youtube videos using this idea), it's not the most transferable way to create deformations, that's
