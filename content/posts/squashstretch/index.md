@@ -2,14 +2,13 @@
 title = 'Theory behind building a squash & stretch rig'
 summary = 'Overlook of squash & stretch mechanism building with with different rigging approaches'
 languageCode = 'en-us'
-date = 2024-02-12T15:20:18+01:00
+date = 2024-02-15T18:20:18+01:00
 draft = false
 tags = ['rigging', 'beginner', 'theory']
 showRecent = true
 series = ["Rigging for beginner animation"]
 series_order = 1
 +++
-
 
 # Our first rig - a squash & stretch ball
 
@@ -24,43 +23,46 @@ In this article you'll learn:
 
 ## 1. Why is ball important?
 
-Whether you're just starting your journey, study animation or you're a seasoned animation veteran - the basics of everything you know about animation starts with a ball. 
-If we take a look at Richard William's *The Animator's Survival Kit*, the first chapter title where he talks about animating is called *IT'S ALL IN THE TIMING AND THE SPACING* - and 
-it's all about how do we use these two terms in understanding the basics of any motion. 
+Whether you're just starting your animation journey, study the craft, or you're a seasoned animation veteran - the foundation of everything you know about animation starts with a ball. 
+
+If we take a cue at Richard William's *The Animator's Survival Kit*, the first chapter titled *IT'S ALL IN THE TIMING AND THE SPACING* - delves into how we use these two terms to understand the basics of any motion.
 
 >
 > I'll never forget the image of this big Norwegian American sitting in the golden twilight, extending his long arms and spatula hands saying... «The bouncing ball says it all» 
 > 
-> -- <cite> R. Williams "The Animators Survival Kit" </cite>
+> --<cite>R. Williams "The Animators Survival Kit"</cite>
 >
 
-That's why I want my first post dedicated to **building a proper ball rig**, on which we can build basics of **spacing**, **timing** and **squash & stretch** principles and to look under the hood of rigging
-a mesh that can **preserve it's volume** while being scaled.
+That's why I want my first post to be dedicated to **building a proper ball rig** - a foundation upon one can explore basics of **spacing**, **timing** and **squash & stretch** principles. Additionally,
+we'll peek under the hood of rigging mesh that can **preserve it's volume** while being scaled.
 
-Of course, in 3D animation there are two main groups of users: **Autodesk Maya** and **blender** ones. I'm going to try to explain the ideas as software agnostic as possible,
-but there are going to be chapter for both Maya and blender rigging - so noone feels left out. I am going to use some scripts along the way, but every script/addon is going to look like this:
+Of course, in 3D animation there are two main groups of users: Autodesk Maya and blender.
+I'll try to explain the ideas in a software-agnostic manner. However, there will be chapters dedicated to one software, but I'm going to write every tutorial for both sofwares - ensuring noonoe feels left out.
+
+I'll be using some scripts along the way, presented like this:
 
 [Example](https://www.example.com) - so you can install it yourself and follow along.
 
-Besides that, I am going to include rigs done in this series (as I want to rig with you all rigs that you'd commonly find in animation exercises) both as fully working rigs and basics to follow the tutorial **totally free of charge** and **licensed under [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html#license-text)**. 
+Furthermore, I'll include rigs created in the series - fully functional and suitable for use as foundational animation tutorials. They will be provided **totally free of charge** 
+and **licensed under [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html#license-text)**. 
 
-If you're interested to hop into the world of animation technicality then let's start!
+If you're interested in delving into the technical aspects of animation, let's get started!
 
 ## 3. What is actually squash & stretch?
 
 
-You're probably familiar with the idea of squashing and stretching of stuff - it seems super simple. If we *squash* a water balloon, water inside will push the sides making it look like pancake.
-If we release it, it'll spring back to the more natural shape and if we throw it - it'll going to *stretch* in air before squashing on somebody's face.
+You're probably familiar with the concept of squashing and stretching - it seems deceptively simple. When we *squash* a water balloon, the water inside pushes the sides, giving it a pancake-like appearance.
+Upon release, it springs back to its more natural shape, and if thrown - it stretches in the air before squashing upon impact.
 
 ![Squash & Stretch](https://i.gifer.com/IG9T.gif "A balloon squashing on a face, courtesy of gifer.com")
 
-Disney's Nine Old Men found that squashing and stretching of objects is one of the most important principles to create a good looking animation - probably that's why they've made it **the #1 principle** in their **12 Principles of Animation** and
-understanding it, is one of the building blocks of a strong animator today - because no matter if you draw your frames or manipulate a super complex humanoid body, you have to account for squash & stretch 
-to achieve a real *illusion of life*.
+Disney's Nine Old Men identified squashing and stretching as one of the most crucial principles for creating visually appealing animation. It holds such significance that they designate dit as the **the #1 principle** in their **12 Principles of Animation**.
+Understanding this principle is a cornerstone for today's animators, whether they're sketching frames or manipulating a complex humanoid body. Accounting for squash and stretch is essential to achieving the elusive *illusion of life*.
 
 ### The mathematical explanation
 
-We'll start by eating the frog. As far as mathematics go, we are going to take a sphere that has dimensions of *x*, *y* and *z* and volume *V1*,  we are going to multiply it by *n* in one direction and multiply it by 1/sqrt(*n*) in the rest to get a *V2* that is the same as *V1*.
+Let's start by eating the frog. In mathematical terms, we'll consider a sphere with dimensions of *x*, *y* and *z* and a volume *V<sub>1</sub>*. We will then manipulate it by
+multiplying by *n* in one direction and by {{<katex>}}\\(\frac{1}{\sqrt{n}}\\) in the other directions. This manipulation aims to achieve a new volume *V<sub>2</sub>* that emains equal to *V<sub>1</sub>*.
 
 >
 >{{< katex >}}
@@ -73,85 +75,112 @@ We'll start by eating the frog. As far as mathematics go, we are going to take a
 
 ### Rigging explanation
 
-In rigging there are multiple ways to achieve a volume preservation effect depending on the usage and outcome. 
+When it comes to rigging, achieving a volume preservation effect can be approached in various ways based on the intended use and desired outcome.
 
-If you came to animation from modelling, the first idea that might pop to you mind is **Lattice Deformer*.
+Those of you who transition to animation from modelling, the first technique that may come to mind is the **Lattice Deformer**.
 
-![Image of Lattice Deformer](/adamblogstuff/images/ballrig_theory_1.png "Lattice around the cube object in Object Mode - from blender official docs")
+![Image of Lattice Deformer](/adamblogstuff/images/balltheory/ballrig_theory_1.png "Lattice around the cube object in Object Mode - from blender official docs")
 
-Lattice is a deformer that is found both in <span style="color:#FF3600">blender</span>( that color will mean it's a blende term) and <span style="color:#00ECFF">Maya</span> (that color will mean it's a Maya term) and it's often used for applying deformation. For our purposes, 
-**deformation cage** can be constrained and controlled, but while working on ball rigs (and I've saw a lot of Youtube videos using this idea), it's not the most transferable way to create deformations, that's
-why I am not going to talk about them in upcoming tutorials.
+Lattice is a deformer present both in <span style="color:#EC930B">blender</span> and <span style="color:#32ACFC">Maya</span>, commonly used for applying deformation. However, for our purposes
+where a deformation cage can be constrained and controlled, it might not be the most versatile method for creating mesh deformations. Despite encountering numerous YouTube tutorials utilizing such approach,
+I won't be delving into this method in the upcoming ball rig tutorials.
 
-Second one, more in line with rigging tools themselves would be <span style="color:#FF3600">**Stretch To Constraint**</span>/<span style="color:#00ECFF"> **Squash Deformer** </span>. 
-Both of them are off-the-shelf features that are going to streamline building the mechanisms on simpler rigs, but might be limited in some more advanced setups. Because <span style="color:#FF3600">blender</span> as of 4.0 didn't add 
-rigging nodes yet, we'll be using <span style="color:#FF3600">Stretch To Constraint</span> in <span style="color:#FF3600">blender</span>-specific tutorial. How does it work under the hood? 
+![Image of Squash Deformer](/adamblogstuff/images/balltheory/ballrig_theoy_2.png "Squash deformer results - from Maya docs")
 
-Actually, the basic idea of doing a squash & stretch is **joint scaling**. When the object *stretches*, the joint (or chain of joints) is getting longer and whem it *squashes*, it naturally gets shorter.
-As this can be done both uniformly along all axes (thus making the chain bigger) and along specific ones - one might try to imitate what is happening to other axes at the same time.
-For that, we can use base math.
+Second method, more aligned with the rigging tools themselves, involves using Stretch To Constraint (in blender)/ Squash Deformer (in Maya). These are off-the-shelf
+features that can significantly simplify construction of said mechanism in rigging. However, they might have limitations in more advanced setups. 
 
-Let's do an example. 
+{{< alert >}}
+As of version 4.0, blender hasn't introduced rigging nodes yet, we'll be utilizing **Stretch To Constraint** in the blender-specific
+tutorial.
+{{< /alert >}}
 
-We have a bone of transform (x, y, z), where y will be the height. 
 
-As we know the y, we stretch the bone by vector \\(\vec{v}\\) = [0, 1, 0] resulting in new transform of (x, y+1, z). As we know the new transform, 
-we know that the new bone is higher from the default one by 1, but to sell the effect of *stretching*, we need to also make the bone smaller in other axes - therefore we can multiply x and z using the Volume formula
-I've given you before, looking like this: {{< katex >}} \\(\frac{1}{\sqrt{n}}\\), where **n** is the amount of transform we are adding by translation, in our case **n = 1**. 
+**But how does it work under the hood?**
 
-In <span style="color:#00ECFF">Maya</span>, we can use a *Rigging Node Editor*, to directly connect the channels of x, y and z with *multiplyDivide node*, to multiply the channels accordingly - 
-achieving a good squash & stretch that is going to work on all type of bone chains - it's extremly useful for humanoid skeleton rigs with cartoon features!
+The fundamental concept behind volume-preservating squash & stretch is **joint scaling**. When we *stretch* an object, it's joint (or chain of joints) undergoes scaling. Of course when it *squashes*, the chain naturally scales too.
+This scaling can be applied uniformly along all axes - providing full-scaling of the rig or selectively along specific axes. To mimic the simultaneous change if onther axes, we can use the *Volume* ratio presented before.
+
+Let's try this example.
+
+To illustrate this, let's assume we have an object whose transforms are (*x*, *y*, *z*).
+
+We can stretch the bone by vector \\(\vec{v}\\) = [0, 1, 0] resulting in new transform:
+
+(*x*, *y+1*, *z*)
+
+By knowing the new value of *y* transform, we have our **n**.
+
+To sell the effect of stretching, we need to scale the same object in other axes to achieve the same volume. To achieve that, we'll use the formula I've written about before.
+
+>
+> When we scale object in y axis by **n**, we'll multiply x and z scale by {{< katex >}} \\(\frac{1}{\sqrt{n}}\\) - to preserve the volume of the object.
+>
+
+In Maya's' *Rigging Node Editor*, it is possible to connect x, y and z with *multiplyDivide node*, to multiply these channels accordingly.
+This method is going to achieve a  good squash & stretch that is going to work on all type of bone chains - it's extremly useful for humanoid skeleton rigs with cartoon features!
 
 ### Squash & Stretch in video games
 
-*Squash & Stretch isn't something that you are going to see in video games a lot.* 
-At least... not by default.
+Squash & Stretch isn't something you'll often encounter in videogames, at least now by default.
 
-Unreal Engine by default do not export scale of deformation bones at all! And while this can make you think - *why bother?* - 
-is has a really good reason to do so. A volume-perserving squash & stretch in a *Skeletal Mesh* has to calculate skinning deformations every frame, making it one of the heaviest (or rather the most expansive)
-things for your CPU to do. Of course, sometimes whole art style might be broken because of that, but that's why there's a special option to enable bone scaling while importing the mesh to preserve them,
-but normally it has to be included in general optimalization or rather - it has to be a game feature, not a default.
+Unreal Engine, for instance, doesn't export scale of deformation bones at all!
+This might prompt one simple question - *why bother?*. The reason behind this decision is quite substantial. Achieving a good looking, volume-preserving
+squash & stretch of *Skeletal Mesh* entails calculating skinning deformations every frame, making it one of the most resource-hungry tasks for player's CPU. While enabling bone scaling during mesh inport is an option to
+preserve these effects, it's typically not the default setting due to performance problems. In many cases, this decision alligns with overall optimization strategies - it's going to be used only when
+the game really depends on it.
 
-Because of heavy optimalization implications there are different ways to sell this principle while animating for video games. You might see some slight translations of skeleton, arms or legs, 
-sometimes the legs are becoming longer to stay on ground for a while to give more weight (World of Warcraft's Pandaren jump loop), sometimes you will translate the skeleton a little to give a better pose - 
-there are many different tricks to sell scalling and stretching you'll learn while animating. Of course, it won't be a *real*, *calculated volume preservating* squash & stretch, but it'll create the *illusion
-of life* - and that's what we aim for.
+Given the heavy optimization implications, there'are other techniques that might mimic the **feeling of squashing and stretching** in video games. These often include translations of the skeleton, mostly adjustments
+to arms and legs. Let's consider jumping - by translating parts of skeleton one can achieve a stronger, more dynamic pose, for example by leaving the legs for a few frames on the ground longer only to
+squash them together (to their original position) nearing the apex of the jump loop. Such technique of translation can be observed in World of Warcraft's Pandaren Jump.
+
+![WoW's Pandaren Jump Loop Animation](/adamblogstuff/images/balltheory/ballrig_theory_1.gif "Pandaren jump loop probably my favourite WoW animation")
+
+These are just a few examples of the different tricks animators employ to create the *illusion of life*, even though it may not involve the *real* calculated volume-preserving squash & stretch. After all,
+the ultimate goal is to sell the viewer the best looking, lively performance withing the constraints of game performance.
 
 ## 3. How does a ball rig work?
 
 ### Mesh
 
-For this example I’m going to use a simple ball mesh with a checker texture that you can download:
-- For blender [here](https://www.example.com)
+For this example I'll be using a mesh with a checker texture, that you can download:
+- For blender [here](https://github.com/arahmitz/am_blender_ball_tutorial)
 - For Maya [here](https://www.example.com)
 
 ### Skeleton
 
-A ball skeleton in the easiest form is just one bone which <span style="color:#00ECFF"> joints </span>or head and tail <span style="color:#FF3600"> joints </span> (that color will mean it's a blender term)
-are the only pieces over which we will skin. Because there's no deformation of these, we can use automatic weight painting.
+In it's simplest form, a ball skeleton consists of just one bone, where joints (Maya) / head and tail of the bone (blender) are touching the sphere's base and end.
+These hold whole skinning information, making it an ideal object to use automatic skinning options for.
 
 ### Controls
 
-If we think about a ball rig, there are a few basic things we'll need.
+Considering what animator might need to control in a ball rig, we might think of a few cases.
 
 {{< alert >}}
 For blender I'm going to use [Bone Widget](https://blenderdefender.gumroad.com/l/boneWidget) to create control shapes.  
 For Maya, I'm are going to use [IDR ControllerTools](https://indyrigger.gumroad.com/l/kybSJ?layout=profile) to do the same.
 {{< /alert >}}
 
-The list of controls:
-- **Root** - if you ever downloaded a rig, you probably know it as some kind of a circle or a variation of circle with arrows - it's going to tell every software we work in what's the **default space** of our object. 
-The easiest way to think about it is to think that if we are going to move the root controller, everything will move along with it. In gameplay animation most of the time it'll stay at default [0, 0, 0] position to mimic the player's capsule.
-- **Center of Gravity** - commonly known as cog or c.o.g is usually the control around hips or general center of gravity of your rig. It's one of the main thing animators are going to use to give a sense of weight. 
-For a ball usage, we'll create a **cog** to move the ball in 3D space.
-- **Rotor** - while it's not something that you might find in every rig, I am going to add a second controller under the COG that is going to let us rotate the ball - why? To detach the **translation** of our ball from it's **rotation**. 
-It will help us with separating squash and stretch from the rotation.
-- **Squash and Stretch Controllers** - as we are going to make our ball not only move and rotate but also to squash and stretch - we'll need some controls to *control* the amount of squash and stretch. 
-We'll make **two** controls: at the **top** and **bottom** of the ball to give animators more flexibility when it comes to to proper animation. Because of the rotor control, 
-we'll be also able to rotate the ball independently of these controllers - in case the ball is going to hit a wall for example!
+Every rig, at the top of it's hierarchy has to have a **root**. It's purpose is to hold information about the default space of the rig. It's often represented by a variation of circles with arrows on the ground.
+
+![Possible shapes of root controllerr in Bone Widget](/adamblogstuff/images/balltheory/ballrig_theory_3.png "Possible shapes of root bones using Bone Widget")
+
+The next in hierarchy, overarching rest of the controllers is a bone called **cog** - or sometimes stylized as **c.o.g** (abbreviation for center of gravity). These might get a lot different shapes depending of the center of gravity shape. 
+The most popular ones are circles and saddles, for the purpose of ball rig, we'll use a big **circle**.
+
+![Saddle shape for cog from Bone Widger](/adamblogstuff/images/balltheory/ballrig_theory_4.png "A Saddle-like shape for cog from Bone Widget")
+
+The hierarchy of the rest of controllers might differ depending on circumstances. In case of our ball rig, we'll have a few controllers following a cog. First of them will be a **rotor** - our second level controller.
+In this case rotor will be working the same as the cog - it'll let animators translate or rotate a mesh (unless we lock it) and it's main purpose will be to split rotation and translation to avoid
+clutter in the timeline and graph editor. We'll use a smaller **circle** for this controller.
+
+The last type of controllers for this rig is going to be an **auxilary** controller that will let animator control the squash and stretch of the mesh - preferably from the top and botton. There is no one way to imagine general shape of these controllers - 
+their shape are going to refer to their function. In our case it's going to be a control that might move up and down, so something with a pointy end might be a good idea. We'll talk more about specific shapes in the next chapters. 
 
 ## 4. Closing Thoughts
 
-So we've learned **what is squatch & stretch**, we know **why is this principle important** and we finally **know how does it work**. 
+We explored the concept of **squash and stretch**, delving into its significance and mechanics. Our discussion included its importance in animation and various ways to mimic it when necessary. 
+Additionally, we laid down the foundational theory for building a functional ball rig.
 
-Besides that we have an outline on what do we need, to build a working ball rig, so **let's apply** what we've learned in next articles!
+Armed with this knowledge, the upcoming articles will take a hands-on approach, applying the knowledge to create a working ball rig that you'll be able to animate yourself. If you have any further
+questions of need assistance, dont hesitate to ask. Happy rigging!

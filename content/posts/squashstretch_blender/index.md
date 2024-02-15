@@ -2,7 +2,7 @@
 title = 'Squash & Stretch Ball in blender'
 summary = 'A step by step guide to build your first ball rig in blender'
 languageCode = 'en-us'
-date = 2024-02-12T15:20:15+01:00
+date = 2024-02-15T19:40:15+01:00
 draft = false
 tags = ['rigging', 'beginner', 'blender']
 showRecent = true
@@ -46,6 +46,7 @@ we are going to enable
 - [x] Bone Colors - It'll let us change controller colors later
 - [x] In Front - It'll render bones always in front, super useful for aligning stuff.
 - [x] Axes - It's important for understanding our rotations.
+
 ![Outliner view of Armature data](/adamblogstuff/images/ballrig_blender_2.png "Armature Data in outliner") 
 
 With selected armature, we can change the mode to *Edit* by using <kbd>Tab</kbd> (It's not a basic setting, go to *Preferences* > *Keymap* and select Tab for Pie Menu,
