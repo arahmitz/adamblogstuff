@@ -56,11 +56,11 @@ If we release it, it'll spring back to the more natural shape and if we throw it
 
 Disney's Nine Old Men found that squashing and stretching of objects is one of the most important principles to create a good looking animation - probably that's why they've made it **the #1 principle** in their **12 Principles of Animation** and
 understanding it, is one of the building blocks of a strong animator today - because no matter if you draw your frames or manipulate a super complex humanoid body, you have to account for squash & stretch 
-to achieve a real *illusion of life.
+to achieve a real *illusion of life*.
 
-#### The mathematical explanation
+### The mathematical explanation
 
-We'll start by eating the frog. As far as mathematics go, we are going to take a sphere that has dimensions of *x*, *y* and *z* and volume *V1*,  we are going to multiply it by *n* in one direction and multiply it by 1/sqrt(*n*) in the rest to get a *V2* that is the same as *V1*
+We'll start by eating the frog. As far as mathematics go, we are going to take a sphere that has dimensions of *x*, *y* and *z* and volume *V1*,  we are going to multiply it by *n* in one direction and multiply it by 1/sqrt(*n*) in the rest to get a *V2* that is the same as *V1*.
 
 >
 >{{< katex >}}
@@ -71,7 +71,7 @@ We'll start by eating the frog. As far as mathematics go, we are going to take a
 >*n* - the amount of change along we add, in this case along Y axis
 >
 
-#### Rigging explanation
+### Rigging explanation
 
 In rigging there are multiple ways to achieve a volume preservation effect depending on the usage and outcome. 
 
@@ -102,7 +102,7 @@ I've given you before, looking like this: {{< katex >}} \\(\frac{1}{\sqrt{n}}\\)
 In <span style="color:#00ECFF">Maya</span>, we can use a *Rigging Node Editor*, to directly connect the channels of x, y and z with *multiplyDivide node*, to multiply the channels accordingly - 
 achieving a good squash & stretch that is going to work on all type of bone chains - it's extremly useful for humanoid skeleton rigs with cartoon features!
 
-#### Squash & Stretch in video games
+### Squash & Stretch in video games
 
 *Squash & Stretch isn't something that you are going to see in video games a lot.* 
 At least... not by default.

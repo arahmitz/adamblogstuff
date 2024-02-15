@@ -9,7 +9,7 @@ showRecent = true
 series = ["Rigging for beginner animation"]
 series_order = 2
 +++
-## Rigging the squash & stretch ball in blender
+# Rigging the squash & stretch ball in blender
 
 ## 0. Foreword
 
