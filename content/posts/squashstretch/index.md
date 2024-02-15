@@ -31,7 +31,7 @@ it's all about how do we use these two terms in understanding the basics of any 
 >
 > I'll never forget the image of this big Norwegian American sitting in the golden twilight, extending his long arms and spatula hands saying... «The bouncing ball says it all» 
 > 
-> ~R. Williams "The Animators Survival Kit"
+> -- <cite> R. Williams "The Animators Survival Kit" </cite>
 >
 
 That's why I want my first post dedicated to **building a proper ball rig**, on which we can build basics of **spacing**, **timing** and **squash & stretch** principles and to look under the hood of rigging
