@@ -33,7 +33,7 @@ If we take a cue at Richard William's *The Animator's Survival Kit*, the first c
 > --<cite>R. Williams "The Animators Survival Kit"</cite>
 >
 
-That's why I want my first post to be dedicated to **building a proper ball rig** - a foundation upon one can explore basics of **spacing**, **timing** and **squash & stretch** principles. Additionally,
+That's why I want my first post to be dedicated to **building a proper ball rig** - a foundation upon one can explore basics of spacing, timing and squash & stretch principles. Additionally,
 we'll peek under the hood of rigging mesh that can **preserve it's volume** while being scaled.
 
 Of course, in 3D animation there are two main groups of users: Autodesk Maya and blender.
@@ -81,7 +81,7 @@ Those of you who transition to animation from modelling, the first technique tha
 
 ![Image of Lattice Deformer](/adamblogstuff/images/balltheory/ballrig_theory_1.png "Lattice around the cube object in Object Mode - from blender official docs")
 
-Lattice is a deformer present both in <span style="color:#EC930B">blender</span> and <span style="color:#32ACFC">Maya</span>, commonly used for applying deformation. However, for our purposes
+Lattice is a deformer present both in blender and Maya, commonly used for applying deformation. However, for our purposes
 where a deformation cage can be constrained and controlled, it might not be the most versatile method for creating mesh deformations. Despite encountering numerous YouTube tutorials utilizing such approach,
 I won't be delving into this method in the upcoming ball rig tutorials.
 
@@ -117,7 +117,7 @@ To sell the effect of stretching, we need to scale the same object in other axes
 > When we scale object in y axis by **n**, we'll multiply x and z scale by {{< katex >}} \\(\frac{1}{\sqrt{n}}\\) - to preserve the volume of the object.
 >
 
-In Maya's' *Rigging Node Editor*, it is possible to connect x, y and z with *multiplyDivide node*, to multiply these channels accordingly.
+In Maya's *Rigging Node Editor*, it is possible to connect x, y and z direclty with *multiplyDivide node*, to multiply these channels accordingly.
 This method is going to achieve a  good squash & stretch that is going to work on all type of bone chains - it's extremly useful for humanoid skeleton rigs with cartoon features!
 
 ### Squash & Stretch in video games
