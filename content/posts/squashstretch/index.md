@@ -109,7 +109,7 @@ We can stretch the bone by vector \\(\vec{v}\\) = [0, 1, 0] resulting in new tra
 
 (*x*, *y+1*, *z*)
 
-By knowing the new value of *y* transform, we have our **n**.
+By knowing the new value of *y* transform, we can calculate **n**.
 
 To sell the effect of stretching, we need to scale the same object in other axes to achieve the same volume. To achieve that, we'll use the formula I've written about before.
 
@@ -118,7 +118,7 @@ To sell the effect of stretching, we need to scale the same object in other axes
 >
 
 In Maya's *Rigging Node Editor*, it is possible to connect x, y and z direclty with *multiplyDivide node*, to multiply these channels accordingly.
-This method is going to achieve a  good squash & stretch that is going to work on all type of bone chains - it's extremly useful for humanoid skeleton rigs with cartoon features!
+This method is going to achieve a good squash & stretch that is going to work on all type of bone chains - it's extremly useful for humanoid skeleton rigs with cartoon features!
 
 ### Squash & Stretch in video games
 
@@ -145,7 +145,7 @@ the ultimate goal is to sell the viewer the best looking, lively performance wit
 
 For this example I'll be using a mesh with a checker texture, that you can download:
 - For blender [here](https://github.com/arahmitz/am_blender_ball_tutorial)
-- For Maya [here](https://www.example.com)
+- For Maya [here](https://www.example.com) [tutorial W.I.P]
 
 ### Skeleton
 
