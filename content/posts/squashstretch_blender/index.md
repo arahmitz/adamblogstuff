@@ -2,7 +2,7 @@
 title = 'Squash & Stretch Ball in blender'
 summary = 'A step by step guide to build your first ball rig in blender'
 languageCode = 'en-us'
-date = 2024-02-15T19:40:15+01:00
+date = 2024-02-22T19:40:15+01:00
 draft = false
 tags = ['rigging', 'beginner', 'blender']
 showRecent = true
@@ -18,14 +18,14 @@ In this article you'll learn:
 - How to rig a ball in blender
 - How to create armatures and move them to snap bones in place
 - How to use [Bone Widget](https://blenderdefender.gumroad.com/l/boneWidget) to create controls
-- How to make clean layers in rig
+- How to keep your rig and project file clean
 - Basics of preparing rig for usage by other people
 
 ## 1. Preparation 
 
-As far as rigging in blender goes, we're start by downloading the [project files](https://github.com/arahmitz/am_blender_ball_tutorial) and [Bone Widget](https://blenderdefender.gumroad.com/l/boneWidget).
+For our blender **ball rig**, we're start by downloading the [project files](https://github.com/arahmitz/am_blender_ball_tutorial) and [Bone Widget](https://blenderdefender.gumroad.com/l/boneWidget).
 
-Attention: due to lack of rigging nodes (as of day of writing this post), we'll need to do little hacking in the controllers hierarchy,
+Heads up: As of the publication day, blender doesn't use riging nodes, that's why we'll need to do little hacking in the controllers hierarchy,
 that I'll try to avoid later in the series, I'll let you know where and why it happens.
 
 {{< alert >}}
@@ -34,125 +34,152 @@ if you're on the old version of blender.
 {{< /alert >}}                                  
 
 ## 2. Armature and Skinning
-After you start up your project file, it should look like this:
-![A checkerboard ball in an open scene](/adamblogstuff/images/ballrig_blender_1.png "View after opening the file")                                    
+After opening the .blend file, your project should resemble this:
+![A checkerboard ball in an open scene](/adamblogstuff/images/ballrig_blender/ballrig_blender_1.png "View after opening the file")                                    
 
-First of all, we are going to create an armature in the proper axis. That's why we'are going to click <kbd>NUM3</kbd> to make our camera allign,
-making our left side the front, and our right side the back. We can add the *Armature* by clicking <kbd>SHIFT</kbd> + <kbd>A</kbd> and selecting *Armature* that'll be created in 
-the middle of the bar. Of course we can't see it, so we can navigate to the right side, and by selecting *Armature Data*>*Viewport Display*
-we are going to enable  
+To kick things off, let's create armature in the correct axis. Hit <kbd>NUM3</kbd> to align the camera in ortographic mode.
+Our left side will become the front of the model and our right will become the back. We'll use that knowledge, to create the **root** bone.
+Now, add the *Armature* by pressing <kbd>SHIFT</kbd> + <kbd>A</kbd> and selecting *Armature* from the drop-down menu. 
+It will be generated in the middle of the ball. As it's inside the mesh, you might not see it. Head over to the right side - to the *Properties* tab.
+Select *Armature Data* > *Viewport Display* and enable:
+
 - [x] Names - This option shows bone names, it'll help us in defining bones on screen, without having to look all the time at the outliner.
 - [x] Shapes - It'll let us look at controls later
 - [x] Bone Colors - It'll let us change controller colors later
 - [x] In Front - It'll render bones always in front, super useful for aligning stuff.
 - [x] Axes - It's important for understanding our rotations.
 
-![Outliner view of Armature data](/adamblogstuff/images/ballrig_blender_2.png "Armature Data in outliner") 
+![Outliner view of Armature data](/adamblogstuff/images/ballrig_blender/ballrig_blender_2.png "Armature Data in outliner") 
 
-With selected armature, we can change the mode to *Edit* by using <kbd>Tab</kbd> (It's not a basic setting, go to *Preferences* > *Keymap* and select Tab for Pie Menu,
-it'll make things faster later)
-![Tab for Pie Menu](/adamblogstuff/images/ballrig_blender_3.png    "Mode Select Pie Menu")
-
-While in Edit Mode with the bone selected, I am going to use <kbd>F2</kbd> to fast-change name of the bone to root - as I've explained it before, root always sits at the origin of the world, and thats where our root will sit too.
-![Bone rename](/adamblogstuff/images/ballrig_blender_4.png "Rename tool")
-
-Now, in Edit Mode, we are going to select the *Head* of the bone, and by clicking <kbd>SHIFT</kbd>+<kbd>S</kbd> we're going to choose *Selection to Cursor*. After that, by moving the head with <kbd>G</kbd>, I am going to clikc *Y* to lock axis and hit <kbd>1</kbd> to move it by 1m.
-![Changing the root's placement](/adamblogstuff/gifs/ballrig_blender_1.gif "Changing the root to world transform by using 3D Cursor")
-
-Now that we know how to use 3D cursor, we are going to change the mesh origin point by first moving the *3D Cursor to Active*, but in order to select the mesh, we need to use use <kbd>TAB</kbd> to get back to Object Mode.
-![Moving 3D Cursor to Active Element Origin](/adamblogstuff/gifs/ballrig_blender_2.gif "Changing the 3D Cursor to Ball Origin")
-
-After we've done that, the next step is to create our only *def* bone, that we'll call *def_body*. To do that, we are going to select the armature back, change to Edit Mode,
-then select it's *Tail* and Extrude a bone after clicking <kbd>Z</kbd> to lock the axis as height. We are going to extrude it up to around the middle and rename the bone.
-![Extruding a bone from root](/adamblogstuff/gifs/ballrig_blender_3.gif "Extruding a bone from root")
+Once you've selected the armature, switch to *Edit Mode* by pressing <kbd>CTRL</kbd>+<kbd>TAB</kbd>.
 
 >
-> Clean outliner is your friend - rename things as early as possible to de-clutter things!
+> To streamline the workflow, head over to *Preferences* > *Keymap* and enable "Tab for Pie Menu" option. This modification allows user to switch modes by pressing TAB key. Moving forward, I'll be using it.
 >
 
-After that, we are going to move the *def_body* bone to start in the middle of the ball by selecting the bone (make sure it's not parented, if yours is, use <kbd>ALT</kbd>+<kbd>P</kbd>>*Clear Parent*)
-then by using <kbd>SHIFT</kbd>+<kbd>S</kbd> use *Selection to Cursor*. Your rig should look like this:
-![def_body in proper place](/adamblogstuff/images/ballrig_blender_5.png "Rig with proper deformation bone placed")
+![Tab for Pie Menu](/adamblogstuff/images/ballrig_blender/ballrig_blender_3.png    "Mode Select Pie Menu")
 
-One super important thing for later is changing the rotation mode - with your bones selected in Pose mode use <kbd>CTRL</kbd>+<kbd>R</kbd> and select *XYZ* - we'll touch it later!
-![Selecting a rotation mode](/adamblogstuff/images/ballrig_blender_18.png)
+While in *Edit Mode*, select the bone and rename it to "root" by pressing <kbd>F2</kbd> to enable fast renaming, confirm with <kbd>ENTER</kbd>.
+As mentioned in the past article, the root is always placed in world origin, and that's exactly where we will place ours.
 
-After that, we are going to bind the mesh to the bone in a process called **skinning**.
+![Bone rename](/adamblogstuff/images/ballrig_blender/ballrig_blender_4.png "Rename tool")
 
-To do that, we are going to start by checking every bone in *Bone Data* tab of Properties to look if [ ] Deform is checked, we want our *root* to be unchecked
-while def_body should be checked.
+In *Edit Mode*, select the *Head* and use <kbd>SHIFT</kbd>+<kbd>S</kbd> to opt for *Selection to Cursor*. Next, move the head with <kbd>G</kbd>. To move it preciesly, click <kbd>Y</kbd>, to lock the movement in
+Y axis. After that, before confirming the transform, hit <kbd>1</kbd> to move it by 1m in the selected axis.
+
+![Changing the root's placement](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_1.gif "Changing the root to world transform by using 3D Cursor")
+
+To familiarize with the two key functions of the *3D Cursor*, let's change the mesh's origin. To do that, move the cursor with *3D Cursor to Active* function using <kbd>SHIFT</kbd>+<kbd>S</kbd> shortcut.
+In order to do that, hit <kbd>TAB</kbd>to get back to *Object Mode*.
+
+![Moving 3D Cursor to Active Element Origin](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_2.gif "Changing the 3D Cursor to Ball Origin")
+
+Once that is complete, in next step we're going to create our only *def* bone, that we will name *def_body*. To achieve this, select the armature, switch to *Edit Mode* and select the root bone's *Tail*.
+Extrude a bone by pressing <kbd>E</kbd> and then lock it in Z axis with <kbd>Z</kbd>. Extrude it approximately to the middle of the ball and rename the bone with <kbd>F2</kbd>.
+
+![Extruding a bone from root](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_3.gif "Extruding a bone from root")
 
 >
-> In blender, bones with the prefix DEF are the only ones that should have deform checked, by doing that you'll know which bones influence your mesh
+> Clean outliner is your friend - rename things as early as possible to de-clutter the project!
 >
-![Properties of def_bone with Deform checked](/adamblogstuff/images/ballrig_blender_6.png "Properties of def_bone with Deform checked")
 
-If all of these are checked (and believe me - it's a good idea to get a habit of checking that before skinning the model), we can start skinning process.
-To do that, go back to your Object Mode, select your Mesh, then with <kbd>SHIFT</kbd> select your Armature and by using <kbd>CTRL</kbd>+<kbd>P</kbd>> *Armature Deform - Automatic Weights*.
-![Skinnig process with Armature Deform](/adamblogstuff/gifs/ballrig_blender_4.gif "Skinning process with Automatic Weights")
+Following that, we will move the *def_body* bone in Z axis by using 3D Cursor. Make sure that this bone is not parented by using <kbd>ALT</kbd>+<kbd>P</kbd>>*Clear Parent*.
+Use <kbd>SHIFT</kbd>+<kbd>S</kbd> and select *Selection to Cursor*. Your rig should look like this:
+
+![def_body in proper place](/adamblogstuff/images//ballrig_blender/ballrig_blender_5.png "Rig with proper deformation bone placed")
+
+One crucial step for later is to modify the rotation mode. In *Pose Mode*, select your bones, and hit <kbd>CTRL</kbd>+<kbd>R</kbd>. From the dropdown menu select *XYZ*. It'll become important later!
+
+![Selecting a rotation mode](/adamblogstuff/images/ballrig_blender/ballrig_blender_18.png)
+
+Next, we proceed to bind the mesh to the bone in a process called **skinning**.
+
+Let's begin by examining each bone in the *Bone Data* tab in Properties Menu. Make sure that [] Deform checkbox is selected. For the root, leave this unchecked.
+
+>
+> In blender, bones with the prefix DEF are the only ones that should have deform checked, by doing that you'll know which bones influence your mesh.
+> Besides that, deformation bones are the only ones that are going to be exported into the engine.
+>
+
+![Properties of def_bone with Deform checked](/adamblogstuff/images/ballrig_blender/ballrig_blender_6.png "Properties of def_bone with Deform checked")
+
+Once you've confirmed that only your deformation bones are actually deforming (and it's indeed a good habit to check them before initiating the skinning process), let's start skinning!.
+
+Return to *Object Mode*, select your mesh, then while holding <kbd>SHIFT</kbd>, select your Armature. To bind them, hit <kbd>CTRL</kbd>+<kbd>P</kbd> and choose *Armature Deform - Automatic Weights* from the dropdown menu.
+
+![Skinnig process with Armature Deform](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_4.gif "Skinning process with Automatic Weights")
 
 {{<alert icon="info">}}
-You might ask yourself - why using automatic? Is it always the best? The answer is sadly **no** - automatic weights is almost never the answer. Only models consisting of one mesh
-(or many single meshes like mechanical stuff) is okay-ish, but I still suggest to use *Empty Groups* and select *Vertex Groups* (information which skin touch what) yourself, but
-that's beyond scope of this tutorial.
+You might wonder, "Why opt for automatic weights? Is it always the optimal choice?" Unfortunately, the answer is **no**. Automatic weights are seldom the ideal solution. While it might suffice for models
+compromised of a single mesh or multiple distinct meshes (such as mechanical components), I strongly recommend using *Empty Groups* and manually assigning *Vertex Groups* to precisely control which parts of the skin are
+influenced by which bone. However, this process is beyond the scope of this tutorial.
 {{</alert>}}
 
-After that, we're going to check if our skinning worked properly by going to select Armature, then in Pose Mode moving first *root* and then *def_body* and see if ball works properly.
-Note: I am resetting transforms fast by hitting <kbd>ALT</kbd>+<kbd>R</kbd> and <kbd>ALT</kbd>+<kbd>G</kbd> for rotation and transformation.
-![Checking if skinning is working right](/adamblogstuff/gifs/ballrig_blender_5.gif "Checking if skinning is working right, we'll do it every time after skinning")
+Following this, let's chek if our skinning process worked properly. Select the Armature, then in *Pose Mode*, move *root*, and then *def_body* bones to check if the rig works properly.
+Note: You can quickly reset transformations by pressing <kbd>ALT</kbd>+<kbd>R</kbd> for rotation, <kbd>ALT</kbd>+<kbd>G</kbd> for translation and <kbd>ALT</kbd>+<kbd>S</kbd> for scale.
 
-With that, we've done our first phase of making the **ball rig in blender**. Now, to keep you on your toes, please parent the *def_body* to *root* with offset., here's the fast guide in spoiler if you're not sure how to do it.
+![Checking if skinning is working right](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_5.gif "Checking if skinning is working right, we'll do it every time after skinning")
 
+With that, we've completed the first phase of creating the **ball rig in blender**. As a next step, go ahead and parent the *def_body* to the root with an offset. Here's a quick guide in case you're unsure:
 <details> 
   <summary> Click to reveal </summary>
-   Go to edit mode
-
-   Select def_body, then shift-click root
    
-   Hit CTRL+P -> Parent With Offset
+   1. Go to *Edit Mode*
+
+   2. Select *def_body*, then <kbd>SHIFT</kbd>-click root bone
+   
+   3. Use <kbd>CTRL</kbd>+<kbd>P</kbd> -> *Parent With Offset*
+
 </details>
 
 ## 3. Making Squash & Stretch mechanism
 
-As I've talked about what's the math behind the good squash and stretch ratio, blender comes with a pre-built constraint that is going to do the work for us. There are some advantages
-of this, although personally I'd prefer rigging nodes like in Maya. 
+As we've discussed the mathematics behind achieving an optimal squash & stretch ratio, blender offers a pre-built constraint that can handle the task for us. While it has advantages, I personally lean towards rigging nodes of Maya.
 
 The constraint I'm talking about is **Stretch To** that looks like this:
-![Stretch To Constraint](/adamblogstuff/images/ballrig_blender_7.png "Screenshot of Stretch To from blender docs")
 
-As I am not a fan of explaining perfectly created documentation, here's the link to [Stretch To Constraint](https://docs.blender.org/manual/en/latest/animation/constraints/tracking/stretch_to.html).
-I am going to touch things, that we're really interested in:
-- *Target* - it'll be the the "end" of our squash & stretch target
-- *Maintain Volume* - it picks which axes should be affected to preserve the virtual volume stretching along Y axis.
+![Stretch To Constraint](/adamblogstuff/images/ballrig_blender/ballrig_blender_7.png "Screenshot of Stretch To from blender docs")
 
-Let's get back to our rig. We'll start by creating our **stretch mechanism*. To do that, we are going to copy our *def_body* bone, then select the tail and by resetting the
-3D Cursor to World Origin move the tail to the new cursor position. But to do that, we are going to learn about **Bone Collections**.
+As I am not a fan of explaining perfectly written documentation, here's the link to [Stretch To Constraint](https://docs.blender.org/manual/en/latest/animation/constraints/tracking/stretch_to.html).
+Now, let's focus on the key aspects:
+- *Target* - it'll be the the "end point" of our squash & stretch target
+- *Maintain Volume* - it determines which axes should be affected to preserve the virtual volume stretching along Y axis.
 
-![Bone Collection Menu](/adamblogstuff/images/ballrig_blender_8.png "Bone Collection Menu in Properties Tab")
-You can think of *Bone Collections* like layers in any other software - in blender 4.0, developers actually revamped old system (which had 16 normal and 16 protected layers) and made
-them actually unlimited. By using + button, we are going to add some layers and make it look like this:
+Let's return to our rig and start creating our **stretch mechanism**. To begin, duplicate our *def_body* bone, then select the tail. Next, reset the *3D Cursor* with <kbd>SHIFT</kbd>+<kbd>S</kbd>>*3D Cursor To World Origin*.
+You might have some problems selecting the right *Tail*, so to help with that, let's look into the concept of **Bone Collections**.
 
-![Filled Bone Collections with layers](/adamblogstuff/images/ballrig_blender_9.png "I've added five different layers that we're going to use for the whole tutorial")
+![Bone Collection Menu](/adamblogstuff/images/ballrig_blender/ballrig_blender_8.png "Bone Collection Menu in Properties Tab")
 
-The most important thing to understand here is that if we click a bone, and it has a dot near the name of the collection, then it's a part of the collection - and we can hide/unhide them. Be careful - you cant parent/unparent to bones that are actively hidden!
+Consider *Bone Collections* as akin to layers in other software applications. Since blender 4.0 update, old layer system was revamped to make them unlimited (we had 16 normal + 16 protected before). By utilizing the "+" button, we can add
+several layers and configure them to appear like this:
 
-We're going to sort the bones we've created with the prefixes they added. 
-![Adding bones to the right layers](/adamblogstuff/gifs/ballrig_blender_6.gif "Sorting out the bones to the right layers")
+![Filled Bone Collections with layers](/adamblogstuff/images/ballrig_blender/ballrig_blender_9.png "I've added five different layers that we're going to use for the whole tutorial")
 
-With that done, we can finally do the *mch_stretch* bone. Lets start with our sequence again: we are going to copy our *def_body* bone, then select the tail and by resetting the
-3D Cursor to World Origin move the tail to the new cursor position.
-![Stretching mch_stretch bone to it's proper place](/adamblogstuff/gifs/ballrig_blender_7.gif "Stretching mch_stretch to it's proper position")
+The critical aspect to grasp is that if a bone has a dot near the name of the collection when selected, then it's a part of that collection. Consequently, we can hide or unhide them as needed, although they can be in more than one collection.
+However, it's essential to remember: you cannot parent or unparent bones that are actively hidden!
 
-Now, looking back to our control list, we need to add something, to control out stretch from both sides - to do that, we're going to need two controls,
-but general cleaniness of rigging means that we are going to use **target** bones making our constraits separated between deformation skeleton that will follow our
-target skeleton (tgt and sometimes mch), that will follow **control** bones which animators are going to move. You can think of it as something similar to Maya's *offset groups* which are used to make the controllers themselves at transform [0, 0, 0]. As always - we're going to build habits that will make us better riggers in the future.
+Let's sort the bones by their names:
 
-We are going to extrude two bones on Z axis, one from bottom and one from top of the mch_stretch, we're also going to name them *tgt_stretch-top* and *tgt_stretch-bottom* and *Clear Parent*.
-![Creating the tgt bones to control the stretch](/adamblogstuff/gifs/ballrig_blender_8.gif "Creating target bones for the stretch controlls, notice I am checking if the things separated properly")
+![Adding bones to the right layers](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_6.gif "Sorting out the bones to the right layers")
 
-Again, I am going to leave you some exercises. In the next step, we are going to assign proper bone collections and create a *tgt_body* and that will control *def_body*. Remember to uncheck deform! Besides that, we are going to copy *tgt_body* once more and call it *tgt_cog*
+Having set up the *Bone Collections*, we can now proceed to create the *mch_stretch* bone. Let's follow the sequence again: duplicate the *def_body* bone with <kbd>SHIFT</kbd>+<kbd>D</kbd>, select the tail and use
+<kbd>SHIFT</kbd>+<kbd>S</kbd>>*3D Cursor To World Origin*. It should snap the bone to the bottom of the ball making the newly created bone go through whole height.
 
-After we've done that, we should end up with a hierarchy like this:
+![Stretching mch_stretch bone to it's proper place](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_7.gif "Stretching mch_stretch to it's proper position")
+
+Taking a glance at our [control list](/adamblogstuff/posts/squashstretch), it's evident that we need some additional controls to manage the stretch from both sides. For this purpose, we'll create two additional bones. 
+To maintain a clean rigging structure, we will utilize **target** bones. They will separate constraints between the **deformation** skeleton (def) and our **controls** (ctrl) by having an intermediary target (tgt) skeleton.
+Think of it as something akin to Maya's *offset groups*, used to ensure that controllers are always at transform (0, 0, 0). As always - we're building habits that will enhance our rigging skills in the future.
+
+Let's proceed by extruding two bones on the Z-axis in *Edit Mode*, one from the bottom and one from the top of the *mch_stretch*. We'll name them *tgt_stretch-top* and *tgt_stretch-bottom*, then hit <kbd>ALT</kbd>+<kbd>P</kbd>>*Clear Parent*
+We are going to extrude two bones on Z axis, one from bottom and one from top of the mch_stretch, we're also going to name them *tgt_stretch-top* and *tgt_stretch-bottom* and *Clear Parent* to let them move independently.
+
+![Creating the tgt bones to control the stretch](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_8.gif "Creating target bones for the stretch controlls, notice I am checking if the things separated properly")
+
+For the next step, I'll leave you with some exercises. In the next step, we'll assign appropriate bone collections and create a *tgt_body* that will be a copy of *def_body*. Ensure to uncheck the deform option! Additionally, duplicate
+*tgt_body* once more and name it *tgt_cog*.
+
+Once completed, our hierarchy should resemble the following:
 
 ```
 root
@@ -168,18 +195,19 @@ Now, to explain how this ball's mechanism will work, we are going to do two thin
 - Add stretchTo to *mch_stretch*
 - parent things properly
 
-And then we'll talk about **why** does it work like this.
+Before delving into the **why** behind this setup, let's add constraints. Switch to *Pose Mode* and add constraints either by using <kbd>SHIFT</kbd>+<kbd>CTRL</kbd>+<kbd>C</kbd> or through *Properties*>*Bone Constraints*.
+Set Armature as the target and *tgt_stretch-top* (or bottom) as the bone target. After this, check if it functions as intended.
 
-Let's start by adding the constraint. To add them, we need to be in *Pose Mode*. You can add them by using <kbd>SHIFT</kbd>+<kbd>CTRL</kbd>+<kbd>C</kbd> or by going to *Properties*>*Bone Constraints*. We're going to pick *Armature* as our target and *tgt_stretch-top* as our bone target. After that, we can check if it works properly.
-![Adding stretchTo constraint](/adamblogstuff/gifs/ballrig_blender_9.gif "We could also shift-click our target bone > bone we add constraint to to automatically select it")
+![Adding stretchTo constraint](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_9.gif "We could also shift-click our target bone > bone we add constraint to to automatically select it")
 
-After that we're going to parent our mechanism the proper way. Think of it that way:
-- We want to move everything by tgt_cog, meaning it should be at the top of the hierarchy
-- After that, we want our stretchers, to follow the cog, so they should be children of cog
-- We want our mch_stretch to stretch in both ways by moving either contoller and not move the other one, which means that stretch needs to be a children of one of them - because our stretch works with tgt_stretch-top we don't need stretch to follow it, so we can freely make it a child of tgt_stretch-bottom
-- We want to be able to keep rotation independent of the stretch, so it needs to happen after stretching - basically making the rotation happen AFTER, by making it a children
+Following the constraint addition, let's parent our mechanism properly. Let's re-think what we need:
+- First, we want to be able to move everythign by *tgt_cog*, making it the top of the hierarchy.
+- Second, our stretch controllers should follow the cog, so they're going to be children of *tgt_cog*.
+- For *mch_stretch* to work in both directions we can make it a child of *tgt_stretch-bottom* - as bottom and top are on the same level in hierarchy, they'll be independent, so this setup will let us use stretchTo from bottom to
+*tgt_stretch-top* and move the stretcher mechanism by moving the bottom while top will stay in place.
+- To maintain independent rotation from the stretch, it should happen "under" the stretching hierarchy. Therefore, make the rotation occur afterward by making it a child of *mch_stretch*.
 
-We end up with a hierarchy like this
+This results in a hierarchy like this:
 
 ```
 root
@@ -190,129 +218,147 @@ root
             mch_stretch
                 tgt_body
 ```
-![Making the parenting work](/adamblogstuff/gifs/ballrig_blender_10.gif "While it might be hard to remember how Parent actually works, think that it's always CHILDREN first being grabbed by PARENT at last")
+
+![Making the parenting work](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_10.gif "While it might be hard to remember how Parent actually works, think that it's always CHILDREN first being grabbed by PARENT at last")
 
 ## 4. Controls
 
-We don't really want animators to touch our rig insides, so for the ease of all we are going to create controls for our rig - remember, we're rigging for somebody else - so we need to make rigs in a way clear enough that other people understand it as well. Because of that, in this sub-section I am going to talk about some conventions. 
+Even though besides rigging I am also an animator, I always plan my controls like I'd be rigging for someone else - that's part of my design experience legacy. That's why, we'll tackle planning the controls like we 
+would plan user experience.
 
-To start, we need to make our mesh follow our target bones first. In this case, because we have only one deformation bone, it'll be super easy and I am going to let you do it yourself! 
+While rigging, one should aim to create systems that are easy to understand and as hard to break as possible. That's why normally you'd want to layer things in a way, that is possible to fiddle with for 
+people with more technical knowledge, but not too simple to break too easy. For example - looking at [antCGI's](https://www.antcgi.com/) way of setting up projects in Maya, 
+I really love creating stuff that are *DO_NOT_TOUCH* to properly mention what parts are going to break the whole rig. 
 
-The goal is to add a *Copy Transforms* constraint to *def_body* and select *tgt_body* as the target.
+As blender outliner collections work differently than Maya ones, we achieved some kind of this grouping with *target* bones.
+That's why we are going to create a set on controls on top, so animators won't have to work withing specific system of bones and give them more quality-of-life selecting.
 
-![def_body bone constraint menu](/adamblogstuff/images/ballrig_blender_10.png "It should look like this, if you can't select it - unhide def bone collection")
+TO kick things off, our initial step is going to make deformation bones follow our target skeleton. Since we're dealing with just one deformation bone, it'll be straightforward. That's why I want you
+to do it yourself!.
 
-Now, we can look if every control works properly - we can disable all other bone collections
+The goal is to add a *Copy Transforms* constraint to *def_body* and select *tgt_body* as the target. You can use either bone properties, or go to *Pose Mode* and use <kbd>SHIFT</kbd>+<kbd>CTRL</kbd>+<kbd>C</kbd> shortcut.
+To remember it easy: you always add the constraint to the last bone you've selected.
 
-![Checking out if all target bones work properly](/adamblogstuff/gifs/ballrig_blender_11.gif "A quick look if we can do everything even if we disable other bones than target ones")
+![def_body bone constraint menu](/adamblogstuff/images/ballrig_blender/ballrig_blender_10.png "It should look like this, if you can't select it - unhide def bone collection")
 
-After a check, we are ready to create controls! Remember to get [Bone Widget](https://blenderdefender.gumroad.com/l/boneWidget) for this step.
+Now, let's check if every target bone works properly. 
 
-We'll start by looking at different controls first and we are going to start with a **root control**. While in blender armature modifier creates a joint that we can use, 
-it's always a good idea to create a control for your root bone, that will let you do some tricks like progressive walks (adding motion to root bone to mimic what game engine
-does).
+![Checking out if all target bones work properly](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_11.gif "A quick look if we can do everything even if we disable other bones than target ones")
 
-There are different shapes for root bones:
+If everything works, let's dive into setting up some cool looking controls! Grab [Bone Widget](https://blenderdefender.gumroad.com/l/boneWidget) before we get started.
 
-![Vayne Valorant Style Rig](/adamblogstuff/images/ballrig_blender_11.jpg "Vayne Rig by Matheus Lima @ artstation")
-![Azri Style Rig](/adamblogstuff/images/ballrig_blender_12.jpg "AZRI Rig by popular autor Jonathan Cooper, author of GameAnim: Video Games Explained")
-![Uncle Death Rig](/adamblogstuff/images/ballrig_blender_13.jpg "Uncle Death Rig for blender by Crabnuts (@Kani_Natto_), blender rig controls are generally lighter and less saturated")
+First off, we're going to talk about different types of controls and shapes one might associate with specific bone names. If we look at the hierarchy, at the top we have a **root**.
+If you didn't know, blender actually creates root everytime - it's actually the *Armature* itself - that's why technically you could export your skeleton without root, but 2-level root is a standard in 
+rigging these days. It gives more control and is used in some techniques, that I might touch in the future. For us the most important thing to understand is that the root bone mimics in-engine capsule.
 
-As you see, there are few popular shapes and I'm sure that you've encountered even more - but mostly they are circular (sometimes squared) with or without arrows. In Bone Widget, we have an option to add one of two (Root 1, Root 2), and for the Vayne-styled one, we are going to create "Root 1".
+Let's explore some popular shapes:
 
-To do that, first we need to create a copy bone of *root* and name it *ctrl_root* and add it to a proper bone collection. As controls are going to mimic our target bone hierarchy,
-you can leave it unattended under Armature.
+![Vayne Valorant Style Rig](/adamblogstuff/images/ballrig_blender/ballrig_blender_11.jpg "Vayne Rig by Matheus Lima @ artstation")
+![Azri Style Rig](/adamblogstuff/images/ballrig_blender/ballrig_blender_12.jpg "AZRI Rig by popular autor Jonathan Cooper, author of GameAnim: Video Games Explained")
+![Uncle Death Rig](/adamblogstuff/images/ballrig_blender/ballrig_blender_13.jpg "Uncle Death Rig for blender by Crabnuts (@Kani_Natto_), blender rig controls are generally lighter and less saturated")
 
-![Creating ctrl_root](/adamblogstuff/gifs/ballrig_blender_12.gif "We can easily leave it in hierarchy as we'll mimic target one")
+I'm sure you've come across a variety of them - circular, sometimes squared, with or without arrows. In Bone Widget, we've got the choice of two options (named Root 1 and Root 2), and for the Vayne-styled look (my preferable), let's go with
+Root 1.
 
-Next, we are going to do switch to *Pose Mode* and hit <kbd>N</kbd>, to open the sidebar. By picking *Rig Tools*, we open up **Bone Widget** and select *Root 1* as the shape. Then we can click *Create*, to create the shape.
-![Creating the shape](/adamblogstuff/gifs/ballrig_blender_13.gif)
+To start, duplicate a bone of *root* and give it the name *ctrl_root*. Don't forget to clean things up within the Bone Layers. Since our controls will mirror the target bone hierarchy, you can safely leave it hanging out
+under Armature without any worries.
 
-After done that, I am going to give you a simple exercies - your task is to copy all target bones and rename them `ctrl_*` where * is the relative name. Remember, we don't need to copy MCH one. After that, we can parent it to mimic tgt bone hierarchy.
+![Creating ctrl_root](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_12.gif "We can easily leave it in hierarchy as we'll mimic target one")
+
+Moving on, let's switch over to *Pose Mode* and hit <kbd>N</kbd>, to pop open the sidebar. Navigate to *Rig Tools* and open up **Bone Widget**. Next, Select Root 1 as the shape and click *Create* to change the bone's shape.
+
+![Creating the shape](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_13.gif)
+
+Once you've nailed that, here's a straightforward exercise for you: duplicate all the target bones and rename them as `ctrl_*`, where * represents the relative name. Skip copying the *mch* bone, because mechanisms aren't controls. 
+After this, set up the parenting to mimic the target bone hierarchy.
 
 >
->That's also where the hack I've been talking about happens - **do not copy** *tgt_body*, we'll create a control from it (so you can move it to ctrl collection),
->because otherwise the rotation will break.
+> Now, here's the trick I've been hinting at: **do not duplicate** *tgt_body*. Instead, we'll make it a control (so you can add it to ctrl collection). This step is crucial to avoid rotation glitches.
 >
 
-![Creating other ctrl bones](/adamblogstuff/gifs/ballrig_blender_14.gif "Remember to add them to collections afterwards")
+![Creating other ctrl bones](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_14.gif "Remember to add them to collections afterwards")
 
-To get more clarity, we are going to add copy transforms from *ctrl* bones to *tgt* ones, this time doing it faster, by shift clicking one after another like this
-![Adding copy transform constraints](/adamblogstuff/gifs/ballrig_blender_15.gif "If you cant click the bone, you can always select it in outliner")
+Now, we need our *target* bones to follow *controls*, so let's add copy transform from controls to targets. This time, we're going to do it faster - by <kbd>SHIFT</kbd> clicking first *ctrl*, then *tgt* bone and using the same shortcut as with 
+the deformation bone - <kbd>SHIFT</kbd>+<kbd>CTRL</kbd>+<kbd>C</kbd>.
 
-Let's now think about our other controls. We'll start by creating something for the *ctrl_cog* and *tgt_body*. A standad cog (and sometimes called hips) is some kind of a circle, and we'll go with that, we are going to create a smaller circle for the rotation. When you add a shape, you can also change it's shape by clicking *Edit* button, by doing that, I can easily re-size the controls.
+![Adding copy transform constraints](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_15.gif "If you cant click the bone, you can always select it in outliner")
 
-![Creating cog and rotation controls](/adamblogstuff/gifs/ballrig_blender_16.gif "You can notice, that I've forgotten to add tgt_body to the right collection before and it didn't let me create shape because tgt was hidden")
+Let's brainstorm about our other controls - beginning with *ctrl_cog* and *tgt_body*. A standard cog (sometimes referred to as hips) is usually a big circle around "hips" area. We'll roll with it, also creating a smaller circle for the rotation purposes.
+When you add a shape, keep in mind that you can tweak its dimensions by hitting the *Edit* button, allowing you to resize the controls.
 
-Stretching controls can vary from rig to rig, but for the case of our rig, we are going to consider is as **auxilary controls** - which means that we need to create a shape, that'll
-convey the idea behind what it does, so an animator can understand how to work with the rig. You can think of controls building kinda like designing UX for the animator - you want
-to use marker - things, that by form, shape or color will subconsciously give an idea on how to work with your designed thing (for more about markers in design, you can check
-*The Design of Everyday Things* by Donald Norman). 
+![Creating cog and rotation controls](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_16.gif "You can notice, that I've forgotten to add tgt_body to the right collection before and it didn't let me create shape because tgt was hidden")
 
-For my markers, I've chosen pyramids - they are pointy on one side, so they can lead the eye to the center of the ball naturally making animator think that if he translates
-the controller to the inside, something will happen. 
+When it comes to stretching controls, their design can vary from one rig to another. However, for our rig, let's categorize them as **auxiliary controls**. This implies that we need to create a shape that conveys the purpose
+behind its function, enabling animators to grasp how to manipulate the controller as naturally as possible. Think of control design as a form of <abbr title="User Experience">UX</abbr> of rigging techniques - incorporating markers that,
+through form, shape, or color, subtly guide users on how to interact with our rigs. If you're interested in delving deeper into the concept of markers in design, Donald Norman's *The Design of Everyday Things* is a great resource.
 
-As we've learned how to do it, you can add them yourself, at the end it should like this
+As my choice for markers, I've settled on pyramids. Their pointy side naturally guides the eye towards the ball, creating an intuitive sense that translating the controller towards the inside will produce a certain effect, probably toward the center
+of the ball. Now that we've looked into my process, feel free to add them yourself. By the end, your setup should look similar to this:
 
-![Finished controlls](/adamblogstuff/images/ballrig_blender_14.png "If you select two bones, you can add the same shape at the same time!")
+![Finished controlls](/adamblogstuff/images/ballrig_blender/ballrig_blender_14.png "If you select two bones, you can add the same shape at the same time!")
 
-As you see, my pyramids are smaller and moved up, and you can achieve that either by using *Edit*, or by the menu that appears in the down left corner
+As you can observe, my pyamids are a bit smaller and shifter outwards. You can achieve this effect either by utilizing the *Edit* option or by accessing the menu that appears in the bottom-left corner.
+Experiment with these features to fine-tune the size and positioning to match your design!
 
-![Add shape menu](/adamblogstuff/images/ballrig_blender_15.png)
+![Add shape menu](/adamblogstuff/images/ballrig_blender/ballrig_blender_15.png)
 
-When you've experience enough rigs, you start to see that colors in rigging are usually the same no matter who creates them. While I was researching the history of them, I've
-established my own control scheme that I am going to pass down for you:
+After gaining experience with enough rigs, you'll likely notice that colors in rigging tend to follow similar patterns, regardless of the author. I've developed my own control scheme, which I'm excited to share with you:
 
 - Left side controls are <span style="color:red"> RED </span>
 - Right side controls are <span style="color: #209DFF"> BLUE </span>
-- Middle side controls are <span style="color: green"> GREEN </span>
-- Auxilary controls are <span style="color:yellow"> YELLOW </span>
+- Middle side controls are <span style="color: green"> YELLOW </span>
+- Auxilary controls are <span style="color:yellow"> GREEN </span>
 
-We can change our controls colors in *Bone*>*Viewport Display*. I usually change them to a custom color theme and use the button next to it, to copy them to other controlls (the object you are copying from is LAST), let's try it by adding yellow color to rotation and stretch controllers. We're going to select *ctrl_stretch-top* and add a custom color theme under their Viewport Display tab, set them up to YELLOW, and then by selecting rest of the control hit the double arrow button.
+To change the control colors, navigate to *Bone*>*Viewport Display* in *Properties* tab. I typically opt for a custom color theme, utilizing the adjacent button to copy the color scheme to other colors (with the source object being the LAST selected).
 
-![Adding yellow colors to the controllers](/adamblogstuff/gifs/ballrig_blender_17.gif "Blender uses a specific setup where you give 3 colors -  Regular / Select / Active")
+Give it a shot by selecting ctrl_stretch-top, navigating to it's *Viewport Display* tab and adding a custom color theme with a vibrant green shade. Once set, select the remaining auxiliary controls and hit the double arrow button to match these colors.
 
-As you know how to add controls, let's wrap this up, by adding colors to the rest of controllers. You should end up with this:
+![Adding yellow colors to the controllers](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_17.gif "Blender uses a specific setup where you give 3 colors -  Regular / Select / Active")
 
-![Finished controlls rig](/adamblogstuff/images/ballrig_blender_16.png "We've almost done!")
+Since you're now adept at adding control colors, let's bring this to a close by adding them into the remaining controllers. Your final result should resemble this:
+
+![Finished controlls rig](/adamblogstuff/images/ballrig_blender/ballrig_blender_16.png "We've almost done!")
 
 ## 5. Clean up & final touches
 
-So, we've finally created everything, we could start animating right away!
+Now that we've build everything, you might be tempted to dive straight into animation.
 
-<span style="color:red" size ="16"> WRONG! </span>
+Hold on!
 
-I've told you at the start that mess is going to be a pain in the ass, so let's do final cleaning up.
+Remember, I mentioned that a mess can be a real headache later, so let's wrap up with some final cleanup.
 
 We'll start with Armature Tab - we can finally check off *Names*, *In Front* and *Axes* tab - animators don't really need them and if they need to have controls in front, they'll set them up.
 
-![Rig without names](/adamblogstuff/images/ballrig_blender_17.png "Your rig should look like this")
+![Rig without names](/adamblogstuff/images/ballrig_blender/ballrig_blender_17.png "Your rig should look like this")
+
+Before we conclude, let's address one more crucial aspect: locking certain transforms. Althoguh I'm usually in favor of providing animators with flexibility (of not locking their transforms), there
+are instances where a bit of guidance can enhance their animation experience.
+
+Let's begin with the stretch controllers. While animators can manipulate these with transform (location), rotation and scale are only going to make the controls spin/scale without any influence over the rig - 
+to streamline usage, we can lock these transforms, allowing animators to control the squashing effortlessly by simply pressing <kbd>G</kbd>.
 
 The last thing we should think about is locking up some transforms - I am generally against limiting animators choices, but there are some things we can do, to help animators
 in their work. 
 
-We'll start with stretch controllers - while animator can use Transform (location), adding rotation or scale is only going to rotate the control, without any real consequences - 
-we can lock it, so he can work with just pressing <kbd>G</kbd> to control the stretch.
-![Locking stretches](/adamblogstuff/gifs/ballrig_blender_18.gif "You can hold LMB and drag to lock more than one thing at a time")
+![Locking stretches](/adamblogstuff/gifs/ballrig_blender/ballrig_blender_18.gif "You can hold LMB and drag to lock more than one thing at a time")
 
-After that lets think about our rotation control - we don't really need the scale, so it should be locked. Rotation is the main thing so it should be open, but what about location?
-I'd say tha there are two schools when it comes to that. First school would lock it out (because the control isn't to do that), but I believe it's better to leave it open - 
-animators are going to see if they would add a keyframe to the wrong controller and fix it themselves, but sometimes they might need to detach the translation to two different bones
-and this setup will let them. Sadly, it can break our squash & stretch - I'll leave it to your call, but for my example I am not going to lock it.
+After this, let's consider the rotation control. We don't really need the scale, so it should be locked. Rotation is the primary focus, so that should remain open. What about location?
+There are two schools of thought on this. Some prefer locking it out since the control isn't meant for translation. However, as stated earlier, I believe it's better to leave it open.
+Animators can discern if they've added a keyframe to the wrong controller and rectify it themselves. Moreover, they might need to detach the translation to two different bones, and this setup
+facilitates that. Keep in mind that leaving the location unlocked might affect some squash transforms (if you really try to break the setup) - ultimately the decision is yours.
 
-When it comes to cog, it's the main control which animators are going to move the mesh with, so location and rotation should be open, as far as scale goes - I'm going to lock it to 
-avoid bugs.
+Moving onto the cog, as the main control for moving the mesh, both location and rotation should be open. However, for the scale, I suggest locking it to prevent potential bugs.
 
-And lastly the root control - of course location and rotation should be unlocked. As far as scale goes - with our setup (of making the hierarchy the same) user can easily scale the
-root to achieve bigger balls - as controls are going to scale too and the rig will work! Of course it's not always the case with rigging and sometimes you'll need to plan if a rig
-should be scalable or not and you'll have to create the controls appropriately.
-
-With that we've finally finished our rig! You can start learning animation right away with your own, self-rigged ball! 
-Good luck in your animation journey and if you decide to share your ball animation, I'll be happy to be tagged (@arahfx) to see what you created!
+Finally - the root control - certaintly, location and rotation should be unlocked. Regarding scale, with our setup of maintaining a consistent hierarchy, users can easily scale the root to achieve
+different sizes easily. Controls will scale proportionally, ensuring the rig functions seamlessly. However, scalability isn't always straightforward in rigging and careful consideration is needed
+when designing controls.
 
 ## 6. Closing Thoughts
 
-Congratulations on rigging your first, fully working **ball rig**! Now, you can start your animation journey by tackling bouncing ball exercises.
-Besides that we've now have idea on how to **plan our controls** and **name them properly**, which will be super handy later.
+Congratulations on successfully rigging your first ball! Now, you can embark on your animation journey, starting with bouncing ball exercises. Additionally, you've gained insights into planning controls and naming conventions, which will prove invaluable in your future endeavors.
 
-As you are probably as happy as me, I am not going to hold you any longer - after you master *the ball*, the animation world will be your oyster!
+If you're as excited as I am, I won't keep you any longer. After mastering the ball, the animation world is yours to explore! 
+
+Happy animating!
+
+And if you choose to share you ball animation, tag me (@arahfx) - I'd love to see your creations!

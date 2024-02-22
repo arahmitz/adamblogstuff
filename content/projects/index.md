@@ -11,7 +11,7 @@ sharingLinks = false
 
 ## Games I've been a part of
 ### Forever Skies (PC, PS5)
-![Forever Skies main logo](/adamblogstuff/images/foreverskiesmain.jpg "[Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/_) - Animation & Rigging")
+![Forever Skies main logo](/adamblogstuff/images/projects/foreverskiesmain.jpg "[Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/_) - Animation & Rigging")
 Forever Skies is the first project I am working on as an animator/rigger. I've been working mostly on third and first person animations, rigging and skinning of humanoids, non-humanoids
 and devices for Unreal Engine 4 and I've been helping in implementation of the animation system within the project.
 

@@ -2,7 +2,7 @@
 title = 'Theory behind building a squash & stretch rig'
 summary = 'Overlook of squash & stretch mechanism building with with different rigging approaches'
 languageCode = 'en-us'
-date = 2024-02-15T18:20:18+01:00
+date = 2024-02-21T18:20:18+01:00
 draft = false
 tags = ['rigging', 'beginner', 'theory']
 showRecent = true
@@ -10,7 +10,7 @@ series = ["Rigging for beginner animation"]
 series_order = 1
 +++
 
-# Our first rig - a squash & stretch ball
+#  Our first rig - a squash & stretch ball
 
 ## 0. Foreword
 
@@ -183,4 +183,6 @@ We explored the concept of **squash and stretch**, delving into its significance
 Additionally, we laid down the foundational theory for building a functional ball rig.
 
 Armed with this knowledge, the upcoming articles will take a hands-on approach, applying the knowledge to create a working ball rig that you'll be able to animate yourself. If you have any further
-questions of need assistance, dont hesitate to ask. Happy rigging!
+questions of need assistance, dont hesitate to ask. 
+
+Happy rigging!
