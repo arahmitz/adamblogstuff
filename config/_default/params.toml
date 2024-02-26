@@ -60,7 +60,7 @@ disableTextInHeader = false
   showBreadcrumbs = false
   showDraftLabel = true
   showEdit = false
-  # editURL = "https://github.com/arahmitz/adamblogstuff/"
+  editURL = "https://github.com/arahmitz/adamblogstuff/"
   editAppendPath = true
   seriesOpened = true
   showHeadingAnchors = true
@@ -102,7 +102,7 @@ disableTextInHeader = false
 [taxonomy]
   showTermCount = true
   showHero = true
-  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = true
   showViews = false
   showLikes = false
