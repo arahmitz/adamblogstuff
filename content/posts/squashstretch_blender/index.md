@@ -57,7 +57,7 @@ Once you've selected the armature, switch to *Edit Mode* by pressing <kbd>CTRL</
 > To streamline the workflow, head over to *Preferences* > *Keymap* and enable "Tab for Pie Menu" option. This modification allows user to switch modes by pressing TAB key. Moving forward, I'll be using it.
 >
 
-![Tab for Pie Menu](/adamblogstuff/images/ballrig_blender/ballrig_blender_3.png    "Mode Select Pie Menu")
+![Tab for Pie Menu](/adamblogstuff/images/ballrig_blender/ballrig_blender_3.png "Mode Select Pie Menu")
 
 While in *Edit Mode*, select the bone and rename it to "root" by pressing <kbd>F2</kbd> to enable fast renaming, confirm with <kbd>ENTER</kbd>.
 As mentioned in the past article, the root is always placed in world origin, and that's exactly where we will place ours.
