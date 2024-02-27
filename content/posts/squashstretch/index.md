@@ -6,8 +6,8 @@ date = 2024-02-21T18:20:18+01:00
 draft = false
 tags = ['rigging', 'beginner', 'theory']
 showRecent = true
-series = ["Rigging for beginner animators"]
-series_order = 1
+#series = ["Rigging for beginner animators"]
+#series_order = 1
 +++
 
 #  Our first rig - a squash & stretch ball
@@ -62,7 +62,7 @@ Understanding this principle is a cornerstone for today's animators, whether the
 ### The mathematical explanation
 
 Let's start by eating the frog. In mathematical terms, we'll consider a sphere with dimensions of *x*, *y* and *z* and a volume *V<sub>1</sub>*. We will then manipulate it by
-multiplying by *n* in one direction and by {{<katex>}}\\(\frac{1}{\sqrt{n}}\\) in the other directions. This manipulation aims to achieve a new volume *V<sub>2</sub>* that emains equal to *V<sub>1</sub>*.
+multiplying by *n* in one direction and by {{<katex>}}\\(\frac{1}{\sqrt{n}}\\) in the other directions. This manipulation aims to achieve a new volume *V<sub>2</sub>* that remains equal to *V<sub>1</sub>*.
 
 >
 >{{< katex >}}
