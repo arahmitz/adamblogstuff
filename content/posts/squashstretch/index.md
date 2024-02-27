@@ -6,8 +6,8 @@ date = 2024-02-21T18:20:18+01:00
 draft = false
 tags = ['rigging', 'beginner', 'theory']
 showRecent = true
-#series = ["Rigging for beginner animators"]
-#series_order = 1
+series = ["Rigging for beginner animators"]
+series_order = 1
 +++
 
 #  Our first rig - a squash & stretch ball
