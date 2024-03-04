@@ -20,7 +20,6 @@ buildFuture = false
 
 [taxonomies]
   tag = "tags"
-  category = "categories"
   author = "authors"
   series = "series"
 
@@ -38,10 +37,6 @@ buildFuture = false
 
     [[related.indices]]
         name = "tags"
-        weight = 100
-
-    [[related.indices]]
-        name = "categories"
         weight = 100
 
     [[related.indices]]
