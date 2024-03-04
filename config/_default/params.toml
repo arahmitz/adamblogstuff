@@ -16,15 +16,15 @@ enableCodeCopy = true
 # mainSections = ["section1", "section2"]
 # robots = ""
 
-disableImageOptimization = false
+disableImageOptimization = true
 disableTextInHeader = false
 
 # defaultBackgroundImage = "IMAGE.jpg" # used as default for background images 
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 
-#highlightCurrentMenuArea = true
-# smartTOC = true
-# smartTOCHideUnfocusedChildren = true
+highlightCurrentMenuArea = true
+smartTOC = true
+smartTOCHideUnfocusedChildren = false
 
 [header]
   layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-fill-blur
@@ -37,15 +37,15 @@ disableTextInHeader = false
   showScrollToTop = true
 
 [homepage]
-  layout = "background" # valid options: page, profile, hero, card, background, custom
+  layout = "background"
   homepageImage = "/img/homepage.jpg" # used in: hero, and card
   showRecent = true
-  showRecentItems = 6
+  showRecentItems = 10
   showMoreLink = false
   showMoreLinkDest = "/posts"
   cardView = true
   cardViewScreenWidth = false
-  layoutBackgroundBlur = true # only used when layout equals background
+  layoutBackgroundBlur = true 
 
 [article]
   showDate = true
