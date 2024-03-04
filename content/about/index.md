@@ -16,7 +16,7 @@ I am an Animator / Rigger, based in Wrocław, Poland.
 
 Currently, I am working at [Far From Home](https://www.farfromhomegames.com/) where I am animating and rigging [Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/)!
 
-Welcome to my blog, where I explore the art of **rigging**, **gameplay animation** and **technical animation*. This blog serves as a blend of insights into rigging techniques, animation principles, scripting, and their application in the dynamic world of video games.
+Welcome to my blog, where I explore the art of **rigging**, **gameplay animation** and **technical animation**. This blog serves as a blend of insights into rigging techniques, animation principles, scripting, and their application in the dynamic world of video games.
 
 Beyond discussion, my goal is to offer valuable tutorials and resources to aid you on your (and mine) journey through everything there is related to animation for **video games**. I'll also try sprinkle in some thought-provoking book reviews and reflections on the broader animation industry. I believe in the power of animation as the ultimate storytelling medium in the entertainment industry. I'm excited to share my experiences and perspectives on every facet of this captivating medium.
 
