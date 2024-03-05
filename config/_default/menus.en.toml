@@ -63,13 +63,13 @@
     weight = "30"
 
 [[main]]
-    name = "About"
-    pageRef = "about"
+    name = "Portfolio"
+    pageRef = "portfolio"
     weight = "40"
 
 [[main]]
-    name = "Portfolio"
-    pageRef = "portfolio"
+    name = "About"
+    pageRef = "about"
     weight = "50"
 
 
