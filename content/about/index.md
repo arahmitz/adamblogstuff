@@ -1,8 +1,8 @@
 +++
 title = 'About'
-summary = 'T'
+summary = ''
 languageCode = 'en-us'
-date = 2024-02-11T15:20:18+01:00
+date = 2024-03-01T18:30:00+01:00
 draft = false
 showAuthor = true
 showDate = false
@@ -16,9 +16,9 @@ I am an Animator / Rigger, based in Wrocław, Poland.
 
 Currently, I am working at [Far From Home](https://www.farfromhomegames.com/) where I am animating and rigging [Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/)!
 
-Welcome to my blog, where I explore the art of **rigging**, **gameplay animation** and **technical animation**. This blog serves as a blend of insights into rigging techniques, animation principles, scripting, and their application in the dynamic world of video games.
+Welcome to my blog, where I explore the art of **rigging**, **gameplay animation** and **technical animation**. This blog serves as a blend of insights into rigging techniques, animation insights, scripting, pipelines, workflows and their application in the dynamic world of video games.
 
-Beyond discussion, my goal is to offer valuable tutorials and resources to aid you on your (and mine) journey through everything there is related to animation for **video games**. I'll also try sprinkle in some thought-provoking book reviews and reflections on the broader animation industry. I believe in the power of animation as the ultimate storytelling medium in the entertainment industry. I'm excited to share my experiences and perspectives on every facet of this captivating medium.
+Beyond discussion, my goal is to offer valuable tutorials and resources to aid you on your (and mine) journey through everything there is related to animation for **video games**. I'll also try to sprinkle in some thought-provoking book reviews and reflections on the broader animation industry. I believe in the power of animation as the ultimate storytelling medium in the entertainment industry. I'm excited to share my experiences and perspectives on every facet of this captivating medium.
 
 My unique background encompasses both art (Graphic Design) and engineering (Computer Science), a blend that has propelled me into the specialized field of technical animation. 
 Outside of my professional pursuits, I'm a reportage photographer, crafting digital photography books, a cinematography freak and an avid player of both digital and analog RPGs.
