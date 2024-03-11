@@ -24,6 +24,6 @@ My unique background encompasses both art (Graphic Design) and engineering (Comp
 Outside of my professional pursuits, I'm a reportage photographer, crafting digital photography books, a cinematography freak and an avid player of both digital and analog RPGs.
 I hope you'll enjoy your time here!
 
-If you have any questions or just want to chat - I am open to DMs at both my {{< icon "x-twitter" >}}[@arahfx](https://twitter.com/arahfx) and {{< icon "linkedin" >}}[Adam Madej](https://www.linkedin.com/in/arahfx/)!
+If you have any questions or just want to chat - I am open to DMs at both my {{< icon "x-twitter" >}} [@arahfx](https://twitter.com/arahfx) and {{< icon "linkedin" >}} [Adam Madej](https://www.linkedin.com/in/arahfx/)!
 
-For business inquires: {{< icon "email" >}} <a href="mailto:adammadejfx@gmail.com">adammadejfx@gmail.com</a>
+For business inquires: {{< icon "email" >}} <a href="mailto:adammadejfx@gmail.com"> adammadejfx@gmail.com</a>.
