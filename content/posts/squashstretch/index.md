@@ -30,14 +30,14 @@ If we take a cue at Richard William's *The Animator's Survival Kit*, the first c
 >
 > I'll never forget the image of this big Norwegian American sitting in the golden twilight, extending his long arms and spatula hands saying... «The bouncing ball says it all» 
 > 
-> --<cite>R. Williams "The Animators Survival Kit"</cite>
+> --<cite> R. Williams "The Animators Survival Kit" </cite>
 >
 
 That's why I want my first post to be dedicated to **building a proper ball rig** - a foundation upon one can explore basics of spacing, timing and squash & stretch principles. Additionally,
 we'll peek under the hood of rigging mesh that can **preserve it's volume** while being scaled.
 
 Of course, in 3D animation there are two main groups of users: Autodesk Maya and blender.
-I'll try to explain the ideas in a software-agnostic manner. However, there will be chapters dedicated to one software, but I'm going to write every tutorial for both sofwares - ensuring noonoe feels left out.
+I'll try to explain the ideas in a software-agnostic manner. However, there will be chapters dedicated to one software, but I'm going to write every tutorial for both sofwares - ensuring noone feels left out.
 
 I'll be using some scripts along the way, presented like this:
 
@@ -126,7 +126,7 @@ Squash & Stretch isn't something you'll often encounter in videogames, at least 
 
 Unreal Engine, for instance, doesn't export scale of deformation bones at all!
 This might prompt one simple question - *why bother?*. The reason behind this decision is quite substantial. Achieving a good looking, volume-preserving
-squash & stretch of *Skeletal Mesh* entails calculating skinning deformations every frame, making it one of the most resource-hungry tasks for player's CPU. While enabling bone scaling during mesh inport is an option to
+squash & stretch of *Skeletal Mesh* entails calculating skinning deformations every frame, making it one of the most resource-hungry tasks for player's CPU. While enabling bone scaling during mesh import is an option to
 preserve these effects, it's typically not the default setting due to performance problems. In many cases, this decision alligns with overall optimization strategies - it's going to be used only when
 the game really depends on it.
 
