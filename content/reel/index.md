@@ -1,5 +1,5 @@
 +++
-title = "My DemoReel"
+title = "Reel"
 languageCode = 'en-us'
 draft = false
 showAuthor = false

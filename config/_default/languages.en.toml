@@ -10,13 +10,13 @@ title = "Home"
   dateFormat = "2 January 2006"
   logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
-  # description = "My awesome website"
+  description = "Adam Madej - Animator"
   copyright = "Adam Madej © 2024"
 
 [author]
 name = "Adam Madej"
 image = "img/myface2.png"
-headline = "Complicating animation process with technicalities" # homepage headline
+headline = "(Un)complicating animation process with tech stuff" # homepage headline
 bio = "Gameplay animator nerding out about (technical) animation related topics." # in-article headline
 links = [
 { linkedin = "https://www.linkedin.com/in/arahfx/" },
