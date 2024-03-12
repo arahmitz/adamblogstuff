@@ -9,17 +9,12 @@ showZenmode = false
 sharingLinks = false
 +++
 
-## Games I've been a part of
 ### Forever Skies (PC, PS5)
 ![Forever Skies main logo](/adamblogstuff/images/projects/foreverskiesmain.jpg "[Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/_) - Animation & Rigging")
-Forever Skies is the first project I am working on as an animator/rigger. I've been working mostly on third and first person animations, rigging and skinning of humanoids, non-humanoids
-and devices for Unreal Engine 4 and I've been helping in implementation of the animation system within the project.
 
----
+Forever Skies is a first-person post-apocalyptic survival game with co-operation option. During the game players fill the role of a scientist sent back to destroyed Earth in order to find a cure for a mysterious disease. 
+To achieve success, players have to avoid dangers, scavenge the Earth for resources, craft tools and build an Airship, allowing them to travel across the Skies. 
 
-## My own projects
-###  Rigs for Animation Students in blender & Maya
-
-I've been working on bringing basic animation rigs like balls, pendulums, tails and walker animation rigs to help students with both learning how to rig these.
-On many Polish gamedev networking events I've noticed a lack of good quality basic rigs for blender and that's why I wanted to give back to the community by making
-something that might work software independently (of course it's not possible by doing it once, so I just rig & create tutorials for both softwares).
+I am responsible for animation and rigging within the project, mostly working on adapting first person animation into
+third person perspective (for co-op purposes), rigging and animating tools, strutures and enemies. Besides that
+I am working within sequencer building cutscenes and work on pipeline-related stuff.
