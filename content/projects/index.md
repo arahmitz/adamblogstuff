@@ -10,7 +10,7 @@ sharingLinks = false
 +++
 
 ### Forever Skies (PC, PS5)
-![Forever Skies main logo](/adamblogstuff/images/projects/foreverskiesmain.jpg "[Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/_) - Animation & Rigging")
+![Forever Skies main logo](/images/projects/foreverskiesmain.jpg "[Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/_) - Animation & Rigging")
 
 Forever Skies is a first-person post-apocalyptic survival game with co-operation option. During the game players fill the role of a scientist sent back to destroyed Earth in order to find a cure for a mysterious disease. 
 To achieve success, players have to avoid dangers, scavenge the Earth for resources, craft tools and build an Airship, allowing them to travel across the Skies. 
