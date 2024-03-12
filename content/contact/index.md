@@ -20,7 +20,7 @@ the craft - I'd love to hear from you!
 
 Feel free to reach out by dropping me a message using the form below.
 
-<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mwkgqrgy" method="post">
   <fieldset id="fs-frm-inputs">
     <label for="full-name">Name</label>
     <input type="text" name="name" id="full-name" placeholder="Name (required)" required="">
