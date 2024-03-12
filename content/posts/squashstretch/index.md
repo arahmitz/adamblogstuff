@@ -79,13 +79,13 @@ When it comes to rigging, achieving a volume preservation effect can be approach
 
 Those of you who transition to animation from modelling, the first technique that may come to mind is the **Lattice Deformer**.
 
-![Image of Lattice Deformer](/adamblogstuff/images/balltheory/ballrig_theory_1.png "Lattice around the cube object in Object Mode - from blender official docs")
+![Image of Lattice Deformer](/images/balltheory/ballrig_theory_1.png "Lattice around the cube object in Object Mode - from blender official docs")
 
 Lattice is a deformer present both in blender and Maya, commonly used for applying deformation. However, for our purposes
 where a deformation cage can be constrained and controlled, it might not be the most versatile method for creating mesh deformations. Despite encountering numerous YouTube tutorials utilizing such approach,
 I won't be delving into this method in the upcoming ball rig tutorials.
 
-![Image of Squash Deformer](/adamblogstuff/images/balltheory/ballrig_theoy_2.png "Squash deformer results - from Maya docs")
+![Image of Squash Deformer](/images/balltheory/ballrig_theoy_2.png "Squash deformer results - from Maya docs")
 
 Second method, more aligned with the rigging tools themselves, involves using Stretch To Constraint (in blender)/ Squash Deformer (in Maya). These are off-the-shelf
 features that can significantly simplify construction of said mechanism in rigging. However, they might have limitations in more advanced setups. 
@@ -134,7 +134,7 @@ Given the heavy optimization implications, there'are other techniques that might
 to arms and legs. Let's consider jumping - by translating parts of skeleton one can achieve a stronger, more dynamic pose, for example by leaving the legs for a few frames on the ground longer only to
 squash them together (to their original position) nearing the apex of the jump loop. Such technique of translation can be observed in World of Warcraft's Pandaren Jump.
 
-![WoW's Pandaren Jump Loop Animation](/adamblogstuff/images/balltheory/ballrig_theory_1.gif "Pandaren jump loop probably my favourite WoW animation")
+![WoW's Pandaren Jump Loop Animation](/images/balltheory/ballrig_theory_1.gif "Pandaren jump loop probably my favourite WoW animation")
 
 These are just a few examples of the different tricks animators employ to create the *illusion of life*, even though it may not involve the *real* calculated volume-preserving squash & stretch. After all,
 the ultimate goal is to sell the viewer the best looking, lively performance withing the constraints of game performance.
@@ -163,12 +163,12 @@ For Maya, I'm are going to use [IDR ControllerTools](https://indyrigger.gumroad.
 
 Every rig, at the top of it's hierarchy has to have a **root**. It's purpose is to hold information about the default space of the rig. It's often represented by a variation of circles with arrows on the ground.
 
-![Possible shapes of root controllerr in Bone Widget](/adamblogstuff/images/balltheory/ballrig_theory_3.png "Possible shapes of root bones using Bone Widget")
+![Possible shapes of root controllerr in Bone Widget](/images/balltheory/ballrig_theory_3.png "Possible shapes of root bones using Bone Widget")
 
 The next in hierarchy, overarching rest of the controllers is a bone called **cog** - or sometimes stylized as **c.o.g** (abbreviation for center of gravity). These might get a lot different shapes depending of the center of gravity shape. 
 The most popular ones are circles and saddles, for the purpose of ball rig, we'll use a big **circle**.
 
-![Saddle shape for cog from Bone Widger](/adamblogstuff/images/balltheory/ballrig_theory_4.png "A Saddle-like shape for cog from Bone Widget")
+![Saddle shape for cog from Bone Widger](/images/balltheory/ballrig_theory_4.png "A Saddle-like shape for cog from Bone Widget")
 
 The hierarchy of the rest of controllers might differ depending on circumstances. In case of our ball rig, we'll have a few controllers following a cog. First of them will be a **rotor** - our second level controller.
 In this case rotor will be working the same as the cog - it'll let animators translate or rotate a mesh (unless we lock it) and it's main purpose will be to split rotation and translation to avoid
