@@ -33,6 +33,7 @@ form textarea,
   background-color: rgba(255, 255, 255, 0.9);
   padding: 0.75em 1rem;
   margin-bottom: 1.5rem;
+  color: black;
 }
 form input:focus,
 form select:focus,
@@ -60,6 +61,7 @@ form [type="reset"] {
   background-color: #205075;
   padding: 8px 16px;
   border-radius: 4px;
+  color: white;
 }
 form [type="button"]:focus,
 form [type="submit"]:focus,
