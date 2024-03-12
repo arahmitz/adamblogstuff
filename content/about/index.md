@@ -26,4 +26,4 @@ I hope you'll enjoy your time here!
 
 If you have any questions or just want to chat - I am open to DMs at both my {{< icon "x-twitter" >}} [@arahfx](https://twitter.com/arahfx) and {{< icon "linkedin" >}} [Adam Madej](https://www.linkedin.com/in/arahfx/)!
 
-For business inquires: {{< icon "email" >}} <a href="mailto:adammadejfx@gmail.com"> adammadejfx@gmail.com</a>
+For business inquires, please use the [contact form](/adamblogstuff/contact).
