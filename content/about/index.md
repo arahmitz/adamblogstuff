@@ -9,6 +9,7 @@ showDate = false
 showReadingTime = false
 showZenmode = false
 sharingLinks = false
+heroStyle = "background"
 +++
 
 # Hey! I'm Adam. 

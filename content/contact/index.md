@@ -10,9 +10,10 @@ showReadingTime = false
 showZenmode = false
 sharingLinks = false
 showTableOfContents = false
+heroStyle = "background"
 +++
 
-## :video_game: Let's Create Something Amazing Together! :rocket:
+## Let's Create Something Amazing Together!
 
 I'm always thrilled to connect with other artists, game developers and animation enthusiasts. Whether you have an
 exciting project in mind, want to discuss the latest trends, games, movies or books or just share your love for

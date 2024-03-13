@@ -7,6 +7,7 @@ showDate = false
 showReadingTime = false
 showZenmode = false
 sharingLinks = false
+heroStyle = "background"
 +++
 
 ### Forever Skies (PC, PS5)
