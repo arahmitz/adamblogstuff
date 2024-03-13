@@ -10,12 +10,14 @@ sharingLinks = false
 heroStyle = "background"
 +++
 
-### Forever Skies (PC, PS5)
+## Forever Skies (PC, PS5)
 ![Forever Skies main logo](/images/projects/foreverskiesmain.jpg "[Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/_) - Animation & Rigging")
 
-Forever Skies is a first-person post-apocalyptic survival game with co-operation option. During the game players fill the role of a scientist sent back to destroyed Earth in order to find a cure for a mysterious disease. 
-To achieve success, players have to avoid dangers, scavenge the Earth for resources, craft tools and build an Airship, allowing them to travel across the Skies. 
+*Forever Skies* is a first-person post-apocalyptic survival game. Return to Earth, ravaged by an ecological disaster. Fly, upgrade and customize your mobile high-tech airship base. Scavenge resources to survive, face dangers on the surface and hunt for viral pathogens to cure a mysterious illness.
 
-I am responsible for animation and rigging within the project, mostly working on adapting first person animation into
-third person perspective (for co-op purposes), rigging and animating tools, strutures and enemies. Besides that
-I am working within sequencer building cutscenes and work on pipeline-related stuff.
+In *Forever Skies*, I am responsible for animation and rigging within the project. I am focused on the blender-related side of the pipeline where I rig bipeds, non-bipeds, weapons and structures. Additionally I am
+responsible for many animations within the project - I've been mostly adapting already-done FPP animations into TPP (for co-op purposes), but I've also done my share of FPP animation, weapon, structure and non-humanoid sequences both in
+blender and using UE4's Sequencer. 
+
+Beyond the creative aspects, I actively contribute to integrating animations into Unreal Engine 4, ensuring a seamless and immersive gaming experience. I strive to create a better animation pipeline, actively using python to address and solve
+various technical challanges, thus optimizing our workflow within the team.
