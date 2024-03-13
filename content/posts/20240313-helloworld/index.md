@@ -1,6 +1,6 @@
 +++
 title = 'Hello world!'
-summary = 'Overlook of squash & stretch mechanism building with with different rigging approaches'
+summary = 'A launch/welcome post'
 languageCode = 'en-us'
 date = 2024-03-13T22:23:18+01:00
 draft = false
