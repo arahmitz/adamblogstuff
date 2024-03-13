@@ -58,7 +58,7 @@ form [type="reset"] {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  background-color: #205075;
+  background-color: #fb923c;
   padding: 8px 16px;
   border-radius: 4px;
   color: white;
@@ -72,3 +72,4 @@ form [type="reset"]:focus {
 form select {
   text-transform: none;
 }
+
