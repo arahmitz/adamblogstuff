@@ -2,7 +2,7 @@
 title = 'Theory behind building a squash & stretch rig'
 summary = 'Overlook of squash & stretch mechanism building with with different rigging approaches'
 languageCode = 'en-us'
-date = 2024-02-21T18:20:18+01:00
+date = 2024-03-13T22:40:15+01:00
 draft = false
 tags = ['rigging', 'beginner', 'theory']
 showRecent = true
