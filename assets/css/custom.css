@@ -73,3 +73,11 @@ form select {
   text-transform: none;
 }
 
+@font-face {
+  font-family: Inter;
+  src: url('/fonts/Inter-Regular.ttf');
+}
+
+html {
+  font-family: Inter;
+}
