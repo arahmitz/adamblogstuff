@@ -54,7 +54,7 @@ form [type="button"],
 form [type="submit"],
 form [type="reset"] {
   width: auto;
-  cursor: pointer;
+  cursor: poKarla;
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
@@ -75,10 +75,10 @@ form select {
 
 /* Overriding font */
 @font-face {
-  font-family: Inter;
-  src: url('/fonts/Inter-Regular.ttf');
+  font-family: Karla;
+  src: url('/fonts/Karla-Regular.ttf');
 }
 
 html {
-  font-family: Inter;
+  font-family: Karla;
 }
