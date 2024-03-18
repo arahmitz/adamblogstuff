@@ -2,7 +2,7 @@
 title = 'Squash & Stretch Ball in blender'
 summary = 'A step by step guide to build your first ball rig in blender'
 languageCode = 'en-us'
-date = 2024-03-13T22:40:15+01:00
+date = 2024-03-17T19:40:15+01:00
 draft = false
 tags = ['rigging', 'beginner', 'blender']
 showRecent = true
