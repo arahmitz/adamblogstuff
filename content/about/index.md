@@ -10,6 +10,7 @@ showReadingTime = false
 showZenmode = false
 sharingLinks = false
 heroStyle = "background"
+showTableOfContents = false
 +++
 
 # Hey! I'm Adam. 
