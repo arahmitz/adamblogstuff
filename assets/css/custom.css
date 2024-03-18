@@ -75,10 +75,10 @@ form select {
 
 /* Overriding font */
 @font-face {
-  font-family: Karla;
-  src: url('/fonts/Karla-Regular.ttf');
+  font-family: Raleway;
+  src: url('/fonts/Raleway-Regular.ttf');
 }
 
 html {
-  font-family: Karla;
+  font-family: Raleway;
 }
