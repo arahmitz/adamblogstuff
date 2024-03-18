@@ -16,7 +16,7 @@ title = "Home"
 [author]
 name = "Adam Madej"
 image = "img/myface2.png"
-headline = "(Un)complicating animation process with tech stuff" # homepage headline
+headline = "(Un)complicating animation process with technical knowledge" # homepage headline
 bio = "Gameplay animator nerding out about (technical) animation related topics." # in-article headline
 links = [
 { linkedin = "https://www.linkedin.com/in/arahfx/" },
