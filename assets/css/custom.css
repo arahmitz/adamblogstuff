@@ -54,7 +54,7 @@ form [type="button"],
 form [type="submit"],
 form [type="reset"] {
   width: auto;
-  cursor: poKarla;
+  cursor: pointer;
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
