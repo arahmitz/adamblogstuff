@@ -75,10 +75,10 @@ form select {
 
 /* Overriding font */
 @font-face {
-  font-family: Ruda;
-  src: url('/fonts/Ruda-Regular.ttf');
+  font-family: ChakraPetch;
+  src: url('/fonts/ChakraPetch-Regular.ttf');
 }
 
 html {
-  font-family: Ruda;
+  font-family: ChakraPetch;
 }
