@@ -6,8 +6,8 @@ date = 2024-03-17T19:40:15+01:00
 draft = false
 tags = ['rigging', 'beginner', 'blender']
 showRecent = true
-# series = ["Volume preserving squash & stretch ball rig in blender"]
-# series_order = 1
+series = ["Squash & Stretch ball rig"]
+series_order = 2
 +++
 # Rigging the squash & stretch ball in blender
 
