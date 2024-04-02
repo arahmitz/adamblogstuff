@@ -6,7 +6,7 @@ date = 2024-03-16T21:02:06+01:00
 draft = false
 tags = ['rigging', 'beginner', 'theory']
 showRecent = true
-series = ["Squash & Stretch ball rig"]
+series = ["Squash & Stretch Ball Rig"]
 series_order = 1
 +++
 
@@ -183,6 +183,7 @@ Additionally, we laid down the foundational theory for building a functional bal
 Armed with this knowledge, the upcoming articles will take a hands-on approach, applying the knowledge to create a working ball rig that you'll be able to animate yourself. If you have any further
 questions of need assistance, dont hesitate to ask. 
 
+If you want to put the new knowledge to use - we'll going to build the ball rig in blender in next article.
+
 Happy rigging!
 
-In this tutorial we'll be using these ideas to create a ball rig - [check it out](/posts/20240317-squashstretch_blender)!
