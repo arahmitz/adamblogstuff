@@ -6,7 +6,7 @@ date = 2024-03-16T21:02:06+01:00
 draft = false
 tags = ['rigging', 'beginner', 'theory']
 showRecent = true
-series = ["Rigging for starting animators"]
+series = ["Volume preserving squash & stretch ball rig in blender"]
 series_order = 1
 +++
 
@@ -43,7 +43,7 @@ I'll be using some scripts along the way, presented like this:
 
 [Example](https://www.example.com) - so you can install it yourself and follow along.
 
-Furthermore, I'll include rigs created in the series - fully functional and suitable for use as foundational animation tutorials. They will be provided **totally free of charge** 
+Furthermore, I'll include rigs created in the tutorials - fully functional and suitable for use as foundational animation tutorials. They will be provided **totally free of charge** 
 and **licensed under [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html#license-text)**. 
 
 If you're interested in delving into the technical aspects of animation, let's get started!
@@ -145,7 +145,6 @@ the ultimate goal is to sell the viewer the best looking, lively performance wit
 
 For this example I'll be using a mesh with a checker texture, that you can download:
 - For blender [here](https://github.com/arahmitz/am_blender_ball_tutorial)
-- For Maya [here](https://www.example.com) [tutorial W.I.P]
 
 ### Skeleton
 
@@ -158,7 +157,6 @@ Considering what animator might need to control in a ball rig, we might think of
 
 {{< alert >}}
 For blender I'm going to use [Bone Widget](https://blenderdefender.gumroad.com/l/boneWidget) to create control shapes.  
-For Maya, I'm are going to use [IDR ControllerTools](https://indyrigger.gumroad.com/l/kybSJ?layout=profile) to do the same.
 {{< /alert >}}
 
 Every rig, at the top of it's hierarchy has to have a **root**. It's purpose is to hold information about the default space of the rig. It's often represented by a variation of circles with arrows on the ground.
