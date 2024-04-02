@@ -184,3 +184,5 @@ Armed with this knowledge, the upcoming articles will take a hands-on approach, 
 questions of need assistance, dont hesitate to ask. 
 
 Happy rigging!
+
+In this tutorial we'll be using these ideas to create a ball rig - [check it out](/posts/20240317-squashstretch_blender)!
