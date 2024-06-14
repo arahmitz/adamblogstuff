@@ -6,8 +6,8 @@ lite-vimeo {
     background-position: center center;
     background-size: cover;
     cursor: pointer;
-    max-width: 1080px;
-    width: 100%;
+    max-width: 720px;
+    width: flex;
 }
 
 /* gradient */
