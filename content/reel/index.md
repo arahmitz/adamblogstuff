@@ -12,3 +12,5 @@ heroStyle = "background"
 +++
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/772649237?h=30b28406a5" width="800" height="600"frameborder="0"    allowfullscreen></iframe>
 
+<!-- Include the custom element script -->
+<script type="module" src="https://cdn.jsdelivr.net/npm/lite-vimeo-embed/+esm"></script>
