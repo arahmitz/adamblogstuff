@@ -82,3 +82,13 @@ form select {
 html {
   font-family: ChakraPetch;
 }
+
+.litevideo{
+  min-width: 600px;
+}
+
+@media screen and (max-width: 720px) {
+  .litevideo{
+    min-width: 400px;
+  }
+}
