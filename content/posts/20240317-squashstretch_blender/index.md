@@ -304,8 +304,8 @@ Experiment with these features to fine-tune the size and positioning to match yo
 
 After gaining experience with enough rigs, you'll likely notice that colors in rigging tend to follow similar patterns, regardless of the author. I've developed my own control scheme, which I'm excited to share with you:
 
-- Left side controls are <span style="color:red"> RED </span>
-- Right side controls are <span style="color: #209DFF"> BLUE </span>
+- Left side controls are <span style="color:209DFF"> BLUE </span>
+- Right side controls are <span style="color: #red"> RED </span>
 - Middle side controls are <span style="color: yellow"> YELLOW </span>
 - Auxilary controls are <span style="color:green"> GREEN </span>
 
