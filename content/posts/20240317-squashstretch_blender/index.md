@@ -306,8 +306,8 @@ After gaining experience with enough rigs, you'll likely notice that colors in r
 
 - Left side controls are <span style="color:red"> RED </span>
 - Right side controls are <span style="color: #209DFF"> BLUE </span>
-- Middle side controls are <span style="color: green"> YELLOW </span>
-- Auxilary controls are <span style="color:yellow"> GREEN </span>
+- Middle side controls are <span style="color: yellow"> YELLOW </span>
+- Auxilary controls are <span style="color:green"> GREEN </span>
 
 To change the control colors, navigate to *Bone*>*Viewport Display* in *Properties* tab. I typically opt for a custom color theme, utilizing the adjacent button to copy the color scheme to other colors (with the source object being the LAST selected).
 
