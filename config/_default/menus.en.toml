@@ -74,15 +74,14 @@
     weight = "40"
 
 [[main]]
-    name = "Contact"
-    pageRef = "contact"
+    name = "Talks"
+    pageRef = "Talks"
     weight = "50"
 
-#[[main]]
-#    name = "Talks"
-#    pageRef = "Talks"
-#    weight = "60"
-
+[[main]]
+    name = "Contact"
+    pageRef = "contact"
+    weight = "60"
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
