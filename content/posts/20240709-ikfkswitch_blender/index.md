@@ -49,7 +49,7 @@ providing stability and precise control over the limb's position.
 
 ### Preparation
 
-First, download the [project files](https://github.com/arahmitz/am_ikfkswitch_tutorial). 
+First, if you havem't already, download the [project files](https://github.com/arahmitz/am_ikfkswitch_tutorial). 
 
 {{< alert >}}
 The files are prepared for version 4.0, but should be backwards compatibile with older blender versions.
