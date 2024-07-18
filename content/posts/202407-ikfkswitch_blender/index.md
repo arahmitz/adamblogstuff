@@ -4,7 +4,7 @@ summary = 'A tutorial on creating IKFK switches in blender without addons or scr
 languageCode = 'en-us'
 date = 2024-07-17T22:15:00+02:00
 draft = false
-tags = ['notes', 'blender', 'tutorial', 'ikfk', 'rigging']
+tags = ['technical', 'blender', 'tutorial', 'ikfk', 'rigging']
 showRecent = true
 showTableOfContents = true
 +++
