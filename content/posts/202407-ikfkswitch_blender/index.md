@@ -145,6 +145,7 @@ That's all! Now we need to test if everything works properly. Click on *Root* bo
 If it's there and you can move it from 0 to 1, pose both IK and FK bones and try switching between them. If everything was done correctly, the skinned arm should move between the poses you've created!
 ![Checking if the property works](/gifs/ikfkswitcher/ikfkswitch_11.gif "Always check if systems you've created work properly")
 
+
 ## 3. Closing Thoughts
 
 Congratulations on creating your own IKFK switch in blender! This setup allows to seamlessly switch (and keyframe) between FK and IK, one of the most crucial rig features. Remember to experiment with different
