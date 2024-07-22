@@ -145,6 +145,32 @@ That's all! Now we need to test if everything works properly. Click on *Root* bo
 If it's there and you can move it from 0 to 1, pose both IK and FK bones and try switching between them. If everything was done correctly, the skinned arm should move between the poses you've created!
 ![Checking if the property works](/gifs/ikfkswitcher/ikfkswitch_11.gif "Always check if systems you've created work properly")
 
+### **BONUS**: Hiding unused controls with IKFK Switch
+
+As a bonus, let's add a quick Quality of Life upgrade for our IKFK switch. Typically, with the controls set up as described earlier, you would need to manually show and hide the IK and FK controls. While this is manageable, 
+as riggers we should aim to enhance the user experience. Therefore, we will streamline process by adding a couple of additional drivers.
+
+First, return to the *Root* bone's properties and again use *Copy as New Driver* for the IKFK_Switch property. Navigate to the Armature tab, right click the eye icon of the *ik* bone group, and select *Paste Driver*.
+![Copying driver to Bone Collection visibility button](/gifs/ikfkswitcher/ikfkswitch_12.gif "Copying driver to Bone Collection visibility button")
+
+Next, right-click the visibility button and choose *Edit Driver*. Set up the driver as follows:
+
+- **Type**: Scripted Expression
+- **Expression**: `1-IKFK_Switch`
+
+After setting this up, test to ensure the IK controls dissapear when the IKFK_Switch is set to **1**.
+![Testing the IK switch](/gifs/ikfkswitcher/ikfkswitch_13.gif "If the driver is setup correctly, the IK controls shouldn't be visible when IKFK_Switch is set to 1")
+
+To apply the same logic to the FK chain, copy the driver from *ik* bone collection, paste it to the *fk* bone collection visibility, and change the expression to `IKFK_Switch`. This ensures that when the property is set to **0** (making the IK chian visible
+and active), the FK chain is hidden.
+![Adding a driver to FK Bone Collection](/gifs/ikfkswitcher/ikfkswitch_14.gif "Remember to change the expression, otherwise both bone groups are going to be visible only on **0**")
+
+Once the setup is complete, one of the collections should dissapear accordingly. Now, test the rig: if the IKFK_Switch is set to **0**, the IK controllers should be visible and active, while the FK controllers should be hidden. Setting the switch to **1** should
+make the FK controllers visible and the IK controllers hidden.
+![Testing the rig](/gifs/ikfkswitcher/ikfkswitch_15.gif "By doing that, animators are going to love you")
+
+This small addition can save animators a lot of unnecessary clicking, improving their flow and focus on the tasks. Given that this setup is not time-consuming, there's no reason not to add it whenever you're working on any IFK switchable chain.
+
 
 ## 3. Closing Thoughts
 
