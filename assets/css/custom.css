@@ -75,12 +75,12 @@ form select {
 
 /* Overriding font */
 @font-face {
-  font-family: ChakraPetch;
-  src: url('/fonts/ChakraPetch-Regular.ttf');
+  font-family: Inter;
+  src: url('/fonts/Inter-Regular.ttf');
 }
 
 html {
-  font-family: ChakraPetch;
+  font-family: Inter;
 }
 
 .litevideo{

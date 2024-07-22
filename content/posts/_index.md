@@ -15,7 +15,5 @@ sharingLinks = false
 If I am keeping a digital notebook - why not share it?
 {{< /lead >}}
 
-This section contains different articles I wrote either for myself to keep as wikia or as tutorials to aid fellow 
-animators, riggers and tech-animators on their journey through the craft. Besides that, different takes I though about
-sharing about animation in general.
-
+This section contains various articles I've written, either as a personal wikia entries or as tutorials to assist fellow animators, riggers and techanimators on their
+own journey through the craft. Additionally, you'll find different perspectives and insights I've decided to share about animation craft in general.
