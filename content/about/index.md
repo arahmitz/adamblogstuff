@@ -23,6 +23,7 @@ Welcome to my personal website, where I explore the art of **rigging**, **gamepl
 Beyond discussion, my goal is to offer valuable notes, tutorials and resources to aid you on your (and mine) journey through everything there is related to animation for **video games**. I'll also try to sprinkle in some thought-provoking book reviews and reflections on the broader animation industry. I believe in the power of animation as the ultimate storytelling medium in the entertainment industry. I'm excited to share my experiences and perspectives on every facet of this captivating medium.
 
 My unique background encompasses both art (Graphic Design) and engineering (Computer Science), a blend that has propelled me into the specialized field of technical animation. 
+
 Outside of my professional pursuits, I'm a reportage photographer, crafting digital photography books, a cinematography freak and an avid player of both digital and analog RPGs.
 I hope you'll enjoy your time here!
 
