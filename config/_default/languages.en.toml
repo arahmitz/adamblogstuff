@@ -1,25 +1,34 @@
+disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
 title = "Adam Madej"
 
 [params]
-  displayName = "EN"
-  isoCode = "en"
-  rtl = false
-  dateFormat = "2 January 2006"
-  logo = "img/logo.png"
-  # secondaryLogo = "img/secondary-logo.png"
-  description = "Adam Madej - Gameplay Animator"
-  copyright = "Adam Madej © 2024"
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+# secondaryLogo = "."
+description = "Adam Madej - Gameplay Animator"
 
-[author]
+[[params.author.links]]
+github = "github.com/arahmitz"
+
+[[params.author.links]]
+linkedin = "linkedin.com/in/arahfx"
+
+[[params.author.links]]
+vimeo = "https://vimeo.com/arahfx/"
+
+[[params.author.links]]
+x-twitter = "x.com/arahfx"
+[[params.author.links]]
+
+bluesky = "bsky.app/profile/arahfx.bsky.social"
+
+["params.author"]
 name = "Adam Madej"
-image = "img/myface2.png"
-headline = "(Un)complicating animation process with technical knowledge" # homepage headline
-bio = "Gameplay animator nerding out about (technical) animation related topics." # in-article headline
-links = [
-{ linkedin = "https://www.linkedin.com/in/arahfx/" },
-{ vimeo = "https://vimeo.com/arahfx/" },
-{ x-twitter = "https://twitter.com/arahfx" },
-]
+image = "myface2.png"
+headline = "(Un)complicating animation process with technical knowledge"
+bio = "Gameplay animator nerding out about (technical) animation related topics."

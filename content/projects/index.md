@@ -1,14 +1,25 @@
-+++
-title = 'Projects'
-languageCode = 'en-us'
-draft = false
-showAuthor = false
-showDate = false
-showReadingTime = false
-showZenmode = false
-sharingLinks = false
-heroStyle = "background"
-+++
+---
+title: "Projects"
+date: 2024-05-12T20:55:37+01:00
+draft: false
+
+showDate : false
+showDateOnlyInArticle : false
+showDateUpdated : false
+showHeadingAnchors : false
+showPagination : false
+showReadingTime : false
+showTableOfContents : true
+showTaxonomies : false 
+showWordCount : false
+showSummary : false
+sharingLinks : false
+showEdit: false
+showViews: false
+showLikes: false
+showAuthor: false
+layoutBackgroundHeaderSpace: false
+---
 
 ## Forever Skies (PC, PS5)
 ![Forever Skies main logo](/images/projects/foreverskiesmain.jpg "[Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/_) - Animation & Rigging")

@@ -1,17 +1,25 @@
-+++
-title = 'About'
-summary = ''
-languageCode = 'en-us'
-date = 2024-03-01T18:30:00+01:00
-draft = false
-showAuthor = true
-showDate = false
-showReadingTime = false
-showZenmode = false
-sharingLinks = false
-heroStyle = "background"
-showTableOfContents = false
-+++
+---
+title: "About"
+date: 2024-05-12T20:55:37+01:00
+draft: false
+
+showDate : false
+showDateOnlyInArticle : false
+showDateUpdated : false
+showHeadingAnchors : false
+showPagination : false
+showReadingTime : false
+showTableOfContents : true
+showTaxonomies : false 
+showWordCount : false
+showSummary : false
+sharingLinks : false
+showEdit: false
+showViews: false
+showLikes: false
+showAuthor: true
+layoutBackgroundHeaderSpace: false
+---
 
 # Hey! I'm Adam. 
 I am an Animator / Rigger, based in Wrocław, Poland. 

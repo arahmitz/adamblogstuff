@@ -1,14 +1,25 @@
-+++
-title = 'Talks'
-languageCode = 'en-us'
-draft = false
-showAuthor = false
-showDate = false
-showReadingTime = false
-showZenmode = false
-sharingLinks = false
-heroStyle = "background"
-+++
+---
+title: "Talks"
+date: 2024-05-12T20:55:37+01:00
+draft: false
+
+showDate : false
+showDateOnlyInArticle : false
+showDateUpdated : false
+showHeadingAnchors : false
+showPagination : false
+showReadingTime : false
+showTableOfContents : true
+showTaxonomies : false 
+showWordCount : false
+showSummary : false
+sharingLinks : false
+showEdit: false
+showViews: false
+showLikes: false
+showAuthor: false
+layoutBackgroundHeaderSpace: false
+---
 
 ## Animacyjne Dojo (PL)
 ![Animacyjne Dojo Cover](/images/talks/animacyjnedojo_cover.jpg "[Presentation available here](https://docs.google.com/presentation/d/e/2PACX-1vSADucq-Mkmv9_flTBaHDkf3mogJBdUehcg0T6xx7BUkQURv_w4KIVLAtIQUPArO64mrpnpCvUndw5F/pub?start=false&loop=false&delayms=3000)")

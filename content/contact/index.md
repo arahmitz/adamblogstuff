@@ -1,17 +1,25 @@
-+++
-title = 'Contact'
-summary = 'Contact Form'
-languageCode = 'en-us'
-date = 2024-03-01T18:30:00+01:00
-draft = false
-showAuthor = false
-showDate = false
-showReadingTime = false
-showZenmode = false
-sharingLinks = false
-showTableOfContents = false
-heroStyle = "background"
-+++
+---
+title: "Contact"
+date: 2024-05-12T20:55:37+01:00
+draft: false
+
+showDate : false
+showDateOnlyInArticle : false
+showDateUpdated : false
+showHeadingAnchors : false
+showPagination : false
+showReadingTime : false
+showTableOfContents : false
+showTaxonomies : false 
+showWordCount : false
+showSummary : false
+sharingLinks : false
+showEdit: false
+showViews: false
+showLikes: false
+showAuthor: false
+layoutBackgroundHeaderSpace: false
+---
 
 ## Let's Create Something Amazing Together!
 

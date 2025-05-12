@@ -1,5 +1,3 @@
-baseURL = 'https://arahmitz.github.io/adamblogstuff/'
+baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'Techanimatically'
-timeout = 6000000
-
+title = 'My New Hugo Site'
