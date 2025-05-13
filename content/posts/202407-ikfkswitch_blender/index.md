@@ -8,7 +8,7 @@ tags = ['technical', 'blender', 'tutorial', 'ikfk', 'rigging']
 showRecent = true
 showTableOfContents = true
 +++
-# Simple IKFK Switch in blender
+
 
 ## 0. Foreword
 
