@@ -9,7 +9,7 @@ showRecent = true
 series = ["Squash & Stretch Ball Rig"]
 series_order = 2
 +++
-# Rigging the squash & stretch ball in blender
+
 
 ## 0. Foreword
 
@@ -86,7 +86,7 @@ Extrude a bone by pressing <kbd>E</kbd> and then lock it in Z axis with <kbd>Z</
 Following that, we will move the *def_body* bone in Z axis by using 3D Cursor. Make sure that this bone is not parented by using <kbd>ALT</kbd>+<kbd>P</kbd>>*Clear Parent*.
 Use <kbd>SHIFT</kbd>+<kbd>S</kbd> and select *Selection to Cursor*. Your rig should look like this:
 
-![def_body in proper place](/images//ballrig_blender/ballrig_blender_5.png "Rig with proper deformation bone placed")
+![def_body in proper place](/images/ballrig_blender/ballrig_blender_5.png "Rig with proper deformation bone placed")
 
 One crucial step for later is to modify the rotation mode. In *Pose Mode*, select your bones, and hit <kbd>CTRL</kbd>+<kbd>R</kbd>. From the dropdown menu select *XYZ*. It'll become important later!
 
