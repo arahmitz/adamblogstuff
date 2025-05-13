@@ -46,7 +46,7 @@ showDateOnlyInArticle = false
 showDateUpdated = false
 showAuthor = true
 showHero = true
-layoutBackgroundBlur = true
+layoutBackgroundBlur = false
 layoutBackgroundHeaderSpace = "0"
 showBreadcrumbs = false
 showDraftLabel = true
@@ -62,7 +62,7 @@ showTaxonomies = true
 showAuthorsBadges = false
 showWordCount = false
 showZenMode = false
-heroStyle = "background"
+heroStyle = "big"
 relatedContentLimit = ""
 
 [list]
