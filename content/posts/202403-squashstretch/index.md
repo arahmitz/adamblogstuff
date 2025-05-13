@@ -10,7 +10,7 @@ series = ["Squash & Stretch Ball Rig"]
 series_order = 1
 +++
 
-#  Our first rig - a squash & stretch ball
+
 
 ## 0. Foreword
 
