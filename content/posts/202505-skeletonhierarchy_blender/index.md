@@ -697,7 +697,7 @@ Aaaaaand... eureka! I finally created a script that takes bones and parent them 
 I might add these cases to my script, but for the demonstration purpose let's say that we have a set way of creating bones in our team & everyone is following the naming conventions.
 
 ### Ready script
-So here it is, a script to build a game-ready skeletal hierarchy out of bones
+So here it is, a script to build a game-ready skeletal hierarchy
 ```python
 import bpy
 
@@ -761,9 +761,8 @@ def create_skeletal_hierarchy():
         
 create_skeletal_hierarchy()
 ```
-
 ## 4. Closing thoughts
 
 I am extremely happy that I've actually managed to do this task, even though it took me some time. I feel like I've actually flexed my python skills.
 
-I hope my explanation helped you as well, see you in another deep dives!
+I hope my explanation helped you as well, see you in another deep dives!s
