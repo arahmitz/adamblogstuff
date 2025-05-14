@@ -696,7 +696,74 @@ Aaaaaand... eureka! I finally created a script that takes bones and parent them 
 
 I might add these cases to my script, but for the demonstration purpose let's say that we have a set way of creating bones in our team & everyone is following the naming conventions.
 
+### Ready script
+So here it is, a script to build a game-ready skeletal hierarchy out of bones
+```python
+import bpy
+
+def create_skeletal_hierarchy():
+    armature = bpy.context.view_layer.objects.active
+    
+    if armature and armature.type == 'ARMATURE':
+        bpy.ops.object.mode_set(mode='EDIT')
+        
+        bones = armature.data.edit_bones
+        
+        skeletal_hierarchy = {
+            "hips": None, # "root"
+            "spine1": "hips",
+            "spine2": "spine1",
+            "spine3": "spine2",
+            "neck": "spine3",
+            "head": "neck",
+            "clavicle": "spine3",
+            "arm": "clavicle",
+            "forearm": "arm",
+            "wrist": "forearm",
+            "thigh": "hips",
+            "calf": "thigh",
+            "foot": "calf",
+            "ball": "foot",
+        }
+        
+        for bone in bones:
+            bone_name = bone.name.lower()
+            base_name = ""
+            suffix = ""
+            
+            if bone_name.endswith("_l"):
+                base_name = bone_name[0:-2]
+                suffix = "_l"
+            elif bone_name.endswith("_r"):
+                base_name = bone_name[0:-2]
+                suffix = "_r"
+            else:
+                base_name = bone_name[:]
+                suffix = ""
+            
+            if base_name in skeletal_hierarchy:
+                parent_base = skeletal_hierarchy[base_name]
+                parent_full = ""
+                
+                if parent_base:
+                    if parent_base + suffix in bones:
+                        parent_full = parent_base + suffix
+                    elif parent_base in bones:
+                        parent_full = parent_base
+                    else:
+                        parent_full = None
+                
+                if parent_full:
+                    bone.parent = bones[parent_full]
+                
+        bpy.ops.object.mode_set(mode='OBJECT')
+        
+        
+create_skeletal_hierarchy()
+```
+
 ## 4. Closing thoughts
 
-I am extremely happy that I've actually managed to create this script as it was bothering me since I've gotten this task. I feel like I've actually deepened my knowledge of not only Python itself, but took another step closer
-to become a fully fledged technical animator.
+I am extremely happy that I've actually managed to do this task, even though it took me some time. I feel like I've actually flexed my python skills.
+
+I hope my explanation helped you as well, see you in another deep dives!
