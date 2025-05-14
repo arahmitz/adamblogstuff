@@ -141,7 +141,7 @@ This is basically the list of operations we want to achieve by code.
 
 To actually automate this process, let's create a new function called `simple_bone_parenting`, and start steps one by one.
 
-#### Selecting the armature and switching to edit mode
+### Selecting the armature and switching to edit mode
 
 The first problem I've had to tackle is actually going to switch Armature to **EDIT MODE**, as that's the only mode where we can manipulate our bone hierarchy.
 
@@ -156,7 +156,7 @@ def simple_bone_parenting():
 
 There isn't much to explain; I've used [blender python API docs](https://docs.blender.org/api/current/index.html) to store the selection in `armature`, then switched it to Edit Mode after checking if it exists and if it's an armature.
 
-#### Selecting bones and making them a list
+### Selecting bones and making them a list
 
 The next part is creating a simple parenting method using *if* statements. That was my first idea on how to tell python what kind of hirarchy I want. After all, every child in hierarchy can only have one parent, 
 so the if statement shouldn't be that scary, right?
