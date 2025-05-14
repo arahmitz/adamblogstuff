@@ -1,5 +1,5 @@
 ---
-title: "Building a skeletal hierarchy using python"
+title: "Building a skeleton hierarchy using python"
 date: 2025-05-13
 draft: false
 description: ""
