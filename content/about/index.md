@@ -19,6 +19,7 @@ showViews: false
 showLikes: false
 showAuthor: true
 layoutBackgroundHeaderSpace: false
+heroStyle: background
 ---
 
 # Hey! I'm Adam. 

@@ -19,6 +19,7 @@ showViews: false
 showLikes: false
 showAuthor: false
 layoutBackgroundHeaderSpace: false
+heroStyle: background
 ---
 
 ## Let's Create Something Amazing Together!
