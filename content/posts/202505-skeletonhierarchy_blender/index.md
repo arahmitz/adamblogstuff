@@ -203,7 +203,7 @@ With that, I've actually managed to write a script that can easily create a simp
 
 ### Building MVP
 
-As this is still new teritory for me, I've decided to build the script from the **MVP** (minimal viable product) and then scale it up, so I've created a simple, one side bone hierarchy like this:
+As this is still new territory for me, I've decided to build the script from the **MVP** (minimal viable product) and then scale it up, so I've created a simple, one side bone hierarchy like this:
 ```
 hips
 spine1
@@ -763,6 +763,6 @@ create_skeletal_hierarchy()
 ```
 ## 4. Closing thoughts
 
-I am extremely happy that I've actually managed to do this task, even though it took me some time. I feel like I've actually flexed my python skills.
+I am extremely happy that I've actually managed to do this task, even though it took me some time. I feel like I've actually flexed my python skills and learned a few new tricks.
 
-I hope my explanation helped you as well, see you in another deep dives!s
+I hope my explanation helped you as well, see you in another deep dive!
