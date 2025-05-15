@@ -17,7 +17,7 @@ why I've chosen the topic.
 There are actually two different reasons on why I've started thinking about this type of tool - first one is that I finally found time to start reading 
 [*Technical Animation in Video Games*](https://www.amazon.com/Technical-Animation-Video-Games-Matthew/dp/1032203277) by [Matt Lake](https://www.matthewlake.net/) 
 (that needs it's own post when I finally finish it) that talks a lot about automation in the rigging department.
-The other one is a task I was given that I couldn't finish in time - as I felt defeated, the task lived rent-free in my mind, so I've decided to tackle it during a weekendand I've found out that it isn't that complex! 
+The other one is a task I was given that I couldn't finish in time - as I felt defeated, the task lived rent-free in my mind, so I've decided to tackle it during a weekend and I've found out that it isn't that complex! 
 That spark inspired me to start a new Markdown file and write a post to share the knowledge I had acquired! Of course I am not a professional programmer,  so I am going to explain stuff as someone who is learning python & programming.
 
 Let's go!
