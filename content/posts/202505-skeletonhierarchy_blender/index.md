@@ -11,13 +11,14 @@ It's been almost a year since the [last post](/posts/202407-ikfkswitch_blender).
 so after a quick Xmas - New Year break we were back working on the final release that happened on [**April the 14th!**](https://store.steampowered.com/news/app/1641960/view/538850173472735858?l=english)
 
 Due to the workload I had to actually drop side projects such as this page. After a break, as we're working on the Post-Launch Support, I finally found both time & motivation to start working on some small stuff and as I've been moving towards my goal of
-becoming a much more *technical* animator. It seems like there isn't a better post to start on than by doing some python scripting. Before we dive into the topic of writing a script that **creates a game-ready skeleton hierarchy** out of the bones, I wanted to talk
+becoming a much more *technical* animator. It seems like there isn't a better post to start on than by doing some python scripting. Before Idive into how I've written a script that **creates a game-ready skeleton hierarchy** out of the bones, I wanted to talk
 why I've chosen the topic.
 
 There are actually two different reasons on why I've started thinking about this type of tool - first one is that I finally found time to start reading 
-[*Technical Animation in Video Games*](https://www.amazon.com/Technical-Animation-Video-Games-Matthew/dp/1032203277) by [Matt Lake](https://www.matthewlake.net/) (that needs it's own post when I finally finish it) that talks a lot about automation in the rigging department.
-The other one is a task I was given that I couldn't finish in time - as I felt defeated, the task lived rent-free in my mind, so I've decided to tackle it in my own time - and I've found out that it isn't that complex! That spark inspired me to start a new Markdown file and write
-a post to share the knowledge I had acquired! Of course I am not a professional programmer, so I am going to explain stuff as someone who is learning python.
+[*Technical Animation in Video Games*](https://www.amazon.com/Technical-Animation-Video-Games-Matthew/dp/1032203277) by [Matt Lake](https://www.matthewlake.net/) 
+(that needs it's own post when I finally finish it) that talks a lot about automation in the rigging department.
+The other one is a task I was given that I couldn't finish in time - as I felt defeated, the task lived rent-free in my mind, so I've decided to tackle it during a weekendand I've found out that it isn't that complex! 
+That spark inspired me to start a new Markdown file and write a post to share the knowledge I had acquired! Of course I am not a professional programmer,  so I am going to explain stuff as someone who is learning python & programming.
 
 Let's go!
 
@@ -106,7 +107,7 @@ root
         thigh_l
             calf_l
                 foot_l
-                    balll
+                    balll_l
         thigh_r
             calf_r
                 foot_r
@@ -139,18 +140,18 @@ To write the script, I first had to understand what exactly I am going to achiev
 
 This is basically the list of operations we want to achieve by code.
 
-To actually automate this process, let's create a new function called `simple_bone_parenting`, and start steps one by one.
+To actually automate this process, let's create a new function called `simple_bone_parenting`, and tackle issues step by step.
 
 ### Selecting the armature and switching to edit mode
 
-The first problem I've had to tackle is actually going to switch Armature to **EDIT MODE**, as that's the only mode where we can manipulate our bone hierarchy.
+The first problem I've had to tackle is actually going to switch Armature to **EDIT MODE**, as that's the only mode where you can manipulate bone hierarchy.
 
 ```python
 def simple_bone_parenting():
     # grabs the context of a selected object
     armature = bpy.context.view_layer.objects.active
 
-       if armature and armature.type == 'ARMATURE':
+    if armature and armature.type == 'ARMATURE':
         bpy.ops.object.mode_set(mode='EDIT')
 ```
 
@@ -278,9 +279,9 @@ def create_skeletal_hierarchy():
 create_skeletal_hierarchy()
         
 ```
-There are a few notes - first of all this looks super ugly. My first though was to use a `switchcase` (I've had most of my programming knowledge in C after all), but I've learned that Python didn't have a swithcase implemented until [PEP06341!](https://peps.python.org/pep-0634/)
-That was actually shocking, as I've always though of Python as this high-level, easy-to-understand programming langauge. Said change implemented a `match-case` what works similarly, but I've started an internet sleuth to find another resolution to this case, that we're going to talk
-next.
+There are a few notes - first of all this looks super ugly. My first though was to use a `switchcase` (I've had most of my programming knowledge in C after all), but I've learned that Python didn't have a 
+swithcase implemented until [PEP06341!](https://peps.python.org/pep-0634/). That was actually shocking, as I've always though of Python as this high-level, easy-to-understand programming langauge.
+Said change implemented a `match-case` what works similarly, but I've started an internet sleuth to find another resolution to this case, that we're going to talk about next.
 
 Besides the obvious, I've also added a `mode_set`, to see the differences in Outliner right away. 
 
@@ -342,9 +343,9 @@ print("I use blender as my, " + my_dictionary["blender"] +
 # I use blender as my dcc, Unreal Engine as my engine and python as my programming langauge
 ```
 
-Which prints a sentence "I use blender as my dcc, Unreal Engine as my engine and python as my programming langauge".
+Outputs: "I use blender as my dcc, Unreal Engine as my engine and python as my programming langauge".
 
-On a note, it is important, that to use the dictionary with a string, they need to be quoted, otherwise it's going to throw an undefined error. 
+it's important in order to use dictionary with a string, they need to be quoted, otherwise it's going to throw an undefined error.
 
 ### Building a hierarchy dictionary
 
@@ -368,9 +369,9 @@ skeletal_hierarchy = {
             "ball": "foot",
         }
 ```
-Note that we follow the idea that we have child on the left and parent on the right, where hips, as the root bone has value of `None`.
+Note - it follows the idea that child is on the left and parent on the right, where hips, as the root bone has value of `None`.
 
-As we have the dictionary, the next idea is to update our function using it and delete the if-ology.
+As the dictionary is ready, the next step is updating the function to use it instead of the if-ology.
 
 ```python
 import bpy
@@ -416,13 +417,13 @@ create_skeletal_hierarchy()
 ```
 
 ### Assigning bone parents using dictionary
-As I've deleted the big if-ology, the next part is actually finding a way to actually attach the bones correctly. To do that, we're going to utilize the loop that we used before:
+As I've deleted the big if-ology, the next part is actually finding a way to actually attach the bones correctly. To do that, I've utilized the loop that was there used before:
 ```python
 for bone in bones:
     bone_name = bone.name.lower()
 ```
 
-`bone_name` exists to match the values of the dictionary even if the bone is going to be capitalized, so I can easily look if it exists in `skeletal_hierarchy`. If it does, I can find it's `parent` as it's a key:value.
+`bone_name` exists to match the values of the dictionary even if the bone is going to be capitalized, so I can easily look if it exists in `skeletal_hierarchy`. If it does, I can find it's `parent` as a key:value.
 ```python
 for bone in bones:
     bone_name = bone.name.lower()
@@ -433,7 +434,7 @@ for bone in bones:
         parent = skeletal_hierarchy[bone_name]
 ```
 
-Now, the only thing that I need is to assign every child a parent. As we're checking if the bone exists in our hierarchy, we can utilize that point to use `bone.parent`
+Now, the only thing that I need is to assign every child a parent. As I'm checking if the bone exists in the hierarchy, I can utilize that point to use `bone.parent`.
 
 ```python
 for bone in bones:
@@ -449,9 +450,9 @@ for bone in bones:
             # we're parentng to our actual bones list
             bone.parent = bones[parent]
 ```
-Remember that we want to actually parent bones to `bones` list, not to the dictionary - this mistake gave me some debugging.
+I want to actually parent bones to `bones` list, not to the dictionary - it took me a while to catch this bug.
 
-If we add this part to our script, it'll look like this:
+After the addition of this part, the script looks like this:
 ```python
 import bpy
 
@@ -551,7 +552,7 @@ ball_r
 ```
 **Why is that?**
 
-Let's break down what is actually happening when we go through our loops for two bones: `spine3` and `clavicle_l`
+Let's break down what is actually happening when the script goes through loops for two bones: `spine3` and `clavicle_l`
 
 For the `spine3`:
 ```python
@@ -581,9 +582,9 @@ if parent and parent in bones:
 # -> parent spine3 to spine2
 bone.parent = bones[parent]
 ```
-We create a nice looking hierarchy.
+It create a nice looking hierarchy, where `spine3` is parented to `spine2`.
 
-If we use `clavicle_l`:
+But when it evaluates `clavicle_l`, there's actually a bug:
 ```python
 for bone in bones: # checks if clavicle_l exists in bones -> it does
 ```
@@ -596,11 +597,13 @@ bone_name = bone.name.lower()
 # checks if clavicle_l exists in skeletal_hierarchy -> it does not
 if bone_name in skeletal_hierarchy:
 ```
-At this point the rest of the code doesn't matter, it'll bypass it and the same thing will happen to rest of the suffixed bones. That's the reason why our hierarchy looks like this.
+At this point the rest of the code doesn't matter, it'll bypass it and the same thing will happen to rest of the suffixed bones. That's the reason why final hierarchy do not parent suffixed bones at all.
 
 ### Reading suffixed bones
 
-I am not going to line - this part took me the longest to figue out. As a python beginner and someone who was taugh in C, Python amazes me with so many quality-of-life functions - one of them is working with strings.
+I am not going to lie - this part took me the longest to figue out. As a python beginner and someone who's mostly comfortable with C, Python amazes me with so many quality-of-life functions - one of them is 
+flexibility in working with strings.
+
 Let's break what is the full name of a bone:
 
 {{< mermaid >}}
@@ -622,7 +625,7 @@ graph LR;
 A[spine03]-->B["   "];
 {{< /mermaid >}}
 
-That's important, because Python's implementation of string operation is actually super handy, let's look at this
+That's important, because Python's implementation of string operations is actually super handy, let's look at this
 ```python
 base_name = "clavicle"
 suffix = "_l"
@@ -636,13 +639,13 @@ This realisation is actually **wild**. It fixes all the problems, as I can now:
 4. Re-attach `suffix` to `parent` - **IMPORTANT**
 5. Parent `bone_name` to `parent`+`suffix`
 
-Point 4. is crucial - I've spent a lot of debugging because I forgot to actually re-attach the suffix. 
+Point 4. is crucial - I've spent a lot of debugging time because I forgot to actually re-attach the suffix. 
 
 Now, to the implementation:
 
-We'll start with the splitting.
+I'll start with the splitting.
 
-Luckily Python has a great way of working splitting the affixes - each string can be used as a list of letters, so we can just delete the last two. Besides that, we can easily find what the string ends with using `string.endswith()`
+AS I've said before - Python implementaion helps a lot with the strings - each string can be used as a list of letters, so I could just check if the string ends with a suffix (thanks to `endswith()`), and if it did - delete it. 
 I'll be adding `clavicle_l` and `spine3` in comments to explain
 ```python
 for bone in bones:
@@ -661,17 +664,17 @@ for bone in bones:
         suffix = "" # ""
 ```
 
-Now that we have them split, lets find the parent, that's nothing new besides declaring `parent_full` that we're going to use in the next step
+Now that I have them split, lets find the `parent`(the key:value) -  that's nothing new besides declaring `parent_full` that we're going to use in the next step
 ```python
 if base_name in skeletal_hierarchy: # clavicle / spine3
     parent_base = skeletal_hierarchy[base_name] # clavicle / spine3
     parent_full = "" # declaration + resetting it to null
 ```
 
-Looking at the list, next one is the most important one - we have to re-attach `suffix` to the `parent`, that's why I've created `parent_full`. That's another part where I had a bug during the development.
+Looking at the list, next one is the most important one - we have to re-attach `suffix` to the `parent`, that's why I've created `parent_full`.
 
-I had my *_l* or *_r* bones working, but `clavicle_l` and `leg_l` and their *_r* versions have parents, that have blank suffix, so normally, we'd look for *spine3_l* or *hips_l* and it doesn't exist,
-that's why I've added an elif to check if the non-suffixed version exists in `bones`.
+That's a place where I discovered another possible bug - I had my *_l* or *_r* bones working, but `clavicle_l` and `leg_l` and their *_r* versions have parents, that have blank suffix, so normally, 
+it would look for *spine3_l* or *hips_l* and it doesn't exist, that's why I've added an elif to check if the non-suffixed version exists in `bones`.
 ```python
  if parent_base:
     if parent_base + suffix in bones: # spine3_l - false, spine2 - true
@@ -682,7 +685,7 @@ that's why I've added an elif to check if the non-suffixed version exists in `bo
         parent_full = None
 ```
 
-To end the script, I have to actually parent the bones to the proper parents, so we lack our last, crucial part:
+To end the script, I have to actually parent the bones to the proper parents:
 ```python
 if parent_full: # spine3 - true, spine2 - true
     # parent clavicle_l to spine3, 
@@ -690,7 +693,7 @@ if parent_full: # spine3 - true, spine2 - true
     bone.parent = bones[parent_full] 
 ```
 
-Aaaaaand... eureka! I finally created a script that takes bones and parent them using predefined hierarchy. Of course there are other problems that might be a good excercise to fix:
+Aaaaaand... **eureka!** I finally created a script that takes bones and parent them using predefined hierarchy. Of course there are other problems that might be a good excercise to fix:
 - what if there are more numbers in spine?
 - What if there are prefixes instead of affixes?
 
@@ -763,6 +766,7 @@ create_skeletal_hierarchy()
 ```
 ## 4. Closing thoughts
 
-I am extremely happy that I've actually managed to do this task, even though it took me some time. I feel like I've actually flexed my python skills and learned a few new tricks.
+It's a great feeling to finally get that break-through, even though it's a bit bitter-sweet feeling, as I've came up with the resolution a week too late. I feel like I've actually learned a few new tricks
+and deepened my python & programming knowledge. That's also a good momentum to work on some new stuff and get even better.
 
-I hope my explanation helped you as well, see you in another deep dive!
+I hope that my explanation helped you as well, I am open to talking about it and see you in another tech dive!
