@@ -5,7 +5,7 @@ draft: false
 description: ""
 tags: ["Rigging", "blender", "Python", "Technical", "Scripting", "Intermediate"]
 ---
-
+## 0. What was happening & update on what's going on
 It's been almost a year since the [last post](/posts/202407-ikfkswitch_blender). It was actually a super busy time as we were closing on two very important milestones - first [we released a co-op mode](https://www.ign.com/videos/forever-skies-official-co-op-mode-release-date-trailer?utm_campaign=trueAnthem%3A+Manual&utm_medium=trueAnthem&utm_source=facebook&fbclid=IwY2xjawKQY8RleHRuA2FlbQIxMQBicmlkETE3ZkNCY0lBSGp3d0RtUGkwAR4zS0XMNCE9K5Mcr6Q-FJqMq6yBTCbetAu5Vn2Nf6ic7jqKRyFBzktyHW8uew_aem_IAaKIUVM-ABZ70CpPwzwAA) of 
 [Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/) on 9th of December - it was a culmination of my work on the game, as my project-long task was creating TPP animations to match them to FPP ones. It was the last patch before the release, 
 so after a quick Xmas - New Year break we were back working on the final release that happened on [**April the 14th!**](https://store.steampowered.com/news/app/1641960/view/538850173472735858?l=english)
@@ -22,14 +22,14 @@ That spark inspired me to start a new Markdown file and write a post to share th
 
 Let's go!
 
-## 0. Foreword
+## 1. Foreword
 
 In this article you'll learn:
 - How does a game ready skeleton hierarchy look like
 - How to write a simple script to operate on bones in blender
 - How to write a script that builds a game-ready skeleton hierarchy using Python
 
-## 1. Quick reminder on Skeletal Mesh & Hierarchy
+## 2. Quick reminder on Skeletal Mesh & Hierarchy
 
 ### What is a skeletal mesh?
 As game animators, we work with **Skeletal Meshes** everyday. In engine, a skeletal mesh (SK_), is an object that holds information about a 3D model with a skeleton that is skinned. It consists of two main parts:
@@ -116,7 +116,7 @@ root
 ```
 We're going to use that as basis for the **today's topic**.
 
-## 2. How do you actually parent bones with script in blender?
+## 3. How do you actually parent bones with script in blender?
 
 ### Assumptions
 
@@ -200,7 +200,7 @@ To see the change in the Outliner, you actually have to go back to Object Mode -
 
 With that, I've actually managed to write a script that can easily create a simple bone hierarchy that I've predefined. That's the a-ha moment I was talking before - the one that made me realise I can write this automatic bone hierarchy script.
 
-## 3. Building game-ready skeletal hierarchy with a script
+## 4. Building game-ready skeletal hierarchy with a script
 
 ### Building MVP
 
@@ -764,7 +764,7 @@ def create_skeletal_hierarchy():
         
 create_skeletal_hierarchy()
 ```
-## 4. Closing thoughts
+## 5. Closing thoughts
 
 It's a great feeling to finally get that break-through, even though it's a bit bitter-sweet feeling, as I've came up with the resolution a week too late. I feel like I've actually learned a few new tricks
 and deepened my python & programming knowledge. That's also a good momentum to work on some new stuff and get even better.
