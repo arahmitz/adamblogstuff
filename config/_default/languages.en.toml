@@ -12,8 +12,8 @@ dateFormat = "2 January 2006"
 # secondaryLogo = "."
 description = "Adam Madej - Gameplay Animator"
 
-[[params.author.links]]
-github = "github.com/arahmitz"
+# [[params.author.links]]
+# github = "github.com/arahmitz"
 
 [[params.author.links]]
 linkedin = "linkedin.com/in/arahfx"
