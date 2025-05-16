@@ -53,7 +53,7 @@ A standard skeletal hierarchy starts with the **root** bone, that is going to ho
 
 After that, the biggest building block of a character is it's **spine**. UE4's Manny uses *3* bones to hold the information about game character's spine and it's of course a child of hips. As **spine03** is usually around character chest, it becomes a parent of the **neck** and **head** bones.
 
-From our chest, we of course have our arm bones.They have to be attached to our chest, so naturally we are going to parent them to **spine03**. To give animators a good control of the arm, we're going to start with the **clavicle** that is going to act similar to a collar bone. 
+From the chest, we of course have arm bones. They have to be attached to chest, so naturally we are going to parent them to **spine03**. To give animators a good control of the arm, we're going to start with the **clavicle** that is going to act similar to a collar bone. 
 
 One of the most important parts to remember is that arms (and legs) are actually mirrored on the side, so we have to actually use a prefix or suffix to differentiate them. I am going to use a **_l** or **_r** suffix. 
 
@@ -114,7 +114,7 @@ root
                     ball_r
                     
 ```
-We're going to use that as basis for the **today's topic**.
+I'm going to use that as basis for the **today's topic**.
 
 ## 3. How do you actually parent bones with script in blender?
 
@@ -138,7 +138,7 @@ To write the script, I first had to understand what exactly I am going to achiev
 2. Select `bone2`, then `bone1`, <kbd>CTRL</kbd>+<kbd>P</kbd> -> select *Keep Offset*
 3. Select `bone3` then `bone 2` and repeat
 
-This is basically the list of operations we want to achieve by code.
+This is basically the list of operations I want to achieve by code.
 
 To actually automate this process, let's create a new function called `simple_bone_parenting`, and tackle issues step by step.
 
