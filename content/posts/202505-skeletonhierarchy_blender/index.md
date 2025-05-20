@@ -336,11 +336,9 @@ my_dictionary = {
 Now, we can print, a simple sentence, using it:
 
 ```python
-print("I use blender as my, " + my_dictionary["blender"] + 
-", Unreal Engine as my " + my_dictionary["unrealengine"] + 
-" and python as my programming" + my_dictionary["python"])
-
-# I use blender as my dcc, Unreal Engine as my engine and python as my programming langauge
+print(f"I use blender as my {my_dictionary['blender']},
+Unreal Engine as my {my_dictionary['unrealengine']}
+and python as my programming {my_dictionary['python']}")
 ```
 
 Outputs: "I use blender as my dcc, Unreal Engine as my engine and python as my programming langauge".
