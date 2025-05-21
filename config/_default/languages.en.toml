@@ -16,16 +16,16 @@ description = "Adam Madej - Gameplay Animator"
 # github = "github.com/arahmitz"
 
 [[params.author.links]]
-linkedin = "linkedin.com/in/arahfx"
+linkedin = "https://linkedin.com/in/arahfx"
 
 [[params.author.links]]
 vimeo = "https://vimeo.com/arahfx/"
 
 [[params.author.links]]
-x-twitter = "x.com/arahfx"
+x-twitter = "https://x.com/arahfx"
 [[params.author.links]]
 
-bluesky = "bsky.app/profile/arahfx.bsky.social"
+bluesky = "https://bsky.app/profile/arahfx.bsky.social"
 
 ["params.author"]
 name = "Adam Madej"
