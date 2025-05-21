@@ -280,8 +280,8 @@ create_skeletal_hierarchy()
         
 ```
 There are a few notes - first of all this looks super ugly. My first though was to use a `switchcase` (I've had most of my programming knowledge in C after all), but I've learned that Python didn't have a 
-swithcase implemented until [PEP06341!](https://peps.python.org/pep-0634/). That was actually shocking, as I've always though of Python as this high-level, easy-to-understand programming langauge.
-Said change implemented a `match-case` what works similarly, but I've started an internet sleuth to find another resolution to this case, that we're going to talk about next.
+swithcase implemented until [PEP06341](https://peps.python.org/pep-0634/)! That was actually shocking, as I've always though of Python as this high-level, easy-to-understand programming langauge.
+Said change implemented a `match-case` that works similarly, but as I've started an internet sleuth to find another resolution to this case, I've found something better.
 
 Besides the obvious, I've also added a `mode_set`, to see the differences in Outliner right away. 
 
