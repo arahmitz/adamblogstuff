@@ -763,7 +763,7 @@ create_skeletal_hierarchy()
 ```
 ## 5. Closing thoughts
 
-It's a great feeling to finally get that break-through, even though it's a bit bitter-sweet feeling, as I've came up with the resolution a week too late. I feel like I've actually learned a few new tricks
+It's a great feeling to finally get that break-through, even though it's a bit bitter-sweet feeling, as I've came up with the resolution a week too late than needed. I feel like I've actually learned a few new tricks
 and deepened my python & programming knowledge. That's also a good momentum to work on some new stuff and get even better.
 
 I hope that my explanation helped you as well, I am open to talking about it and see you in another tech dive!
