@@ -448,7 +448,6 @@ for bone in bones:
             # we're parentng to our actual bones list
             bone.parent = bones[parent]
 ```
-I want to actually parent bones to `bones` list, not to the dictionary - it took me a while to catch this bug.
 
 After the addition of this part, the script looks like this:
 ```python
@@ -572,7 +571,7 @@ parent = skeletal_hierarchy[bone_name]
 ```
 ```python
 # checks if parent exists -> spine2 does
-# checks if parent exists in boens -> spine2 does
+# checks if parent exists in bones -> spine2 does
 if parent and parent in bones:
 ```
 ```python
