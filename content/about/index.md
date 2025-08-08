@@ -23,7 +23,7 @@ heroStyle: background
 ---
 
 # Hey! I'm Adam. 
-I am an Animator / Rigger, based in Wrocław, Poland. 
+I am a Technical Animator, based in Wrocław, Poland. 
 
 Currently, I am working at [Far From Home](https://www.farfromhomegames.com/) where I am animating and rigging [Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/)!
 

@@ -10,7 +10,7 @@ isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
 # secondaryLogo = "."
-description = "Adam Madej - Gameplay Animator"
+description = "Adam Madej - Technical Animator"
 
 # [[params.author.links]]
 # github = "github.com/arahmitz"
@@ -31,4 +31,4 @@ bluesky = "https://bsky.app/profile/arahfx.bsky.social"
 name = "Adam Madej"
 image = "myface2.png"
 headline = "(Un)complicating animation process with technical knowledge"
-bio = "Gameplay animator nerding out about (technical) animation related topics."
+bio = "Technical Animator nerding out about (technical) animation related topics."
