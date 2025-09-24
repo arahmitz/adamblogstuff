@@ -9,7 +9,7 @@ tags: ["Rigging", "Reflections", "Personal", "Course"]
 # The past few months have been busy. 
 [In my last post](/posts/202505-skeletonhierarchy_blender) I was focused on building my Python skills as a part of my path towards becoming a **Technical Animator**.
 
-Back then, I've taken ownership of Forever Skies' entire animation system as the only animator in post-release team. I've also applied for autumn edition of [**Rigging Dojo's**](https://www.riggingdojo.com/) **Character 101 course**
+Back then, I've taken ownership of Forever Skies' entire animation system as the only animator in post-release team. I've also applied for autumn edition of [**Rigging Dojo's**](https://www.riggingdojo.com/) **Character Rigging 101** course.
 to strenghthen my core skills.
 
 Since joining Far From Home in 2023, I've worked all across the animation pipeline: skinning, rigging, fpp & tpp animation for humanoids and creatures, in-engine implementation, sometimes small tool development in blender. I've collaborated with 
