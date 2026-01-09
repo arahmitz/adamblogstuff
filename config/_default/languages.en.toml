@@ -25,7 +25,7 @@ vimeo = "https://vimeo.com/arahfx/"
 x-twitter = "https://x.com/arahfx"
 [[params.author.links]]
 
-bluesky = "https://bsky.app/profile/arahfx.bsky.social"
+github = "https://github.com/arahmitz"
 
 ["params.author"]
 name = "Adam Madej"
