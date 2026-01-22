@@ -1,7 +1,7 @@
 ---
 title: "Rigging Dojo Character 101 Postmortem - Thinking like a TD"
 date: 2026-01-12
-draft: false
+draft: true
 description: "My reflections on Rigging Dojo's Character Rigging 101 course and lessons that shaped my TD mindset"
 tags: ["Rigging", "Reflections", "Personal", "Course", "TD"]
 ---
