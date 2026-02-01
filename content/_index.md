@@ -4,4 +4,4 @@ description: "Adam Madej's personal blog about gameplay animation"
 ---
 
 
-{{< youtubeLite id="BqsJlrNq8w" label="Adam Madej Demoreel 2025" >}}
+{{< youtubeLite id="rBqsJlrNq8w" label="Adam Madej Demoreel 2025" >}}
