@@ -12,9 +12,6 @@ dateFormat = "2 January 2006"
 # secondaryLogo = "."
 description = "Adam Madej - Technical Animator"
 
-# [[params.author.links]]
-# github = "github.com/arahmitz"
-
 [[params.author.links]]
 linkedin = "https://linkedin.com/in/arahfx"
 
@@ -23,9 +20,9 @@ vimeo = "https://vimeo.com/arahfx/"
 
 [[params.author.links]]
 x-twitter = "https://x.com/arahfx"
-[[params.author.links]]
 
-github = "https://github.com/arahmitz"
+[[params.author.links]]
+github = "github.com/arahmitz"
 
 ["params.author"]
 name = "Adam Madej"
