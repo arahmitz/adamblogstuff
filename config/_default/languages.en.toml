@@ -22,7 +22,7 @@ vimeo = "https://vimeo.com/arahfx/"
 x-twitter = "https://x.com/arahfx"
 
 [[params.author.links]]
-github = "github.com/arahmitz"
+github = "https://github.com/arahmitz"
 
 ["params.author"]
 name = "Adam Madej"
