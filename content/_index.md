@@ -1,7 +1,7 @@
 ---
-title: "Welcome to Adam Madej Animations!"
-description: "Adam Madej's personal blog about gameplay animation"
+title: "Technical / Gameplay Animator - Adam Madej"
+description: "Nerding out about (technical) animation in game development - Adam Madej"
 ---
 
 
-{{< youtubeLite id="vmirvjZ8S1Q" label="Adam Madej Demoreel 2025" >}}
+{{< youtubeLite id="dwYsRDMyb6M" label="Adam Madej Demoreel 2025" >}}
