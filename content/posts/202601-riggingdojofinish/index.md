@@ -1,7 +1,7 @@
 ---
-title: "Rigging Dojo Character 101 Postmortem - Thinking like a TD"
+title: "Rigging Dojo Character 101 Postmortem"
 date: 2026-01-12
-draft: true
+draft: false
 description: "My reflections on Rigging Dojo's Character Rigging 101 course and lessons that shaped my TD mindset"
 tags: ["Rigging", "Reflections", "Personal", "Course", "TD"]
 ---
@@ -50,8 +50,8 @@ that we'll just do reps on that and it's only about practice. In reality, I've l
 - I thought I understood anatomy okay-ish, but exercises like drawing skeletons & muscles over references revealed gaps in applied knowledge.
 - Not everything is fixable by "better weight painting". You absolutely needs supporting joints & blendshapes to make things look *right*.
 
-![Geralt of Rivia RIG skinning 1st pass](/images/riggingdojofinish/skinning_bend_1stpass.png "1st pass of chest bend")
-![Geralt of Rivia RIG skinning last pass](/images/riggingdojofinish/skinning_bend_end.png "What I ended up with")
+![Geralt of Rivia RIG skinning 1st pass](/images/riggingdojofinish/skinning_bend_1stpass.png "1st pass of chest bend - many things are not sticking perfectly")
+![Geralt of Rivia RIG skinning last pass](/images/riggingdojofinish/skinning_bend_end.png "Later modifications - it isn't perfect yet, but skinning is a process.")
 
 This course forced me to slow down and confront these issues head-on. I've struggled a lot when it comes to skinning and I still do, but the biggest difference is
 that I've started the course with dread of skinning and now I actuallly enjoy the skinning & deformation - I'd say that as of now, it's probably the most interesting
