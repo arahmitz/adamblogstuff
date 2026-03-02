@@ -1,5 +1,5 @@
 ---
-title: "Technical / Gameplay Animator - Adam Madej"
+title: "Technical Animator - Adam Madej"
 description: "Nerding out about (technical) animation in game development - Adam Madej"
 ---
 

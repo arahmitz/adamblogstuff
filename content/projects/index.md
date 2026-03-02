@@ -1,5 +1,5 @@
 ---
-title: "Projects"
+title: "Projects I worked on"
 date: 2024-05-12T20:55:37+01:00
 draft: false
 
@@ -22,7 +22,7 @@ layoutBackgroundHeaderSpace: false
 heroStyle: background
 ---
 
-## Forever Skies (PC, PS5)
+## Forever Skies (2025)
 ![Forever Skies main logo](/images/projects/foreverskiesmain.jpg "[Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/_) - Animation & Rigging")
 
 *Forever Skies* is a first-person post-apocalyptic survival game. Return to Earth, ravaged by an ecological disaster. Fly, upgrade and customize your mobile high-tech airship base. Scavenge resources to survive, face dangers on the surface and hunt for viral pathogens to cure a mysterious illness.

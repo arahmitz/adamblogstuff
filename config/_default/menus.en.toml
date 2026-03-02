@@ -4,31 +4,38 @@ none = "none"
 [[main]]
 name = "About"
 pageRef = "about"
-identifier = "dpcK3G40VS"
-weight = 1
+#identifier = "dpcK3G40VS"
+weight = 10
 
 [[main]]
-name = "Posts"
-pageRef = "posts"
-identifier = "AgcyRLUGjj"
-weight = 2
+name = "Tools"
+pageRef = "madTools"
+#identifier = "UNxn7lkosO"
+weight = 20
 
 [[main]]
 name = "Projects"
 pageRef = "projects"
-identifier = "UNxn7lkosO"
-weight = 3
+#identifier = "UNxn7lkosO"
+weight = 30
 
 [[main]]
 name = "Talks"
 pageRef = "talks"
-identifier = "GDe8QwrOjY"
-weight = 4
+#identifier = "GDe8QwrOjY"
+weight = 40
+
+[[main]]
+name = "Blog"
+pageRef = "posts"
+#identifier = "AgcyRLUGjj"
+weight = 50
 
 [[main]]
 name = "Contact"
 pageRef = "contact"
-identifier = "iIRlqF1wAb"
-weight = 5
+#identifier = "iIRlqF1wAb"
+weight = 60
+
 [[footer]]
 none = "none"
