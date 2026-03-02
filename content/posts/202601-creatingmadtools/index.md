@@ -4,7 +4,7 @@ date: 2026-01-15
 draft: true
 description: "Released my first set of tools!"
 tags: ["reflections", "tools", "maya", "python"]
-showHero: true
+showHero: false
 ---
 ## 1. The reason why
 
