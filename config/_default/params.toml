@@ -1,4 +1,4 @@
-colorScheme = "github"
+colorScheme = "fire"
 defaultAppearance = "dark"
 autoSwitchAppearance = false
 enableSearch = true
@@ -52,7 +52,7 @@ showBreadcrumbs = false
 showDraftLabel = true
 showEdit = true
 editAppendPath = true
-seriesOpened = true
+seriesOpened = false
 showHeadingAnchors = true
 showPagination = false
 invertPagination = false

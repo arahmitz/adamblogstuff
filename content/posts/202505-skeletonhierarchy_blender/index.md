@@ -3,7 +3,7 @@ title: "Building a skeleton hierarchy using python"
 date: 2025-05-13
 draft: false
 description: ""
-tags: ["blender", "rigging", "python", "tools"]
+tags: ["Rigging", "blender", "Python", "Technical", "Scripting", "Intermediate"]
 ---
 ## 0. Why wasn't I posting for some time
 It's been almost a year since the [last post](/posts/202407-ikfkswitch_blender). It was actually a super busy time as we were closing on two very important milestones - first [we released a co-op mode](https://www.ign.com/videos/forever-skies-official-co-op-mode-release-date-trailer?utm_campaign=trueAnthem%3A+Manual&utm_medium=trueAnthem&utm_source=facebook&fbclid=IwY2xjawKQY8RleHRuA2FlbQIxMQBicmlkETE3ZkNCY0lBSGp3d0RtUGkwAR4zS0XMNCE9K5Mcr6Q-FJqMq6yBTCbetAu5Vn2Nf6ic7jqKRyFBzktyHW8uew_aem_IAaKIUVM-ABZ70CpPwzwAA) of 

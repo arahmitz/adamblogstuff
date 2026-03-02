@@ -3,7 +3,7 @@ title: "Rigging Dojo Character 101 Postmortem"
 date: 2026-01-12
 draft: false
 description: "My reflections on Rigging Dojo's Character Rigging 101 course and lessons that shaped my TD mindset"
-tags: ["reflections"]
+tags: ["Rigging", "Reflections", "Personal", "Course", "TD"]
 ---
 {{< lead >}}
 "TD Mindset is all about finding answers to problems, not knowing everything."

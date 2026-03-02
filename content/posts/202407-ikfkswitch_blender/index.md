@@ -1,11 +1,14 @@
----
-title: "Simple IKFK Switch in blender"
-date: 2024-07-17
-draft: false
-description: "A tutorial on creating IKFK switches in blender without addons or scripting"
-tags: ["rigging", "blender"]
++++
+title = 'Simple IKFK Switch in blender'
+summary = 'A tutorial on creating IKFK switches in blender without addons or scripting'
+languageCode = 'en-us'
+date = 2024-07-17T22:15:00+02:00
+draft = false
+tags = ['technical', 'blender', 'tutorial', 'ikfk', 'rigging']
+showRecent = true
+showTableOfContents = true
++++
 
----
 
 ## 0. Foreword
 

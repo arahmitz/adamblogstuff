@@ -3,7 +3,7 @@ title: "I've enrolled at Rigging Dojo!"
 date: 2025-09-24
 draft: false
 description: "Reflections on starting my Rigging Dojo journey - building strong foundations as a TechAnim"
-tags: ["reflections"]
+tags: ["Rigging", "Reflections", "Personal", "Course"]
 ---
 
 # The past few months have been busy. 
