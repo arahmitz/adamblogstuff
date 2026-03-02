@@ -1,13 +1,13 @@
-+++
-title = 'Hello world!'
-summary = 'A launch/welcome post'
-languageCode = 'en-us'
-date = 2024-03-13T22:23:18+01:00
-draft = false
-tags = ['notes', 'reflections']
-showRecent = true
-showTableOfContents = false
-+++
+---
+title: "Hello, world!"
+date: 2024-03-13
+draft: false
+description: "A launch/welcome post"
+tags: ["reflections"]
+heroStyle: background
+showTableOfContents: false
+---
+
 
 After overcoming some challanges of webdev (and trying to understand how networks and DNSes actually work) I am thrilled to extend a warm welcome to my personal website!
 I envision this space evolving over time to not only serve as my online portfolio/professional site but also as a digitalized repository of my Notion/Confluence notes and tutorials on 
