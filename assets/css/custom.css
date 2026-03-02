@@ -82,25 +82,3 @@ form select {
 html {
   font-family: Inter;
 }
-
-
-.litevideo{
-  min-width: 600px;
-}
-
-@media screen and (max-width: 720px) {
-  .litevideo{
-    min-width: 400px;
-  }
-}
-
-/* Custom CSS to remove extra space for articles with a background */
-.single .article-hero {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-}
-
-/* Optionally, remove the background as well */
-.single .article-hero {
-  background: none !important;
-}
