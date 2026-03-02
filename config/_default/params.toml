@@ -1,4 +1,4 @@
-colorScheme = "github"
+colorScheme = "fire"
 defaultAppearance = "dark"
 autoSwitchAppearance = false
 enableSearch = true
@@ -17,6 +17,7 @@ verification = { }
 rssnext = { }
 defaultBackgroundImage = "homepage.jpg"
 smartTOC = true
+#logo = "logo.svg"
 
 [header]
 layout = "fixed"
