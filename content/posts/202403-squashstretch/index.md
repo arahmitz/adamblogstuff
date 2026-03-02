@@ -1,15 +1,13 @@
-+++
-title = 'Theory behind building a squash & stretch rig'
-summary = 'Overlook of squash & stretch mechanism building with with different rigging approaches'
-languageCode = 'en-us'
-date = 2024-03-16T21:02:06+01:00
-draft = false
-tags = ['rigging', 'beginner', 'theory']
-showRecent = true
-series = ["Squash & Stretch Ball Rig"]
-series_order = 1
-+++
-
+---
+title: "Theory behind building a squash & stretch rig"
+date: 2024-03-16
+draft: false
+description: "Overlook of squash & stretch mechanism building with with different rigging approaches"
+tags: ["rigging", "blender"]
+showTableOfContents: false
+series: ["Squash & Stretc Ball Rig"]
+series_order: 1
+---
 
 
 ## 0. Foreword

@@ -3,7 +3,7 @@ title: "I've hosted animation meetup @ GIC 2025"
 date: 2025-10-27
 draft: false
 description: "Some thoughts about GIC 2025 & Animatorowisko Anniversary"
-tags: ["GIC", "Personal", "Community", "Animatorowisko", "Reflections"]
+tags: ["reflections", "GIC"]
 ---
 ## Quick GIC Summary
 [**Game Industry Conference**](https://gic.gd/) 2025 has just wrapped! I've always had fun in Poznań, but this year was really something else. It was exciting to see more talks and panels touching all kinds of animation related topics.
