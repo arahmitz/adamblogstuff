@@ -17,7 +17,7 @@ When I startd my animation journey back in 2022, I was downloading a lot of scri
 I remember discovering that last one through a video and navigating to Morgan Loomis' [website](http://morganloomis.com/). It was so cool to see someone with a whole page dedicating to their own tool package. It really inspired me to lean more
 into the technical side of the animation pipeline.
 
-This winter, while attending [Rigging Dojo](/posts/202509-riggingdojoenroll), I went deep into Maya again - and quickly onticed how much time I wasted clicking through nested menus just to freeze transforms, select hierarchy or delete history - the
+This winter, while attending [Rigging Dojo](/posts/202509-riggingdojoenroll), I went deep into Maya again - and quickly noticed how much time I wasted clicking through nested menus just to freeze transforms, select hierarchy or delete history - the
 essential parts of Maya's rigging workflow.
 ![Maya's space menu going through Edit -> Delete type -> History](/images/madtoolspost/madtools_maya.jpg "To get here you need to click <kbd>Space</kbd> -> `Edit` -> `Delete by Type` -> `History` or remember a **3 button** combination.")
 
