@@ -17,7 +17,7 @@ sharingLinks : false
 showEdit: false
 showViews: false
 showLikes: false
-showAuthor: false
+showAuthor: true
 layoutBackgroundHeaderSpace: false
 heroStyle: background
 ---

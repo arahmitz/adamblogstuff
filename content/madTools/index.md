@@ -17,7 +17,7 @@ sharingLinks : false
 showEdit: false
 showViews: false
 showLikes: false
-showAuthor: false
+showAuthor: true
 layoutBackgroundHeaderSpace: false
 heroStyle: background
 ---
@@ -31,7 +31,7 @@ You can install a shelf, use the provided UI or download the tools you want indi
 
 ## Tools
 | Icon | Download | Desciption                                   |
-|------|----------|----------------------------------------------|
+|------|--------------------|----------------------------------------------|
 | <div style="display:flex; align-items:center;"><img src="https://github.com/arahmitz/madTools/blob/main/madtools/icons/create_joints.png?raw=true" width="32" height="32"> | [Create Joints](https://raw.githubusercontent.com/arahmitz/madTools/refs/heads/main/madtools/tools/create_joints.py)| Creates a joint chain in +X with editable number of joints, spacing, and naming (via command or UI)|
 | <div style="display:flex; align-items:center;"><img src="https://github.com/arahmitz/madTools/blob/main/madtools/icons/create_locator.png?raw=true" width="32" height="32"></div> | [Create Locator](https://raw.githubusercontent.com/arahmitz/madTools/refs/heads/main/madtools/tools/create_locator.py)| Creates a locator at you current selection (or origin if nothing is selected) |
 | <div style="display:flex; align-items:center;"><img src="https://github.com/arahmitz/madTools/blob/main/madtools/icons/snap_to_average.png?raw=true" width="32" height="32"></div> | [Snap to Average](https://raw.githubusercontent.com/arahmitz/madTools/refs/heads/main/madtools/tools/snap_to_average.py) | Snaps last selected objects to average of the rest **(translation & rotation)** |
