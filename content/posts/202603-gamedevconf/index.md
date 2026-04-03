@@ -69,7 +69,7 @@ Flying halfway across the world is a weird mix of exctiement and exhaustion. Six
 
 I know it sounds small, but at that moment it felt really huge. I was really drained, but super excited that I'm realy there. San Francisco itself felt almost unreal - like a city I've only ever explored in movies, pictures, or games.
 
-![Union Square Night Picture](/images/gdc2026/unions_square.jpg "Even though I was tired and we landed in the evening, I had to go still go out and take some pictures. As we were sleeping near Union Square - that's one of my first views of SF")
+![Union Square Night Picture](/images/gdc2026/union_square.jpg "Even though I was tired and we landed in the evening, I had to go still go out and take some pictures. As we were sleeping near Union Square - that's one of my first views of SF")
 
 It sounds pretty cliché to say that USA is totally different from Europe, but really - it feels **totally** different! The architecture, the views, the weather, the sounds, the smells, the people - everything is just new. Especially the weather - it was
 around 9°C in Poland and over 20°C in SF during the day.
