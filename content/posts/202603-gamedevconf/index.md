@@ -12,11 +12,11 @@ If you're there for the TL;DR part:
 My main takeaways:
 - It's more worth to go when you have some experience in gamedev, there's not much for juniors sadly
 - Find a clear goal for the GDC
-- Be proactive - reach out to people yo uwant to meet
+- Be proactive - reach out to people you want to meet
 - Problem-solving matters more than knowing everything
-- Conferences reawrd effort, not attendance
+- Conferences reward effort, not attendance
 - Find a time to chill out
-- USA is an awesome country to sightsee
+- USA is an awesome country for sightseeing
 - DRINK WATER (SERIOUSLY!)
 
 If I were to go next time I'd:
@@ -41,7 +41,7 @@ I've applied for the Polish scholarship in 2023 - for my first year in professio
 Tried again in 2024 - same result.
 
 After applying at the end of 2025, on the 9th January of 2026 I got this email:
-![Email confirming I got selected for GDC 2026 delegation](/images/gdc2026/confirmationmail.jpg "[In Polish]Congratulations & confirmation of attendance for GDC 2026 delegation")
+![Email confirming I got selected for GDC 2026 delegation](/images/gdc2026/confirmation_mail.jpg "[In Polish]Congratulations & confirmation of attendance for GDC 2026 delegation")
 
 I cannot fully describe what I felt when I saw it in my inbox. Relief, excitement, disbelief, stress - everything all at once.
 
@@ -69,7 +69,7 @@ Flying halfway across the world is a weird mix of exctiement and exhaustion. Six
 
 I know it sounds small, but at that moment it felt really huge. I was really drained, but super excited that I'm realy there. San Francisco itself felt almost unreal - like a city I've only ever explored in movies, pictures, or games.
 
-![Union Square Night Picture](/images/gdc2026/unionsquare1.jpg "Even though I was tired and we landed in the evening, I had to go still go out and take some pictures. As we were sleeping near Union Square - that's one of my first views of SF")
+![Union Square Night Picture](/images/gdc2026/unions_square.jpg "Even though I was tired and we landed in the evening, I had to go still go out and take some pictures. As we were sleeping near Union Square - that's one of my first views of SF")
 
 It sounds pretty cliché to say that USA is totally different from Europe, but really - it feels **totally** different! The architecture, the views, the weather, the sounds, the smells, the people - everything is just new. Especially the weather - it was
 around 9°C in Poland and over 20°C in SF during the day.
@@ -89,14 +89,14 @@ also a a must see - especially for the DuChamp's *Fountain* (1917).
 It was pretty exhausting pre-conference - but I felt like every step felt like I was collecting a beautiful story.
 
 {{< gallery >}}
-  <img src="/images/gdc2026/cityview.jpg" class="grid-w33" />
-  <img src="/images/gdc2026/molchatdoma.jpg" class="grid-w33" />
-  <img src="/images/gdc2026/fishermanswharf.jpg" class="grid-w33" />
-  <img src="/images/gdc2026/transamericatower.jpg" class="grid-w33" />      
-  <img src="/images/gdc2026/goldengate.jpg" class="grid-w33" />
-  <img src="/images/gdc2026/lucastart.jpg" class="grid-w33" />
-  <img src="/images/gdc2026/sfmoma.jpg" class="grid-w33" />
-  <img src="/images/gdc2026/moscone.jpg" class="grid-w33" />
+  <img src="/images/gdc2026/city_view.jpg" class="grid-w33" />
+  <img src="/images/gdc2026/molchat_doma.jpg" class="grid-w33" />
+  <img src="/images/gdc2026/fishermans_wharf.jpg" class="grid-w33" />
+  <img src="/images/gdc2026/transamerica_pyramid_.jpg" class="grid-w33" />      
+  <img src="/images/gdc2026/golden_gate.jpg" class="grid-w33" />
+  <img src="/images/gdc2026/lucast_art.jpg" class="grid-w33" />
+  <img src="/images/gdc2026/sf_moma.jpg" class="grid-w33" />
+  <img src="/images/gdc2026/moscone_center.jpg" class="grid-w33" />
 
 {{< /gallery >}}
 
@@ -218,7 +218,7 @@ Technical Art is an umbrella term - I've met many people on this roundtables tal
 I've found my people.
 {{< /lead >}}
 And I loved every second of it.
-![A picture of my badge with TechArt 20 Years comemorative ribbon](/images/gdc2026/techartrt.jpg "That's what happens when you bring a group of neurospicy people to one place at a conference")
+![A picture of my badge with TechArt 20 Years comemorative ribbon](/images/gdc2026/techart_rt.jpg "That's what happens when you bring a group of neurospicy people to one place at a conference")
 
 I'm actually going to try to bring this format of talking to Game Industry Conference back home: shorter sessions, maybe two smaller time slots and dynamic topics. I believe it could be an awesome addition for our growing
 animation community in Poland - stay tuned for that!
@@ -237,7 +237,7 @@ I also feel like a big part of GDC happens outside of... GDC actually. The schol
 chill out, so everyone was forced to chill out together in a "common"/"chill" room. It was the best place to be, really. Everyone from the hostel (as we weren't the only guests in the hostel) went there after all the parties to spend time together and I
 am really, really happy they did - as I've met many awesome people there. 
 
-![A picutre of us laughing about Evan havi and Accordion with him](/images/gdc2026/hostelparty.jpg "My awesome friends Giorgi, Vince and Evan laughing about the accordion situation")
+![A picutre of us laughing about Evan havi and Accordion with him](/images/gdc2026/hostel_party.jpg "My awesome friends Giorgi, Vince and Evan laughing about the accordion situation")
 The real strength of the conference is having great people around you - and I have to say I was really, really lucky about that.
 
 ## Final Thoughts
@@ -253,4 +253,4 @@ I went to GDC looking for mentorship, but I've came back with something more val
 and of course - an adventure that I'll remember for the rest of my life!
 
 If you've read it this far, here take this funny doggo in googles I've seen at Fisherman's Wharf as a form of thank you:
-![A picture of a man on a motorbike with a dog sitting in a carriage, dog is wearing goggles and doing a high five](/images/gdc2026/funnydog.jpg "So that's what America looks like")
+![A picture of a man on a motorbike with a dog sitting in a carriage, dog is wearing goggles and doing a high five](/images/gdc2026/funny_dog.jpg "So that's what America looks like")
