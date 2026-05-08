@@ -178,7 +178,7 @@ And one more thing I always felt, but finally confirmed:
 {{< lead >}}
 TechAnims are awesome. And they all love to nerd out about their work.
 {{< /lead >}}
-And honestly? that's the best part.
+And that was the greatest part.
 
 Besides that, there are more things I've learned:
 
