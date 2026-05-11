@@ -92,9 +92,9 @@ It was pretty exhausting pre-conference - but I felt like every step felt like I
   <img src="/images/gdc2026/city_view.jpg" class="grid-w33" />
   <img src="/images/gdc2026/molchat_doma.jpg" class="grid-w33" />
   <img src="/images/gdc2026/fishermans_wharf.jpg" class="grid-w33" />
-  <img src="/images/gdc2026/transamerica_pyramid_.jpg" class="grid-w33" />      
+  <img src="/images/gdc2026/transamerica_pyramid.jpg" class="grid-w33" />      
   <img src="/images/gdc2026/golden_gate.jpg" class="grid-w33" />
-  <img src="/images/gdc2026/lucast_art.jpg" class="grid-w33" />
+  <img src="/images/gdc2026/lucast_tart.jpg" class="grid-w33" />
   <img src="/images/gdc2026/sf_moma.jpg" class="grid-w33" />
   <img src="/images/gdc2026/moscone_center.jpg" class="grid-w33" />
 
