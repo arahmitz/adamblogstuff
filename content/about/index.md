@@ -23,11 +23,11 @@ heroStyle: background
 ---
 
 # Hey! I'm Adam. 
-I am a Technical Animator, based in Wrocław, Poland. 
+I am a Technical Animator focusing on Character Tech Art & Toolsdev, based in Wrocław, Poland. 
 
-Currently, I am working at [Far From Home](https://www.farfromhomegames.com/) where I am animating and rigging [Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/)!
+Currently, I am working at [Hot Buns Studio ](https://hotbuns.studio/) as Technical Animator, where I focus on rigging & toolsdev supporting both character art & animation teams on an Unanounced Project (TBA).
 
-Welcome to my personal website, where I explore the art of **rigging**, **gameplay animation** and **technical animation**. This blog serves as a blend of insights into rigging techniques, animation insights, scripting, pipelines, workflows and their application in the dynamic world of video games.
+Welcome to my personal website, where I explore the art of **character technical art**, **tools development** and **technical animation**. This blog serves as a blend of insights into rigging techniques, animation insights, scripting, pipelines, workflows and their application in the dynamic world of video games.
 
 Beyond discussion, my goal is to offer valuable notes, tutorials and resources to aid you on your (and mine) journey through everything there is related to animation for **video games**. I'll also try to sprinkle in some thought-provoking book reviews and reflections on the broader animation industry. I believe in the power of animation as the ultimate storytelling medium in the entertainment industry. I'm excited to share my experiences and perspectives on every facet of this captivating medium.
 

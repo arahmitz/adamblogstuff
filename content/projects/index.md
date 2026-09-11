@@ -23,9 +23,9 @@ heroStyle: background
 ---
 
 ## Forever Skies (2025)
-![Forever Skies main logo](/images/projects/foreverskiesmain.jpg "[Forever Skies](https://store.steampowered.com/app/1641960/Forever_Skies/_) - Animation & Rigging")
+![Forever Skies main logo](/images/projects/foreverskiesmain.jpg "[Forever Skies (2025)](https://store.steampowered.com/app/1641960/Forever_Skies/_)/ [Far From Home](https://www.farfromhomegames.com/) - Animation, Rigging, Animation Implementation") 
 
-*Forever Skies* is a first-person post-apocalyptic survival game. Return to Earth, ravaged by an ecological disaster. Fly, upgrade and customize your mobile high-tech airship base. Scavenge resources to survive, face dangers on the surface and hunt for viral pathogens to cure a mysterious illness.
+*Forever Skies* is a co-op first-person post-apocalyptic survival game. Return to Earth, ravaged by an ecological disaster. Fly, upgrade and customize your mobile high-tech airship base. Scavenge resources to survive, face dangers on the surface and hunt for viral pathogens to cure a mysterious illness.
 
 In *Forever Skies*, I am responsible for animation and rigging within the project. I am focused on the blender-related side of the pipeline where I rig bipeds, non-bipeds, weapons and structures. Additionally I am
 responsible for many animations within the project - I've been mostly adapting already-done FPP animations into TPP (for co-op purposes), but I've also done my share of FPP animation, weapon, structure and non-humanoid sequences both in
