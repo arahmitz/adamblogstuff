@@ -4,7 +4,7 @@ date: 2024-03-16
 draft: false
 description: "Overlook of squash & stretch mechanism building with with different rigging approaches"
 tags: ["rigging", "blender"]
-showTableOfContents: false
+showTableOfContents: true
 series: ["Squash & Stretc Ball Rig"]
 series_order: 1
 ---

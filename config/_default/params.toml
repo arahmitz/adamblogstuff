@@ -1,7 +1,7 @@
 colorScheme = "fire"
 defaultAppearance = "dark"
 autoSwitchAppearance = false
-enableSearch = true
+enableSearch = false
 enableCodeCopy = true
 replyByEmail = false
 disableImageOptimization = false
@@ -38,6 +38,7 @@ showMoreLinkDest = "/posts/"
 cardView = true
 cardViewScreenWidth = false
 layoutBackgroundBlur = false
+disableHeroImageFilter = true
 
 [article]
 showDate = true

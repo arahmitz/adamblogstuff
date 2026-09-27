@@ -4,7 +4,7 @@ date: 2024-03-17
 draft: false
 description: "A step by step guide to build your first ball rig in blender"
 tags: ["rigging", "blender"]
-showTableOfContents: false
+showTableOfContents: true
 series: ["Squash & Stretc Ball Rig"]
 series_order: 2
 ---
